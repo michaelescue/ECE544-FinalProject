@@ -1,0 +1,2708 @@
+!SESSION 2020-05-31 23:35:42.189 -----------------------------------------------
+eclipse.buildId=2018.2
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk
+
+This is a continuation of log file C:\Users\ME\Vivado_Projects\vivado_finalproject\vivado_finalproject.sdk\.metadata\.bak_0.log
+Created Time: 2020-06-01 02:51:32.998
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:51:32.999
+!MESSAGE XSCT Command: [::hsi::utils::get_sw_libs -json C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:51:33.006
+!MESSAGE XSCT command with result: [::hsi::utils::get_sw_libs -json C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Result: [null, {}]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:51:33.007
+!MESSAGE XSCT Command: [::hsi::utils::get_drivers_for_sw -json C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:51:33.011
+!MESSAGE XSCT command with result: [::hsi::utils::get_drivers_for_sw -json C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Result: [null, {"axi_gpio_0": {"name": "gpio",
+"ver": "4.3",
+},
+"axi_timebase_wdt_0": {"name": "wdttb",
+"ver": "4.3",
+},
+"axi_timer_0": {"name": "tmrctr",
+"ver": "4.4",
+},
+"axi_uartlite_0": {"name": "uartlite",
+"ver": "3.2",
+},
+"axi_uartlite_1": {"name": "uartlite",
+"ver": "3.2",
+},
+"mdm_1": {"name": "uartlite",
+"ver": "3.2",
+},
+"microblaze_0_axi_intc": {"name": "intc",
+"ver": "3.7",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.2",
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.2",
+},
+"nexys4IO_0": {"name": "nexys4IO",
+"ver": "1.0",
+},
+"pmod_hb3_axi_custom_0": {"name": "generic",
+"ver": "2.0",
+},
+"microblaze_0": {"name": "cpu",
+"ver": "2.7",
+},
+}]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:51:33.012
+!MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:51:33.014
+!MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:51:33.015
+!MESSAGE XSCT Command: [::hsi::utils::get_sw_libs -json C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:51:33.018
+!MESSAGE XSCT command with result: [::hsi::utils::get_sw_libs -json C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Result: [null, {}]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:51:33.018
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:51:33.020
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Result: [null, ]. Thread: ModalContext
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:51:34.143
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:51:34.353
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:51:34.358
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:51:34.720
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:51:34.725
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:51:34.874
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:51:34.880
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:51:34.993
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:51:35.431
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:51:35.439
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:51:35.609
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:51:35.613
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:51:35.767
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:51:35.771
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:51:35.937
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:51:35.945
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:51:36.119
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:51:36.126
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:51:36.281
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:51:36.289
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:51:36.465
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:51:36.472
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:51:36.582
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:51:40.651
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:51:40.855
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:51:40.861
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:51:40.973
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:51:41.909
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:51:41.914
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:51:42.309
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:51:47.521
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:51:47.524
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:51:47.525
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:51:47.525
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:51:47.525
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:51:47.526
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:51:47.526
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:51:47.526
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:51:47.527
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:51:47.527
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:51:47.528
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:51:47.528
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:52:21.544
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:52:32.416
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:52:32.718
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:52:32.739
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:52:32.911
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:52:38.765
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:52:38.783
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:52:38.920
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:52:44.609
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:52:44.615
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:52:44.767
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:52:47.054
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:52:47.059
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:52:47.181
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:52:54.167
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:52:54.173
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:52:54.302
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:53:01.146
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:53:01.171
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:53:01.387
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:53:02.442
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:53:02.456
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:53:02.457
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:53:02.460
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:53:02.461
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:53:02.461
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:53:02.464
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:53:02.465
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:53:02.466
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:53:02.466
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:53:02.466
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:53:02.467
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:53:05.846
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:53:05.877
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.closeConsoleOutputStream(ConsoleOutputSniffer.java:160)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.close(ConsoleOutputSniffer.java:68)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.close(ProcessClosure.java:98)
+	at org.eclipse.cdt.internal.core.ProcessClosure.isAlive(ProcessClosure.java:193)
+	at org.eclipse.cdt.core.CommandLauncher.waitAndRead(CommandLauncher.java:259)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:273)
+	at org.eclipse.cdt.make.core.MakeBuilder.invokeMake(MakeBuilder.java:219)
+	at org.eclipse.cdt.make.core.MakeBuilder.build(MakeBuilder.java:108)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:53:05.938
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:53:05.948
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss ], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:53:05.949
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:53:05.954
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "freertos10_xilinx",
+"osver": "1.1",
+}]. Thread: ModalContext
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:53:06.567
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:53:06.808
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:53:06.826
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.closeConsoleOutputStream(ConsoleOutputSniffer.java:160)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.close(ConsoleOutputSniffer.java:68)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.close(ProcessClosure.java:98)
+	at org.eclipse.cdt.internal.core.ProcessClosure.isAlive(ProcessClosure.java:193)
+	at org.eclipse.cdt.core.CommandLauncher.waitAndRead(CommandLauncher.java:259)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:273)
+	at org.eclipse.cdt.make.core.MakeBuilder.invokeMake(MakeBuilder.java:219)
+	at org.eclipse.cdt.make.core.MakeBuilder.build(MakeBuilder.java:108)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:49.910
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:49.918
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:49.919
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:49.923
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "freertos10_xilinx",
+"osver": "1.1",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:49.978
+!MESSAGE XSCT Command: [::hsi::utils::get_config_params_for_sw -json C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:50.000
+!MESSAGE XSCT command with result: [::hsi::utils::get_config_params_for_sw -json C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Result: [null, {"microblaze_0": {"archiver": {"category": "",
+"value": "mb-ar",
+"default": "mb-ar",
+"type": "string",
+"desc": "Archiver used to archive libraries for both BSP generation as well as for applications",
+"permit": "",
+"options": {},
+"range": "",
+},
+"compiler": {"category": "",
+"value": "mb-gcc",
+"default": "mb-gcc",
+"type": "string",
+"desc": "Compiler used to compile both BSP/Libraries and Applications.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"compiler_flags": {"category": "",
+"value": "-mlittle-endian -mxl-soft-mul -mhard-float -mxl-float-convert -mxl-float-sqrt -mno-xl-soft-div -mcpu=v10.0",
+"default": "-O2 -c",
+"type": "string",
+"desc": "Compiler flags used in BSP and library generation. '-c' flag stands for 'compile and assemble, but do not link'. Without this flag, gcc tries to link the code, which will fail bacause there is no application involved during libgen. '-O2' can be overwritten by extra compiler flags",
+"permit": "none",
+"options": {},
+"range": "",
+},
+"extra_compiler_flags": {"category": "",
+"value": "-ffunction-sections -fdata-sections -Wall -Wextra",
+"default": "-ffunction-sections -fdata-sections -Wall -Wextra",
+"type": "string",
+"desc": "Extra compiler flags used in BSP and library generation.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"xmdstub_peripheral": {"category": "",
+"value": "none",
+"default": "none",
+"type": "peripheral_instance",
+"desc": "Debug peripheral to be used with xmdstub",
+"permit": "",
+"options": {},
+"range": "mdm_1",
+},
+},
+"freertos10_xilinx": {"PSU_TTC0_Select": {"category": "tick_setup",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "psu_cortexr5 only: Set it to true to use TTC0 for tick interrupt generation",
+"permit": "",
+"options": {},
+"range": "",
+},
+"PSU_TTC0_Select_Cntr": {"category": "tick_setup",
+"value": "0",
+"default": "0",
+"type": "int",
+"desc": "psu_cortexr5 only: Selects the TTC0 counter to be used for tick generation. Allowed range is 0-2",
+"permit": "",
+"options": {},
+"range": "",
+},
+"PSU_TTC1_Select": {"category": "tick_setup",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "psu_cortexr5 only: Set it to true to use TTC1 for tick interrupt generation",
+"permit": "",
+"options": {},
+"range": "",
+},
+"PSU_TTC1_Select_Cntr": {"category": "tick_setup",
+"value": "0",
+"default": "0",
+"type": "int",
+"desc": "psu_cortexr5 only: Selects the TTC1 counter to be used for tick generation. Allowed range is 0-2",
+"permit": "",
+"options": {},
+"range": "",
+},
+"PSU_TTC2_Select": {"category": "tick_setup",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "psu_cortexr5 only: Set it to true to use TTC2 for tick interrupt generation",
+"permit": "",
+"options": {},
+"range": "",
+},
+"PSU_TTC2_Select_Cntr": {"category": "tick_setup",
+"value": "0",
+"default": "0",
+"type": "int",
+"desc": "psu_cortexr5 only: Selects the TTC2 counter to be used for tick generation. Allowed range is 0-2",
+"permit": "",
+"options": {},
+"range": "",
+},
+"PSU_TTC3_Select": {"category": "tick_setup",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "psu_cortexr5 only: Set it to true to use TTC3 for tick interrupt generation",
+"permit": "",
+"options": {},
+"range": "",
+},
+"PSU_TTC3_Select_Cntr": {"category": "tick_setup",
+"value": "0",
+"default": "0",
+"type": "int",
+"desc": "psu_cortexr5 only: Selects the TTC3 counter to be used for tick generation. Allowed range is 0-2",
+"permit": "",
+"options": {},
+"range": "",
+},
+"SYSINTC_SPEC": {"category": "",
+"value": "*",
+"default": "",
+"type": "",
+"desc": "",
+"permit": "",
+"options": {},
+"range": "",
+},
+"SYSTMR_DEV": {"category": "",
+"value": "*",
+"default": "",
+"type": "",
+"desc": "",
+"permit": "",
+"options": {},
+"range": "",
+},
+"SYSTMR_SPEC": {"category": "",
+"value": "true",
+"default": "",
+"type": "",
+"desc": "",
+"permit": "",
+"options": {},
+"range": "",
+},
+"check_for_stack_overflow": {"category": "kernel_features",
+"value": "2",
+"default": "2",
+"type": "int",
+"desc": "Set to 0 for no overflow checking.  Set to 1 to include basic run time task stack checking.  Set to 2 to include more comprehensive run time task stack checking.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"enable_stm_event_trace": {"category": "enable_stm_event_trace",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Enable event tracing through System Trace Macrocell avaialable on Zynq MPSoC. This is supported only for Cortex A53 and R5 processors",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"enable_timer_tick_trace": {"category": "enable_stm_event_trace",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Enable tracing of timer tick events",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"hook_functions": {"category": "hook_functions",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Include or exclude application defined hook (callback) functions.  Callback functions must be defined by the application that is using FreeRTOS",
+"permit": "none",
+"options": {},
+"range": "",
+},
+"idle_yield": {"category": "kernel_behavior",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Set to true if the Idle task should yield if another idle priority task is able to run, or false if the idle task should always use its entire time slice unless it is preempted.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"kernel_behavior": {"category": "kernel_behavior",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Parameters relating to the kernel behavior",
+"permit": "none",
+"options": {},
+"range": "",
+},
+"kernel_features": {"category": "kernel_features",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Include or exclude kernel features",
+"permit": "none",
+"options": {},
+"range": "",
+},
+"max_api_call_interrupt_priority": {"category": "kernel_behavior",
+"value": "18",
+"default": "18",
+"type": "int",
+"desc": "The maximum interrupt priority from which interrupt safe FreeRTOS API calls can be made.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"max_priorities": {"category": "kernel_behavior",
+"value": "8",
+"default": "8",
+"type": "int",
+"desc": "The number of task priorities that will be available.  Priorities can be assigned from zero to (max_priorities - 1)",
+"permit": "",
+"options": {},
+"range": "",
+},
+"max_task_name_len": {"category": "kernel_behavior",
+"value": "10",
+"default": "10",
+"type": "int",
+"desc": "The maximum number of characters that can be in the name of a task.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"minimal_stack_size": {"category": "kernel_behavior",
+"value": "200",
+"default": "200",
+"type": "int",
+"desc": "The size of the stack allocated to the Idle task. Also used by standard demo and test tasks found in the main FreeRTOS download.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"num_thread_local_storage_pointers": {"category": "kernel_features",
+"value": "0",
+"default": "0",
+"type": "int",
+"desc": "Sets the number of pointers each task has to store thread local values.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"queue_registry_size": {"category": "kernel_features",
+"value": "10",
+"default": "10",
+"type": "int",
+"desc": "The maximum number of queues that can be registered at any one time. Only registered queues can be viewed in the Eclipse/GDB kernel aware debugger plug-in.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"software_timers": {"category": "software_timers",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Options relating to the software timers functionality",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"stdin": {"category": "",
+"value": "axi_uartlite_0",
+"default": "none",
+"type": "peripheral_instance",
+"desc": "stdin peripheral",
+"permit": "",
+"options": {},
+"range": "axi_uartlite_0 axi_uartlite_1 mdm_1",
+},
+"stdout": {"category": "",
+"value": "axi_uartlite_0",
+"default": "none",
+"type": "peripheral_instance",
+"desc": "stdout peripheral",
+"permit": "",
+"options": {},
+"range": "axi_uartlite_0 axi_uartlite_1 mdm_1",
+},
+"stm_channel": {"category": "enable_stm_event_trace",
+"value": "0",
+"default": "0",
+"type": "int",
+"desc": "STM channel to use for trace. Valid channels are 0-65535",
+"permit": "",
+"options": {},
+"range": "",
+},
+"tick_rate": {"category": "kernel_behavior",
+"value": "100",
+"default": "100",
+"type": "int",
+"desc": "Number of RTOS ticks per sec",
+"permit": "",
+"options": {},
+"range": "",
+},
+"tick_setup": {"category": "tick_setup",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Configuration for enabling tick timer",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"timer_command_queue_length": {"category": "software_timers",
+"value": "10",
+"default": "10",
+"type": "int",
+"desc": "The number of commands the timer command queue can hold at any one time.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"timer_task_priority": {"category": "software_timers",
+"value": "(configMAX_PRIORITIES - 1)",
+"default": "(configMAX_PRIORITIES - 1)",
+"type": "string",
+"desc": "The priority at which the software timer service/daemon task will execute.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"timer_task_stack_depth": {"category": "software_timers",
+"value": "(configMINIMAL_STACK_SIZE)",
+"default": "(configMINIMAL_STACK_SIZE)",
+"type": "string",
+"desc": "The size of the stack allocated to the timer service/daemon task.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"total_heap_size": {"category": "kernel_behavior",
+"value": "65536",
+"default": "65536",
+"type": "int",
+"desc": "Sets the amount of RAM reserved for use by FreeRTOS - used when tasks, queues, semaphores and event groups are created.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_counting_semaphores": {"category": "kernel_features",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Set to true to include counting semaphore functionality, or false to exclude recursive mutex functionality.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_daemon_task_startup_hook": {"category": "hook_functions",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Set true for kernel to call vApplicationDaemonTaskStartupHook on first iteration of RTOS daemon task. The application must provide an implementation of vApplicationDaemonTaskStartupHook().",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_freertos_asserts": {"category": "kernel_features",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Defines configASSERT() to assist development and debugging.  The application can override the default implementation of vApplicationAssert( char *pcFile, uint32_t ulLine )",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_getmutex_holder": {"category": "kernel_features",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Set to true to use mutex xSemaphoreGetMutexHolder API, or false to exclude it.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_idle_hook": {"category": "hook_functions",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Set to true for the kernel to call vApplicationIdleHook() on each iteration of the idle task.  The application must provide an implementation of vApplicationIdleHook().",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_malloc_failed_hook": {"category": "hook_functions",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Only used if a FreeRTOS memory manager (heap_n.c) is included in the project.  Set to true for the kernel to call vApplicationMallocFailedHookHook() if there is insufficient FreeRTOS heap available for a task, queue or semaphore to be created.  The application can override the default implementation of vApplicationMallocFailedHook().",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_mutexes": {"category": "kernel_features",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Set to true to include mutex functionality, or false to exclude mutex functionality.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_newlib_reent": {"category": "kernel_features",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "When true each task will have its own Newlib reent structure.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_port_optimized_task_selection": {"category": "kernel_behavior",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "When true task selection will be faster at the cost of limiting the maximum number of unique priorities to 32.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_preemption": {"category": "kernel_behavior",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Set to true to use the preemptive scheduler, or false to use the cooperative scheduler.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_queue_sets": {"category": "kernel_features",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Set to true to include queue set functionality.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_recursive_mutexes": {"category": "kernel_features",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Set to true to include recursive mutex functionality, or false to exclude recursive mutex functionality.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_stats_formatting_functions": {"category": "kernel_features",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Set to 1 to include the vTaskList() and vTaskGetRunTimeStats() functions, which format run-time data into human readable text.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_task_fpu_support": {"category": "kernel_features",
+"value": "1",
+"default": "1",
+"type": "int",
+"desc": "Set to 1 to create tasks without FPU context, set to 2 to have tasks with FPU context by default.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_task_notifications": {"category": "kernel_features",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Set to true to include direct to task notification functionality.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_tick_hook": {"category": "hook_functions",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Set to true for the kernel to call vApplicationTickHook() during each tick interrupt.  The application must provide an implementation of vApplicationTickHook().",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_timers": {"category": "software_timers",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Set to true to include software timer functionality, or false to exclude software timer functionality",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_timeslicing": {"category": "kernel_behavior",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "When true equal priority ready tasks will share CPU time with a context switch on each tick interrupt.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_trace_facility": {"category": "kernel_features",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Set to true to include the legacy trace functionality, and a few other features.  traceMACROS are the preferred method of tracing now.",
+"permit": "",
+"options": {},
+"range": "",
+},
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:50.188
+!MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:50.226
+!MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:50.226
+!MESSAGE XSCT Command: [::hsi::utils::get_sw_libs -json C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:50.229
+!MESSAGE XSCT command with result: [::hsi::utils::get_sw_libs -json C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Result: [null, {}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:50.270
+!MESSAGE XSCT Command: [::hsi::utils::get_drivers_for_sw -json C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:50.274
+!MESSAGE XSCT command with result: [::hsi::utils::get_drivers_for_sw -json C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Result: [null, {"axi_gpio_0": {"name": "gpio",
+"ver": "4.3",
+},
+"axi_timebase_wdt_0": {"name": "wdttb",
+"ver": "4.3",
+},
+"axi_timer_0": {"name": "tmrctr",
+"ver": "4.4",
+},
+"axi_uartlite_0": {"name": "uartlite",
+"ver": "3.2",
+},
+"axi_uartlite_1": {"name": "uartlite",
+"ver": "3.2",
+},
+"mdm_1": {"name": "uartlite",
+"ver": "3.2",
+},
+"microblaze_0_axi_intc": {"name": "intc",
+"ver": "3.7",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.2",
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.2",
+},
+"nexys4IO_0": {"name": "nexys4IO",
+"ver": "1.0",
+},
+"pmod_hb3_axi_custom_0": {"name": "generic",
+"ver": "2.0",
+},
+"microblaze_0": {"name": "cpu",
+"ver": "2.7",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:56.680
+!MESSAGE XSCT Command: [::hsi::utils::update_mss -hw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf -mss C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:56.687
+!MESSAGE XSCT command with result: [::hsi::utils::update_mss -hw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf -mss C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:56.699
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:56.702
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:56.719
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:56.723
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:56.723
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:56.728
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "freertos10_xilinx",
+"osver": "1.1",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:56.728
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:56.732
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss ], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:56.732
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:56.736
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "freertos10_xilinx",
+"osver": "1.1",
+}]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:56.737
+!MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:56.740
+!MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:56.741
+!MESSAGE XSCT Command: [::hsi::utils::generate_bsp_sources C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:56.776
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:57.758
+!MESSAGE XSCT command with result: [::hsi::utils::generate_bsp_sources C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:57.759
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:57.941
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:57.953
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:57.964
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:57.980
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "freertos10_xilinx",
+"osver": "1.1",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:57.981
+!MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:57.995
+!MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:57.996
+!MESSAGE XSCT Command: [::hsi::utils::get_sw_libs -json C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:58.009
+!MESSAGE XSCT command with result: [::hsi::utils::get_sw_libs -json C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Result: [null, {}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:58.009
+!MESSAGE XSCT Command: [::hsi::utils::get_drivers_for_sw -json C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:58.020
+!MESSAGE XSCT command with result: [::hsi::utils::get_drivers_for_sw -json C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Result: [null, {"axi_gpio_0": {"name": "gpio",
+"ver": "4.3",
+},
+"axi_timebase_wdt_0": {"name": "wdttb",
+"ver": "4.3",
+},
+"axi_timer_0": {"name": "tmrctr",
+"ver": "4.4",
+},
+"axi_uartlite_0": {"name": "uartlite",
+"ver": "3.2",
+},
+"axi_uartlite_1": {"name": "uartlite",
+"ver": "3.2",
+},
+"mdm_1": {"name": "uartlite",
+"ver": "3.2",
+},
+"microblaze_0_axi_intc": {"name": "intc",
+"ver": "3.7",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.2",
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.2",
+},
+"nexys4IO_0": {"name": "nexys4IO",
+"ver": "1.0",
+},
+"pmod_hb3_axi_custom_0": {"name": "generic",
+"ver": "2.0",
+},
+"microblaze_0": {"name": "cpu",
+"ver": "2.7",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:58.022
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:58.026
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:58.034
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:58.041
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:58.041
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:58.047
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "freertos10_xilinx",
+"osver": "1.1",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:58.056
+!MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:58.065
+!MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:58.113
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:58.116
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:58.222
+!MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:58.232
+!MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:58.232
+!MESSAGE XSCT Command: [::hsi::utils::get_sw_libs -json C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:58.252
+!MESSAGE XSCT command with result: [::hsi::utils::get_sw_libs -json C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Result: [null, {}]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:58.253
+!MESSAGE XSCT Command: [::hsi::utils::get_drivers_for_sw -json C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:58.260
+!MESSAGE XSCT command with result: [::hsi::utils::get_drivers_for_sw -json C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Result: [null, {"axi_gpio_0": {"name": "gpio",
+"ver": "4.3",
+},
+"axi_timebase_wdt_0": {"name": "wdttb",
+"ver": "4.3",
+},
+"axi_timer_0": {"name": "tmrctr",
+"ver": "4.4",
+},
+"axi_uartlite_0": {"name": "uartlite",
+"ver": "3.2",
+},
+"axi_uartlite_1": {"name": "uartlite",
+"ver": "3.2",
+},
+"mdm_1": {"name": "uartlite",
+"ver": "3.2",
+},
+"microblaze_0_axi_intc": {"name": "intc",
+"ver": "3.7",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.2",
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.2",
+},
+"nexys4IO_0": {"name": "nexys4IO",
+"ver": "1.0",
+},
+"pmod_hb3_axi_custom_0": {"name": "generic",
+"ver": "2.0",
+},
+"microblaze_0": {"name": "cpu",
+"ver": "2.7",
+},
+}]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:58.260
+!MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:58.266
+!MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:58.267
+!MESSAGE XSCT Command: [::hsi::utils::get_sw_libs -json C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:58.272
+!MESSAGE XSCT command with result: [::hsi::utils::get_sw_libs -json C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Result: [null, {}]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:58.273
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:58.277
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:58.766
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:58.770
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss ], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:58.770
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:58.774
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "freertos10_xilinx",
+"osver": "1.1",
+}]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:58.868
+!MESSAGE XSCT Command: [::hsi::utils::generate_bsp_sources C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:59.906
+!MESSAGE XSCT command with result: [::hsi::utils::generate_bsp_sources C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:59.938
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:59.941
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:59.942
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:59.946
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "freertos10_xilinx",
+"osver": "1.1",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:59.946
+!MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:59.949
+!MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:59.949
+!MESSAGE XSCT Command: [::hsi::utils::get_sw_libs -json C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:59.953
+!MESSAGE XSCT command with result: [::hsi::utils::get_sw_libs -json C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Result: [null, {}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:59.954
+!MESSAGE XSCT Command: [::hsi::utils::get_drivers_for_sw -json C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:59.958
+!MESSAGE XSCT command with result: [::hsi::utils::get_drivers_for_sw -json C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Result: [null, {"axi_gpio_0": {"name": "gpio",
+"ver": "4.3",
+},
+"axi_timebase_wdt_0": {"name": "wdttb",
+"ver": "4.3",
+},
+"axi_timer_0": {"name": "tmrctr",
+"ver": "4.4",
+},
+"axi_uartlite_0": {"name": "uartlite",
+"ver": "3.2",
+},
+"axi_uartlite_1": {"name": "uartlite",
+"ver": "3.2",
+},
+"mdm_1": {"name": "uartlite",
+"ver": "3.2",
+},
+"microblaze_0_axi_intc": {"name": "intc",
+"ver": "3.7",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.2",
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.2",
+},
+"nexys4IO_0": {"name": "nexys4IO",
+"ver": "1.0",
+},
+"pmod_hb3_axi_custom_0": {"name": "generic",
+"ver": "2.0",
+},
+"microblaze_0": {"name": "cpu",
+"ver": "2.7",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:59.959
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:59.961
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:59.965
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:59.971
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:59.971
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:59.975
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "freertos10_xilinx",
+"osver": "1.1",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:59.990
+!MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:57:59.993
+!MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/system.hdf C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:58:00.029
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 02:58:00.031
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/freertos10_xilinx_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:00.200
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:00.308
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:00.312
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:00.471
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:00.479
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:00.650
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:00.659
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:00.774
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:01.215
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:01.220
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:01.382
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:01.387
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:01.555
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:01.559
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:01.730
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:01.735
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:01.891
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:01.898
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:02.048
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:02.053
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:02.230
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:02.235
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:02.344
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:06.139
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:06.260
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:06.266
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:06.371
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:07.329
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:07.334
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:07.713
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:13.223
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:13.225
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:13.225
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:13.226
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:13.226
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:13.226
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:13.227
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:13.227
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:13.227
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:13.228
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:13.228
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:13.228
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:45.866
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:56.280
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:56.562
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:56.567
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:58:56.693
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:01.831
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:01.835
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:01.954
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:07.442
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:07.448
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:07.578
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:09.583
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:09.588
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:09.703
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:16.507
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:16.512
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:16.641
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:22.640
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:22.647
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:22.797
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:23.646
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:23.647
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:23.647
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:23.648
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:23.648
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:23.649
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:23.650
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:23.650
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:23.650
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:23.651
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:23.652
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:23.652
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:26.444
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:26.471
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.closeConsoleOutputStream(ConsoleOutputSniffer.java:160)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.close(ConsoleOutputSniffer.java:68)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.close(ProcessClosure.java:98)
+	at org.eclipse.cdt.internal.core.ProcessClosure.isAlive(ProcessClosure.java:193)
+	at org.eclipse.cdt.core.CommandLauncher.waitAndRead(CommandLauncher.java:259)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:273)
+	at org.eclipse.cdt.make.core.MakeBuilder.invokeMake(MakeBuilder.java:219)
+	at org.eclipse.cdt.make.core.MakeBuilder.build(MakeBuilder.java:108)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:27.259
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:27.412
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:27.418
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:27.612
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:27.618
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:27.799
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:27.805
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:27.967
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:28.556
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:28.562
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:28.750
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:28.756
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:28.962
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:28.972
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:29.178
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:29.185
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:29.372
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:29.378
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:29.579
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:29.587
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:29.795
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:29.801
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:29.939
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:34.852
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:34.858
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:34.981
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:36.121
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:36.130
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:36.573
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:42.297
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:42.298
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:42.299
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:42.299
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:42.299
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:42.300
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:42.300
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:42.300
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:42.301
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:42.301
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:42.301
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 02:59:42.302
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 03:00:20.014
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 03:00:31.432
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 03:00:31.449
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 03:00:31.570
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 03:00:38.570
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 03:00:38.576
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 03:00:38.703
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 03:00:44.099
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 03:00:44.105
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 03:00:44.231
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 03:00:46.298
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 03:00:46.304
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 03:00:46.423
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 03:00:53.451
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 03:00:53.459
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 03:00:53.594
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 03:00:59.988
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 03:00:59.993
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 03:01:00.126
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 03:01:00.976
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 03:01:00.976
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 03:01:00.976
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 03:01:00.978
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 03:01:00.978
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 03:01:00.979
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 03:01:00.980
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 03:01:00.980
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 03:01:00.981
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 03:01:00.981
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 03:01:00.981
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 03:01:00.982
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 03:01:03.926
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-06-01 03:01:03.980
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.closeConsoleOutputStream(ConsoleOutputSniffer.java:160)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.close(ConsoleOutputSniffer.java:68)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.close(ProcessClosure.java:98)
+	at org.eclipse.cdt.internal.core.ProcessClosure.isAlive(ProcessClosure.java:193)
+	at org.eclipse.cdt.core.CommandLauncher.waitAndRead(CommandLauncher.java:259)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:273)
+	at org.eclipse.cdt.make.core.MakeBuilder.invokeMake(MakeBuilder.java:219)
+	at org.eclipse.cdt.make.core.MakeBuilder.build(MakeBuilder.java:108)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:15.174
+!MESSAGE XSCT Command: [disconnect tcfchan#5], Thread: Thread-863
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:15.193
+!MESSAGE XSCT command with result: [disconnect tcfchan#5], Result: [null, ]. Thread: Thread-863
+
+!ENTRY org.eclipse.core.jobs 4 2 2020-06-01 03:01:15.213
+!MESSAGE An internal error occurred during: "GDB process monitor job.".
+!STACK 0
+java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@2e6b4c8f rejected from org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor@686cadcf[Shutting down, pool size = 1, active threads = 0, queued tasks = 1, completed tasks = 1372]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2047)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:823)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.delayedExecute(ScheduledThreadPoolExecutor.java:326)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.schedule(ScheduledThreadPoolExecutor.java:533)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.schedule(DefaultDsfExecutor.java:438)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.submit(ScheduledThreadPoolExecutor.java:632)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.submit(DefaultDsfExecutor.java:470)
+	at org.eclipse.cdt.dsf.gdb.service.GDBBackend$MonitorJob.run(GDBBackend.java:829)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:16.178
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:16.199
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#6]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:16.199
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:16.209
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:16.209
+!MESSAGE XSCT Command: [version -server], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:16.211
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2018.2]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:16.211
+!MESSAGE XSCT Command: [version], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:16.212
+!MESSAGE XSCT command with result: [version], Result: [null, 2018.2]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:16.212
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:16.218
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:16.218
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:16.234
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:16.234
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:16.239
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:16.240
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:16.255
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:16.255
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:16.261
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:16.261
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:16.277
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:16.277
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:16.283
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:16.283
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:16.302
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:16.302
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level == 0}], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:16.318
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level == 0}], Result: [null, ]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:16.319
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:16.320
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:16.334
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:16.340
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:16.340
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:16.356
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:16.356
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==0} -index 0], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:16.380
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==0} -index 0], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:16.380
+!MESSAGE XSCT Command: [fpga -file C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/download.bit], Thread: ModalContext
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2020-06-01 03:01:17.170
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.internal.ui.actions.DsfTerminateCommand$3$1@34738768): Status OK: unknown code=0 OK null' resulted in a rejected execution exception.
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:17.667
+!MESSAGE XSCT command with result: [fpga -file C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/download.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:17.691
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:17.693
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:17.694
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:17.725
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Result: [null, ]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:17.726
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:17.831
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:17.832
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-41
+
+!ENTRY org.eclipse.debug.core 4 125 2020-06-01 03:01:19.354
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Pipe broken
+	at java.io.PipedInputStream.read(PipedInputStream.java:321)
+	at java.io.PipedInputStream.read(PipedInputStream.java:377)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:147)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.access$1(OutputStreamMonitor.java:137)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor$1.run(OutputStreamMonitor.java:212)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.debug.core 4 125 2020-06-01 03:01:19.569
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Pipe broken
+	at java.io.PipedInputStream.read(PipedInputStream.java:321)
+	at java.io.PipedInputStream.read(PipedInputStream.java:377)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:147)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.access$1(OutputStreamMonitor.java:137)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor$1.run(OutputStreamMonitor.java:212)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:20.834
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:20.835
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:20.872
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Result: [null, ]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:20.873
+!MESSAGE XSCT Command: [dow C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/vivado_finalproject/Debug/vivado_finalproject.elf], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:01:21.094
+!MESSAGE XSCT command with result: [dow C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/vivado_finalproject/Debug/vivado_finalproject.elf], Result: [null, ]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:16.799
+!MESSAGE XSCT Command: [disconnect tcfchan#6], Thread: Thread-914
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:16.823
+!MESSAGE XSCT command with result: [disconnect tcfchan#6], Result: [null, ]. Thread: Thread-914
+
+!ENTRY org.eclipse.core.jobs 4 2 2020-06-01 03:02:16.832
+!MESSAGE An internal error occurred during: "GDB process monitor job.".
+!STACK 0
+java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@6e75c5c4 rejected from org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor@24c92fa0[Shutting down, pool size = 1, active threads = 0, queued tasks = 1, completed tasks = 3686]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2047)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:823)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.delayedExecute(ScheduledThreadPoolExecutor.java:326)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.schedule(ScheduledThreadPoolExecutor.java:533)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.schedule(DefaultDsfExecutor.java:438)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.submit(ScheduledThreadPoolExecutor.java:632)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.submit(DefaultDsfExecutor.java:470)
+	at org.eclipse.cdt.dsf.gdb.service.GDBBackend$MonitorJob.run(GDBBackend.java:829)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:17.805
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-56
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:17.823
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#7]. Thread: Worker-56
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:17.823
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-56
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:17.833
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-56
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:17.833
+!MESSAGE XSCT Command: [version -server], Thread: Worker-56
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:17.835
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2018.2]. Thread: Worker-56
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:17.835
+!MESSAGE XSCT Command: [version], Thread: Worker-56
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:17.836
+!MESSAGE XSCT command with result: [version], Result: [null, 2018.2]. Thread: Worker-56
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:17.836
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-56
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:17.842
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-56
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:17.842
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-56
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:17.858
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-56
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:17.859
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-56
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:17.865
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-56
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:17.865
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-56
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:17.881
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-56
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:17.882
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-56
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:17.889
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-56
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:17.889
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-56
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:17.906
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-56
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:17.906
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-56
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:17.912
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-56
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:17.912
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-56
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:17.928
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-56
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:17.928
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level == 0}], Thread: Worker-56
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:17.944
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level == 0}], Result: [null, ]. Thread: Worker-56
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:17.944
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-56
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:17.945
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-56
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:17.958
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:17.964
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:17.964
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:17.980
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:17.981
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==0} -index 0], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:18.005
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==0} -index 0], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:18.005
+!MESSAGE XSCT Command: [fpga -file C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/download.bit], Thread: ModalContext
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2020-06-01 03:02:18.797
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.internal.ui.actions.DsfTerminateCommand$3$1@1ec5819d): Status OK: unknown code=0 OK null' resulted in a rejected execution exception.
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:19.286
+!MESSAGE XSCT command with result: [fpga -file C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/nexysA7fpga_hw_platform_0/download.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:19.309
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-56
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:19.311
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-56
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:19.312
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Thread: Worker-56
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:19.340
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Result: [null, ]. Thread: Worker-56
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:19.341
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-56
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:19.445
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-56
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:19.446
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-56
+
+!ENTRY org.eclipse.debug.core 4 125 2020-06-01 03:02:21.529
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Pipe broken
+	at java.io.PipedInputStream.read(PipedInputStream.java:321)
+	at java.io.PipedInputStream.read(PipedInputStream.java:377)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:147)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.access$1(OutputStreamMonitor.java:137)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor$1.run(OutputStreamMonitor.java:212)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.debug.core 4 125 2020-06-01 03:02:21.700
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Pipe broken
+	at java.io.PipedInputStream.read(PipedInputStream.java:321)
+	at java.io.PipedInputStream.read(PipedInputStream.java:377)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:147)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.access$1(OutputStreamMonitor.java:137)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor$1.run(OutputStreamMonitor.java:212)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:22.449
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-56
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:22.450
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Thread: Worker-56
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:22.491
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Result: [null, ]. Thread: Worker-56
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:22.492
+!MESSAGE XSCT Command: [dow C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/vivado_finalproject/Debug/vivado_finalproject.elf], Thread: Worker-56
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-01 03:02:22.738
+!MESSAGE XSCT command with result: [dow C:/Users/ME/Vivado_Projects/vivado_finalproject/vivado_finalproject.sdk/vivado_finalproject/Debug/vivado_finalproject.elf], Result: [null, ]. Thread: Worker-56
+
+!ENTRY org.eclipse.ui 4 4 2020-06-01 03:02:24.132
+!MESSAGE An internal error has occurred.
+!STACK 0
+java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@c000109 rejected from org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor@24c92fa0[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 3687]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2047)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:823)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.delayedExecute(ScheduledThreadPoolExecutor.java:326)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.schedule(ScheduledThreadPoolExecutor.java:533)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.schedule(DefaultDsfExecutor.java:438)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.execute(ScheduledThreadPoolExecutor.java:622)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.execute(DefaultDsfExecutor.java:462)
+	at org.eclipse.cdt.dsf.debug.internal.ui.CSourceNotFoundDescriptionFactory$1.getDescription(CSourceNotFoundDescriptionFactory.java:72)
+	at org.eclipse.cdt.debug.internal.core.sourcelookup.CSourceNotFoundElement.getDescription(CSourceNotFoundElement.java:55)
+	at org.eclipse.cdt.debug.internal.ui.sourcelookup.CSourceNotFoundEditorInput.getName(CSourceNotFoundEditorInput.java:26)
+	at org.eclipse.cdt.debug.internal.ui.sourcelookup.CSourceNotFoundEditorInput.equals(CSourceNotFoundEditorInput.java:37)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob$3.run(DsfSourceDisplayAdapter.java:405)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob.openEditor(DsfSourceDisplayAdapter.java:415)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob.openEditor(DsfSourceDisplayAdapter.java:384)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob.runInUIThread(DsfSourceDisplayAdapter.java:320)
+	at org.eclipse.ui.progress.UIJob$1.run(UIJob.java:97)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:182)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4203)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3819)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:687)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:604)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
