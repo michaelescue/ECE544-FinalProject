@@ -57,6 +57,9 @@
 // #define DEBUG_NO_ESP32_UART_ISR
 #define DEBUG_ESP32_STDIN   // Used to poll GPIO 0 for commands from stdin and pass them to esp32.
 
+/*  Rx Task */
+#define DEBUG_RX_TASK
+
 /*******************************************************************/
 /* Prototypes    */
 /*******************************************************************/
@@ -69,19 +72,16 @@ int SetupInterruptSystem(XUartLite *UartLitePtr, u32 InterruptID);
 void prvSetupHardware( void );  // Top Level
 void init_wdt(void); // WDT initialization 
 void init_uart(XUartLite *UartLite, u16 DeviceId);
-void init_intc(void);
+
 
 /* ISR Routines    */
 static void isr_wdt(void *pvUnused); // WDT Interrupt Handler 
-static void uart1_rx_handler(void *CallBackRef, unsigned int ByteCount);
+static XUartLite_Handler uart1_rx_handler(void *CallBackRef, unsigned int ByteCount);
 
 /* Tasks    */
 void task_master(void *p); // Master Task
 void rx_task(void *p); // UART1 rx_task/
 
-/* Other Functions  */
-void esp32recv(void);
-void esp32send(const char *text);
 
 
 

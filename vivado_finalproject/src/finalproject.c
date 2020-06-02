@@ -28,6 +28,7 @@
 #include "nexys4IO.h"
 #include "xintc.h"
 #include "xuartlite.h"
+#include "PmodESP32.h"
 
 /*  Function Prototypes Includes    */
 #include "finalproject.h"
@@ -36,7 +37,6 @@
 /*******************************************************************/
 
 /* Queues   */
-QueueHandle_t queue_rx;
 
 /* Semaphores   */
 
@@ -50,6 +50,7 @@ static bool  master_health_check = TRUE; // Initial health of Master is TRUE.
 
 /* UART Buffers  */
 static u8 buf_uart[BUF_LEN] = {0};   // Initialize buffer
+static u8 buf_esp[BUF_LEN] = {0};   // Initialize buffer
 static u32 length = 0;   // Number of bytes to read/write.
 
 /* Return Checks    */
@@ -67,7 +68,12 @@ XIntc inst_intc;
 
 /* UART    */
 XUartLite inst_uart0;
-XUartLite inst_uart1;
+
+/* ESP32    */
+PmodESP32 inst_esp;
+
+/*  Task Handles    */
+/*******************************************************************/
 
 /*  ISRs     */
 /*******************************************************************/
@@ -75,7 +81,6 @@ XUartLite inst_uart1;
 /* WDT Interrupt Handler    */
 static void isr_wdt(void *pvUnused)
 {
-
 
 	/*	Debug Exceptions	*/
 	#ifdef DEBUG_NO_MASTER
@@ -104,14 +109,7 @@ static void isr_wdt(void *pvUnused)
 	#ifdef DEBUG_WDT_TICK
         print(" (W) \r\n");
         #endif
-}
 
-static void uart1_rx_handler(void *CallBackRef, unsigned int ByteCount)
-{
-    XUartLite_Recv(&inst_uart1, buf_uart, ByteCount);
-    length = ByteCount;
-    xQueueSendFromISR(queue_rx, buf_uart, pdFALSE); // Sent to unblock rx_task.
-    portYIELD_FROM_ISR(pdFALSE);
 }
 
 /*  Main Program    */
@@ -127,7 +125,6 @@ int main(void)
     prvSetupHardware();
 
     /*  Initialize O/S Concurrency Mechanisms   */
-    queue_rx = xQueueCreate(1, sizeof(buf_uart));
 
     /* Create Master Task   */
 	#ifndef DEBUG_NO_MASTER
@@ -154,6 +151,7 @@ int main(void)
 void task_master(void *p)
 {
     /* Variables    */
+    int count = 0;
     
 	/* Create the queue */
 
@@ -163,48 +161,70 @@ void task_master(void *p)
 
     // Register WDT isr handler
     #ifndef DEBUG_NO_WDT    
-        register_interrupt_handler( XPAR_MICROBLAZE_0_AXI_INTC_AXI_TIMEBASE_WDT_0_WDT_INTERRUPT_INTR,
+
+    register_interrupt_handler( XPAR_MICROBLAZE_0_AXI_INTC_AXI_TIMEBASE_WDT_0_WDT_INTERRUPT_INTR,
                                     isr_wdt,
                                     NULL,
                                     "WDT");
-                                    #endif
-    
-    // Register UART handlers
 
-	xStatus  = SetupInterruptSystem(&inst_uart1, XPAR_INTC_0_UARTLITE_1_VEC_ID);
-	if (xStatus != XST_SUCCESS) {
-		return XST_FAILURE;
-	}
-
-	XUartLite_SetRecvHandler(&inst_uart1, uart1_rx_handler, NULL);
-    
-    /* Create & Start Threads	*/
-
-    /* Create Master Task   */
-	#ifndef DEBUG_NO_RECEIVE
-	xTaskCreate(    rx_task,
-                    "RX",
-                    2048,
-                    NULL,
-                    3,
-                    NULL );
-	#endif
-
-    /*  Enable Interrupts   */
-	XUartLite_EnableInterrupt(&inst_uart1);
-
+    #endif
 
 	/* Enable WDT	*/
-	#ifndef DEBUG_NO_WDT
-        XWdtTb_Start(&inst_wdt);
-        #endif
+    #ifndef DEBUG_NO_WDT
 
-	#ifdef DEBUG_MASTER
-        print("MASTER THREAD:\tEntering While Loop\r\n");
-        #endif
+    XWdtTb_Start(&inst_wdt);
+
+    #endif
+
+    #ifdef DEBUG_MASTER
+
+    print("MASTER THREAD:\tEntering While Loop\r\n");
+
+    #endif
+
+    u8 * cp;
 
    	/*	Quiescent operations	*/
 	for( ; ; ){
+
+        memset(buf_uart, 0, sizeof(buf_uart));
+        memset(buf_esp, 0, sizeof(buf_esp));
+        count = 0;
+
+        cp = buf_uart;
+
+        while( ( ESP32_Recv(&inst_esp, cp, 1) ) != 0){
+            if(cp == buf_uart) print("FromESP:");
+        	xil_printf("%c", *cp);
+            cp++;
+        }
+
+        cp = buf_esp;
+
+         while( ( XUartLite_Recv(&inst_uart0, cp, 1) ) != 0){
+                if(cp == buf_esp) 
+                {
+                    print("FromTERM:");
+                    vTaskDelay(1);
+                }
+                xil_printf("%c", *cp);
+                if(*cp == '\r')
+                {
+                    cp++;
+                    *cp = '\n';
+                    do{
+                        count += ESP32_Send(&inst_esp, buf_esp, (cp - buf_esp + 1));
+                    }while(count != (cp - buf_esp + 1));
+                }
+                else
+                {
+                    cp++;
+                }
+                
+
+         }
+
+
 
 		/*	Set Health check	*/
 		master_health_check = TRUE;
@@ -212,48 +232,58 @@ void task_master(void *p)
 	}
 
     #ifdef DEBUG_MASTER
+
         print("MASTER THREAD:\tExited While Loop!!!\r\n");
-        #endif
+
+    #endif
 }
 
-void rx_task(void *p)
-{
-    xQueueReceive(queue_rx, buf_uart, portMAX_DELAY); // Block until received from ISR.
-    print("ESP32: ");
-    for(int i = 0; i < length; i++)
-        xil_printf("%c", buf_uart[i]);
-    
-}
 
-/* Initialization Routines    */
+/* Initialization Routines    */    
 /*******************************************************************/
 
 /*  Top Level Hardware Routine  */
 void prvSetupHardware( void )
 {
 
-	#ifdef DEBUG_MAIN
-	    print("SETUP HARDWARE:\tStarting.\r\n");
-	    #endif
+    #ifdef DEBUG_MAIN
+
+        print("SETUP HARDWARE:\tStarting.\r\n");
+
+    #endif
 
     #ifndef DEBUG_NO_WDT
-        init_wdt(); // Initialize WDT.
+        // Initialize WDT.
+        init_wdt(); 
         if(xStatus != XST_SUCCESS) print("WDT:\tInitialization Failed.\r\n");
-        #endif
+
+    #endif
 
     #ifndef DEBUG_NO_UART0
+        // UART0 Init.
         init_uart(&inst_uart0, XPAR_AXI_UARTLITE_0_DEVICE_ID);
         if(xStatus != XST_SUCCESS) print("UART0:\tInitialization Failed.\r\n");
-        #endif
 
-    #ifndef DEBUG_NO_UART1
-        init_uart(&inst_uart1, XPAR_AXI_UARTLITE_1_DEVICE_ID);
-        if(xStatus != XST_SUCCESS) print("UART1:\tInitialization Failed.\r\n");
-        #endif
+    #endif
 
-	#ifdef DEBUG_MAIN
-	    print("SETUP HARDWARE:\tDone.\r\n");
-	    #endif
+    #ifndef DEBUG_NO_ESP
+        // ESP32 Init.
+        xStatus = ESP32_Initialize(&inst_esp, 
+            XPAR_PMODESP32_0_AXI_LITE_UART_BASEADDR,   
+            XPAR_PMODESP32_0_AXI_LITE_GPIO_BASEADDR);
+        if(xStatus != XST_SUCCESS) print("ESP32:\tInitialization Failed.\r\n");
+
+        
+
+    #endif
+
+
+
+    #ifdef DEBUG_MAIN
+
+    print("SETUP HARDWARE:\tDone.\r\n");
+
+    #endif
 
 }
 
@@ -363,64 +393,4 @@ void register_interrupt_handler(uint8_t ucInterruptID, XInterruptHandler pxHandl
 	#ifdef DEBUG_ISR_REGISTRATION
 		xil_printf("ISR REGISTRATION:\t%s Assertion Passed.\r\n", name);
         #endif
-}
-
-int SetupInterruptSystem(XUartLite *UartLitePtr, u32 InterruptID)
-{
-
-	/*
-	 * Initialize the interrupt controller driver so that it is ready to
-	 * use.
-	 */
-	xStatus = XIntc_Initialize(&inst_intc, XPAR_INTC_0_DEVICE_ID);
-	if (xStatus != XST_SUCCESS) {
-		return XST_FAILURE;
-	}
-
-
-	/*
-	 * Connect a device driver handler that will be called when an interrupt
-	 * for the device occurs, the device driver handler performs the
-	 * specific interrupt processing for the device.
-	 */
-	xStatus = XIntc_Connect(&inst_intc, InterruptID,
-			   (XInterruptHandler)XUartLite_InterruptHandler,
-			   (void *)UartLitePtr);
-	if (xStatus != XST_SUCCESS) {
-		return XST_FAILURE;
-	}
-
-	/*
-	 * Start the interrupt controller such that interrupts are enabled for
-	 * all devices that cause interrupts, specific real mode so that
-	 * the UartLite can cause interrupts through the interrupt controller.
-	 */
-	xStatus = XIntc_Start(&inst_intc, XIN_REAL_MODE);
-	if (xStatus != XST_SUCCESS) {
-		return XST_FAILURE;
-	}
-
-	/*
-	 * Enable the interrupt for the UartLite device.
-	 */
-	XIntc_Enable(&inst_intc, InterruptID);
-
-	/*
-	 * Initialize the exception table.
-	 */
-	Xil_ExceptionInit();
-
-	/*
-	 * Register the interrupt controller handler with the exception table.
-	 */
-	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
-			 (Xil_ExceptionHandler)XIntc_InterruptHandler,
-			 &inst_intc);
-
-	/*
-	 * Enable exceptions.
-	 */
-	Xil_ExceptionEnable();
-
-	return XST_SUCCESS;
 }

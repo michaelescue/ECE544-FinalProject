@@ -37,6 +37,9 @@ src/finalproject.o src/finalproject.o: ../src/finalproject.c \
  ../../freertos10_xilinx_bsp_0/microblaze_0/include/xintc.h \
  ../../freertos10_xilinx_bsp_0/microblaze_0/include/xintc_l.h \
  ../../freertos10_xilinx_bsp_0/microblaze_0/include/xuartlite.h \
+ ../../freertos10_xilinx_bsp_0/microblaze_0/include/PmodESP32.h \
+ ../../freertos10_xilinx_bsp_0/microblaze_0/include/xuartlite.h \
+ ../../freertos10_xilinx_bsp_0/microblaze_0/include/xgpio.h \
  ../src/finalproject.h
 
 ../../freertos10_xilinx_bsp_0/microblaze_0/include/FreeRTOS.h:
@@ -114,5 +117,11 @@ src/finalproject.o src/finalproject.o: ../src/finalproject.c \
 ../../freertos10_xilinx_bsp_0/microblaze_0/include/xintc_l.h:
 
 ../../freertos10_xilinx_bsp_0/microblaze_0/include/xuartlite.h:
+
+../../freertos10_xilinx_bsp_0/microblaze_0/include/PmodESP32.h:
+
+../../freertos10_xilinx_bsp_0/microblaze_0/include/xuartlite.h:
+
+../../freertos10_xilinx_bsp_0/microblaze_0/include/xgpio.h:
 
 ../src/finalproject.h:
