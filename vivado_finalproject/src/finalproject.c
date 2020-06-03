@@ -201,28 +201,30 @@ void task_master(void *p)
 
         cp = buf_esp;
 
-         while( ( XUartLite_Recv(&inst_uart0, cp, 1) ) != 0){
+         while( ( count = XUartLite_Recv(&inst_uart0, cp, 1) ) != 0){
                 if(cp == buf_esp) 
                 {
                     print("FromTERM:");
-                    vTaskDelay(1);
+                    vTaskDelay(5);
                 }
-                xil_printf("%c", *cp);
                 if(*cp == '\r')
                 {
                     cp++;
                     *cp = '\n';
-                    do{
-                        count += ESP32_Send(&inst_esp, buf_esp, (cp - buf_esp + 1));
-                    }while(count != (cp - buf_esp + 1));
+                    cp++;
+                    xil_printf("%c", *cp);
+
                 }
                 else
                 {
-                    cp++;
-                }
-                
-
+                    cp+= count;
+                }     
          }
+
+        count = 0;
+        while(count != (cp - buf_esp)){
+            count += ESP32_Send(&inst_esp, buf_esp, (cp - buf_esp));
+        }
 
 
 
