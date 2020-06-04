@@ -275,8 +275,6 @@ void prvSetupHardware( void )
             XPAR_PMODESP32_0_AXI_LITE_GPIO_BASEADDR);
         if(xStatus != XST_SUCCESS) print("ESP32:\tInitialization Failed.\r\n");
 
-        
-
     #endif
 
 
