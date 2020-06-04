@@ -56,9 +56,14 @@
 #define DEBUG_ESP32_UART_ISR
 // #define DEBUG_NO_ESP32_UART_ISR
 #define DEBUG_ESP32_STDIN   // Used to poll GPIO 0 for commands from stdin and pass them to esp32.
+#define ESP32_STATUS_REG  XPAR_PMODESP32_0_AXI_LITE_UART_BASEADDR & 0x8
+#define MASK_RX_VALID_DATA 0x1
+#define MASK_TX_FULL 0x8
+#define MASK_TX_EMPTY 0x4
 
 /*  Rx Task */
 #define DEBUG_RX_TASK
+
 
 /*******************************************************************/
 /* Prototypes    */
@@ -76,14 +81,14 @@ void init_uart(XUartLite *UartLite, u16 DeviceId);
 
 /* ISR Routines    */
 static void isr_wdt(void *pvUnused); // WDT Interrupt Handler 
-static XUartLite_Handler uart1_rx_handler(void *CallBackRef, unsigned int ByteCount);
+static void rx_uart(void *pvUnused);
+static void tx_uart(void *pvUnused);
 
 /* Tasks    */
 void task_master(void *p); // Master Task
 void rx_task(void *p); // UART1 rx_task/
 
-
-
+/* Esp32 */
 
 
 #endif

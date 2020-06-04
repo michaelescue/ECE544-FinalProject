@@ -39,6 +39,7 @@
 /* Queues   */
 
 /* Semaphores   */
+xSemaphoreHandle binarysemaphore;
 
 /* Mutexes  */
 
@@ -49,12 +50,23 @@
 static bool  master_health_check = TRUE; // Initial health of Master is TRUE.
 
 /* UART Buffers  */
-static u8 buf_uart[BUF_LEN] = {0};   // Initialize buffer
-static u8 buf_esp[BUF_LEN] = {0};   // Initialize buffer
+static u8 rx_buf[BUF_LEN] = {0};   // Initialize buffer
+static u32 *txp = NULL;
+static u8 tx_buf[BUF_LEN] = {0};   // Initialize buffer
+static u8 message0[BUF_LEN]= "AT\r\n";
+static u8 message1[BUF_LEN] = "AT+CWMODE=1\r\n";
+static u8 message2[BUF_LEN] = "AT+CWJAP=\"freecandy\",\"!1Chester\"\r\n";
+static u8 message3[BUF_LEN] = "AT+CWJAP?\r\n";
 static u32 length = 0;   // Number of bytes to read/write.
+static bool message_ready = FALSE;
+static u32 send_count = 0;
 
 /* Return Checks    */
 static BaseType_t xStatus;
+
+/* Read Send Flags  */
+static bool rx_valid = FALSE;
+static bool tx_empty = FALSE;
 
 
 /*  Device Instances    */
@@ -112,6 +124,22 @@ static void isr_wdt(void *pvUnused)
 
 }
 
+static void tx_uart(void *pvUnused)
+{
+    tx_empty = Xil_In32(ESP32_STATUS_REG & MASK_TX_EMPTY);
+    if(tx_empty)
+        xSemaphoreGiveFromISR(binarysemaphore, pdFALSE);
+
+
+}
+
+static void rx_uart(void *pvUnused)
+{
+        while(XUartLite_Recv(&inst_esp.ESP32_Uart, rx_buf, 1) != 0);
+        xil_printf("%s", rx_buf);
+
+}
+
 /*  Main Program    */
 /*******************************************************************/
 
@@ -122,9 +150,11 @@ int main(void)
     /*  Handle WDT reset    */
 
     /* Initialize Hardware  */
-    prvSetupHardware();
+
+	prvSetupHardware();
 
     /*  Initialize O/S Concurrency Mechanisms   */
+    binarysemaphore = xSemaphoreCreateBinary();
 
     /* Create Master Task   */
 	#ifndef DEBUG_NO_MASTER
@@ -169,6 +199,49 @@ void task_master(void *p)
 
     #endif
 
+    register_interrupt_handler(XPAR_MICROBLAZE_0_AXI_INTC_PMODESP32_0_UART_INTERRUPT_INTR,
+                                XUartLite_InterruptHandler, &inst_esp.ESP32_Uart, "UART");
+
+    XUartLite_SetRecvHandler(&inst_esp.ESP32_Uart, rx_uart, NULL);
+    XUartLite_SetSendHandler(&inst_esp.ESP32_Uart, tx_uart, NULL);
+
+    XUartLite_EnableInterrupt(&inst_esp.ESP32_Uart);
+
+    /* Initialize ESP32 */
+    strncpy(tx_buf, message0, sizeof(tx_buf));
+
+    length = strlen(message0);
+
+    XUartLite_Send(&inst_esp.ESP32_Uart, message0, length);
+
+    xSemaphoreTake(binarysemaphore, portMAX_DELAY); // Block until relased by isr.
+
+    strncpy(tx_buf, message1, sizeof(tx_buf));
+
+    length = strlen(message1);
+
+    XUartLite_Send(&inst_esp.ESP32_Uart, message1, length);
+
+    xSemaphoreTake(binarysemaphore, portMAX_DELAY); // Block until relased by isr.
+
+    strncpy(tx_buf, message2, sizeof(tx_buf));
+
+    length = strlen(message2);
+
+    XUartLite_Send(&inst_esp.ESP32_Uart, message2, length);
+
+    xSemaphoreTake(binarysemaphore, portMAX_DELAY); // Block until relased by isr.
+
+    strncpy(tx_buf, message3, sizeof(tx_buf));
+
+    length = strlen(message3);
+
+    XUartLite_Send(&inst_esp.ESP32_Uart, message3, length);
+
+    xSemaphoreTake(binarysemaphore, portMAX_DELAY); // Block until relased by isr.
+
+    print("Tx FIFO emptied\r\n");
+
 	/* Enable WDT	*/
     #ifndef DEBUG_NO_WDT
 
@@ -186,47 +259,6 @@ void task_master(void *p)
 
    	/*	Quiescent operations	*/
 	for( ; ; ){
-
-        memset(buf_uart, 0, sizeof(buf_uart));
-        memset(buf_esp, 0, sizeof(buf_esp));
-        count = 0;
-
-        cp = buf_uart;
-
-        while( ( ESP32_Recv(&inst_esp, cp, 1) ) != 0){
-            if(cp == buf_uart) print("FromESP:");
-        	xil_printf("%c", *cp);
-            cp++;
-        }
-
-        cp = buf_esp;
-
-         while( ( count = XUartLite_Recv(&inst_uart0, cp, 1) ) != 0){
-                if(cp == buf_esp) 
-                {
-                    print("FromTERM:");
-                    vTaskDelay(5);
-                }
-                if(*cp == '\r')
-                {
-                    cp++;
-                    *cp = '\n';
-                    cp++;
-                    xil_printf("%c", *cp);
-
-                }
-                else
-                {
-                    cp+= count;
-                }     
-         }
-
-        count = 0;
-        while(count != (cp - buf_esp)){
-            count += ESP32_Send(&inst_esp, buf_esp, (cp - buf_esp));
-        }
-
-
 
 		/*	Set Health check	*/
 		master_health_check = TRUE;
@@ -394,3 +426,6 @@ void register_interrupt_handler(uint8_t ucInterruptID, XInterruptHandler pxHandl
 		xil_printf("ISR REGISTRATION:\t%s Assertion Passed.\r\n", name);
         #endif
 }
+
+/* Everything Else    */
+/*******************************************************************/
