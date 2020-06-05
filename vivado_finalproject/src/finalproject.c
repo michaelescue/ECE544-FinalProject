@@ -186,7 +186,7 @@ void task_master(void *p)
 
 	/* Register Interrupt handlers	*/
 
-    // Register WDT isr handler
+    // Register WDT isr handler.
     #ifndef DEBUG_NO_WDT    
 
     register_interrupt_handler( XPAR_MICROBLAZE_0_AXI_INTC_AXI_TIMEBASE_WDT_0_WDT_INTERRUPT_INTR,
