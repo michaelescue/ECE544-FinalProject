@@ -51,15 +51,12 @@ static bool  master_health_check = TRUE; // Initial health of Master is TRUE.
 
 /* UART Buffers  */
 static u8 rx_buf[BUF_LEN] = {0};   // Initialize buffer
-static u32 *txp = NULL;
 static u8 tx_buf[BUF_LEN] = {0};   // Initialize buffer
 static u8 message0[BUF_LEN]= "AT\r\n";
 static u8 message1[BUF_LEN] = "AT+CWMODE=1\r\n";
-static u8 message2[BUF_LEN] = "AT+CWJAP=\"freecandy\",\"!1Chester\"\r\n";
+static u8 message2[BUF_LEN] = WIFI_LOGIN_INFO;
 static u8 message3[BUF_LEN] = "AT+CWJAP?\r\n";
 static u32 length = 0;   // Number of bytes to read/write.
-static bool message_ready = FALSE;
-static u32 send_count = 0;
 
 /* Return Checks    */
 static BaseType_t xStatus;
@@ -124,7 +121,7 @@ static void isr_wdt(void *pvUnused)
 
 }
 
-static void tx_uart(void *pvUnused)
+static void tx_uart1(void *pvUnused)
 {
     tx_empty = Xil_In32(ESP32_STATUS_REG & MASK_TX_EMPTY);
     if(tx_empty)
@@ -133,7 +130,7 @@ static void tx_uart(void *pvUnused)
 
 }
 
-static void rx_uart(void *pvUnused)
+static void rx_uart1(void *pvUnused)
 {
         while(XUartLite_Recv(&inst_esp.ESP32_Uart, rx_buf, 1) != 0);
         xil_printf("%s", rx_buf);
@@ -199,46 +196,15 @@ void task_master(void *p)
 
     #endif
 
+    // Register ESP UART handlers
     register_interrupt_handler(XPAR_MICROBLAZE_0_AXI_INTC_PMODESP32_0_UART_INTERRUPT_INTR,
-                                XUartLite_InterruptHandler, &inst_esp.ESP32_Uart, "UART");
-
-    XUartLite_SetRecvHandler(&inst_esp.ESP32_Uart, rx_uart, NULL);
-    XUartLite_SetSendHandler(&inst_esp.ESP32_Uart, tx_uart, NULL);
-
+                                XUartLite_InterruptHandler, &inst_esp.ESP32_Uart, "UARTESP");
+    XUartLite_SetRecvHandler(&inst_esp.ESP32_Uart, rx_uart1, NULL);
+    XUartLite_SetSendHandler(&inst_esp.ESP32_Uart, tx_uart1, NULL);
     XUartLite_EnableInterrupt(&inst_esp.ESP32_Uart);
 
     /* Initialize ESP32 */
-    strncpy(tx_buf, message0, sizeof(tx_buf));
-
-    length = strlen(message0);
-
-    XUartLite_Send(&inst_esp.ESP32_Uart, message0, length);
-
-    xSemaphoreTake(binarysemaphore, portMAX_DELAY); // Block until relased by isr.
-
-    strncpy(tx_buf, message1, sizeof(tx_buf));
-
-    length = strlen(message1);
-
-    XUartLite_Send(&inst_esp.ESP32_Uart, message1, length);
-
-    xSemaphoreTake(binarysemaphore, portMAX_DELAY); // Block until relased by isr.
-
-    strncpy(tx_buf, message2, sizeof(tx_buf));
-
-    length = strlen(message2);
-
-    XUartLite_Send(&inst_esp.ESP32_Uart, message2, length);
-
-    xSemaphoreTake(binarysemaphore, portMAX_DELAY); // Block until relased by isr.
-
-    strncpy(tx_buf, message3, sizeof(tx_buf));
-
-    length = strlen(message3);
-
-    XUartLite_Send(&inst_esp.ESP32_Uart, message3, length);
-
-    xSemaphoreTake(binarysemaphore, portMAX_DELAY); // Block until relased by isr.
+    connect_to_wifi();
 
     print("Tx FIFO emptied\r\n");
 
@@ -251,11 +217,9 @@ void task_master(void *p)
 
     #ifdef DEBUG_MASTER
 
-    print("MASTER THREAD:\tEntering While Loop\r\n");
+        print("MASTER THREAD:\tEntering While Loop\r\n");
 
     #endif
-
-    u8 * cp;
 
    	/*	Quiescent operations	*/
 	for( ; ; ){
@@ -309,11 +273,9 @@ void prvSetupHardware( void )
 
     #endif
 
-
-
     #ifdef DEBUG_MAIN
 
-    print("SETUP HARDWARE:\tDone.\r\n");
+        print("SETUP HARDWARE:\tDone.\r\n");
 
     #endif
 
@@ -427,5 +389,40 @@ void register_interrupt_handler(uint8_t ucInterruptID, XInterruptHandler pxHandl
         #endif
 }
 
-/* Everything Else    */
+/* ESP32    */
 /*******************************************************************/
+
+void connect_to_wifi(void)
+{
+    strncpy(tx_buf, message0, sizeof(tx_buf));
+
+    length = strlen(message0);
+
+    XUartLite_Send(&inst_esp.ESP32_Uart, message0, length);
+
+    xSemaphoreTake(binarysemaphore, portMAX_DELAY); // Block until relased by isr.
+
+    strncpy(tx_buf, message1, sizeof(tx_buf));
+
+    length = strlen(message1);
+
+    XUartLite_Send(&inst_esp.ESP32_Uart, message1, length);
+
+    xSemaphoreTake(binarysemaphore, portMAX_DELAY); // Block until relased by isr.
+
+    strncpy(tx_buf, message2, sizeof(tx_buf));
+
+    length = strlen(message2);
+
+    XUartLite_Send(&inst_esp.ESP32_Uart, message2, length);
+
+    xSemaphoreTake(binarysemaphore, portMAX_DELAY); // Block until relased by isr.
+
+    strncpy(tx_buf, message3, sizeof(tx_buf));
+
+    length = strlen(message3);
+
+    XUartLite_Send(&inst_esp.ESP32_Uart, message3, length);
+
+    xSemaphoreTake(binarysemaphore, portMAX_DELAY); // Block until relased by isr.
+}

@@ -11,6 +11,7 @@ BEGIN OS
  PARAMETER SYSTMR_SPEC = true
  PARAMETER stdin = axi_uartlite_0
  PARAMETER stdout = axi_uartlite_0
+ PARAMETER tick_rate = 200
 END
 
 
@@ -21,6 +22,12 @@ BEGIN PROCESSOR
  PARAMETER compiler_flags =  -mlittle-endian -mxl-soft-mul -mhard-float -mxl-float-convert -mxl-float-sqrt -mno-xl-soft-div -mcpu=v10.0
 END
 
+
+BEGIN DRIVER
+ PARAMETER DRIVER_NAME = PmodESP32
+ PARAMETER DRIVER_VER = 1.0
+ PARAMETER HW_INSTANCE = PmodESP32_0
+END
 
 BEGIN DRIVER
  PARAMETER DRIVER_NAME = gpio
@@ -80,12 +87,6 @@ BEGIN DRIVER
  PARAMETER DRIVER_NAME = generic
  PARAMETER DRIVER_VER = 2.0
  PARAMETER HW_INSTANCE = pmod_hb3_axi_custom_0
-END
-
-BEGIN DRIVER
- PARAMETER DRIVER_NAME = PmodESP32
- PARAMETER DRIVER_VER = 1.0
- PARAMETER HW_INSTANCE = PmodESP32_0
 END
 
 
