@@ -19,6 +19,9 @@
 /* Send Buffer Length   */
 #define BUF_LEN 128
 
+/* Circ Buffer Length   */
+#define CIRC_BUF_LEN 3
+
 /*  Instances   */
 #define ESP32_DEVICE_ID
 
