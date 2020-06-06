@@ -429,61 +429,41 @@ void connect_to_wifi(void)
 
     xSemaphoreTake(countingsemaphore, portMAX_DELAY); // Block until relased by isr.
 
-    // vTaskDelay(400);
-
     send_message(message1);
 
     xSemaphoreTake(countingsemaphore, portMAX_DELAY); // Block until relased by isr.
-
-    // vTaskDelay(400);
 
     send_message(message2);
 
     xSemaphoreTake(countingsemaphore, portMAX_DELAY); // Block until relased by isr.
 
-    // vTaskDelay(400);
-
     send_message(message3);
 
     xSemaphoreTake(countingsemaphore, portMAX_DELAY); // Block until relased by isr.
-
-    // vTaskDelay(400);
 
     send_message(message4);
 
     xSemaphoreTake(countingsemaphore, portMAX_DELAY); // Block until relased by isr.
 
-    // vTaskDelay(400);
-
     send_message(message5);
 
     xSemaphoreTake(countingsemaphore, portMAX_DELAY); // Block until relased by isr.
-
-    // vTaskDelay(400);
 
     send_message(message6);
 
     xSemaphoreTake(countingsemaphore, portMAX_DELAY); // Block until relased by isr.
 
-    // vTaskDelay(400);
-
     send_message(message7);
 
     xSemaphoreTake(countingsemaphore, portMAX_DELAY); // Block until relased by isr.
-
-    // vTaskDelay(400);
 
     send_message(message8);
 
     xSemaphoreTake(countingsemaphore, portMAX_DELAY); // Block until relased by isr.
 
-    // vTaskDelay(400);
-
     send_message(message7);
 
     xSemaphoreTake(countingsemaphore, portMAX_DELAY); // Block until relased by isr.
-
-    // vTaskDelay(400);
 
     send_message(message9);
 
