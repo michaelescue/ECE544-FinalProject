@@ -56,6 +56,13 @@ static u8 message0[BUF_LEN]= "AT\r\n";
 static u8 message1[BUF_LEN] = "AT+CWMODE=1\r\n";
 static u8 message2[BUF_LEN] = WIFI_LOGIN_INFO;
 static u8 message3[BUF_LEN] = "AT+CWJAP?\r\n";
+static u8 message4[BUF_LEN] = "AT+CIPMUX=0\r\n";
+static u8 message5[BUF_LEN] = "AT+CIPSTART=\"TCP\",\"final-524b8.firebaseio.com\",80,30\r\n";
+static u8 message6[BUF_LEN] = "AT+CIPSTATUS\r\n";
+static u8 message7[BUF_LEN] = "AT+CIPSENDEX=128\r\n";
+static u8 message8[BUF_LEN] = "GET final-524b8.firebaseio.com/status0/ HTTP/1.1\r\n\r\n\\0";
+// Request-Line = Method SP Request-URI SP HTTP-Version CRLF
+
 static u32 length = 0;   // Number of bytes to read/write.
 
 /* Return Checks    */
@@ -126,7 +133,6 @@ static void tx_uart1(void *pvUnused)
     tx_empty = Xil_In32(ESP32_STATUS_REG & MASK_TX_EMPTY);
     if(tx_empty)
         xSemaphoreGiveFromISR(binarysemaphore, pdFALSE);
-
 
 }
 
@@ -206,7 +212,7 @@ void task_master(void *p)
     /* Initialize ESP32 */
     connect_to_wifi();
 
-    print("Tx FIFO emptied\r\n");
+    // print("Tx FIFO emptied\r\n");
 
 	/* Enable WDT	*/
     #ifndef DEBUG_NO_WDT
@@ -223,6 +229,16 @@ void task_master(void *p)
 
    	/*	Quiescent operations	*/
 	for( ; ; ){
+
+        int recv_count = 0;
+        int send_count = 0;
+
+        recv_count = XUartLite_Recv(&inst_uart0, tx_buf, BUF_LEN);
+
+        if(recv_count > 0){
+
+        }
+
 
 		/*	Set Health check	*/
 		master_health_check = TRUE;
@@ -394,35 +410,64 @@ void register_interrupt_handler(uint8_t ucInterruptID, XInterruptHandler pxHandl
 
 void connect_to_wifi(void)
 {
-    strncpy(tx_buf, message0, sizeof(tx_buf));
-
-    length = strlen(message0);
-
-    XUartLite_Send(&inst_esp.ESP32_Uart, message0, length);
+    send_message(message0);
 
     xSemaphoreTake(binarysemaphore, portMAX_DELAY); // Block until relased by isr.
 
-    strncpy(tx_buf, message1, sizeof(tx_buf));
+    vTaskDelay(400);
 
-    length = strlen(message1);
-
-    XUartLite_Send(&inst_esp.ESP32_Uart, message1, length);
+    send_message(message1);
 
     xSemaphoreTake(binarysemaphore, portMAX_DELAY); // Block until relased by isr.
 
-    strncpy(tx_buf, message2, sizeof(tx_buf));
+    vTaskDelay(400);
 
-    length = strlen(message2);
-
-    XUartLite_Send(&inst_esp.ESP32_Uart, message2, length);
+    send_message(message2);
 
     xSemaphoreTake(binarysemaphore, portMAX_DELAY); // Block until relased by isr.
 
-    strncpy(tx_buf, message3, sizeof(tx_buf));
+    vTaskDelay(400);
 
-    length = strlen(message3);
-
-    XUartLite_Send(&inst_esp.ESP32_Uart, message3, length);
+    send_message(message3);
 
     xSemaphoreTake(binarysemaphore, portMAX_DELAY); // Block until relased by isr.
+
+    vTaskDelay(400);
+
+    send_message(message4);
+
+    xSemaphoreTake(binarysemaphore, portMAX_DELAY); // Block until relased by isr.
+
+    vTaskDelay(400);
+
+    send_message(message5);
+
+    xSemaphoreTake(binarysemaphore, portMAX_DELAY); // Block until relased by isr.
+
+    vTaskDelay(400);
+
+    send_message(message6);
+
+    xSemaphoreTake(binarysemaphore, portMAX_DELAY); // Block until relased by isr.
+
+    vTaskDelay(400);
+
+    send_message(message7);
+
+    xSemaphoreTake(binarysemaphore, portMAX_DELAY); // Block until relased by isr.
+
+    vTaskDelay(400);
+
+    send_message(message8);
+
+    xSemaphoreTake(binarysemaphore, portMAX_DELAY); // Block until relased by isr.
+}
+
+void send_message(u8 *message)
+{
+    strncpy(tx_buf, message, sizeof(tx_buf));
+
+    length = strlen(message);
+
+    XUartLite_Send(&inst_esp.ESP32_Uart, message, length);
 }

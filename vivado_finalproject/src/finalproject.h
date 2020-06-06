@@ -41,7 +41,7 @@
 
 /* Master Task  */
 // #define DEBUG_NO_MASTER // Remove Master Task related code.
-#define DEBUG_MASTER // Debug Master Task.
+// #define DEBUG_MASTER // Debug Master Task.
 #define DEBUG_ISR_REGISTRATION // Debug ISR Registration routine.
 
 /*  WDT */
@@ -91,6 +91,8 @@ void rx_task(void *p); // UART1 rx_task/
 #define MASK_RX_VALID_DATA 0x1
 #define MASK_TX_FULL 0x8
 #define MASK_TX_EMPTY 0x4
-#define WIFI_LOGIN_INFO "AT+CWJAP=\"Me\",\"1Chester\"\r\n"
+// #define WIFI_LOGIN_INFO "AT+CWJAP=\"Me\",\"1Chester\"\r\n"
+#define WIFI_LOGIN_INFO "AT+CWJAP=\"freecandy\",\"!1Chester\"\r\n"
+void send_message(u8 *message);
 
 #endif
