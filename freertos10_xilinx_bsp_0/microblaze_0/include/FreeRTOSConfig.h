@@ -73,7 +73,7 @@
 
 #define configUSE_CO_ROUTINES 0
 
-#define configTICK_RATE_HZ (200)
+#define configTICK_RATE_HZ (100)
 
 #define configMAX_PRIORITIES (8)
 

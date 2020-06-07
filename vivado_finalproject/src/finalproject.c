@@ -49,15 +49,15 @@ xSemaphoreHandle esp_binary_semaphore;
 
 /*  Health Checks   */
 static bool  master_health_check = TRUE; // Initial health of Master is TRUE.
+static bool connected = FALSE;
 
 /* Conditional Flags    */
 bool error_message = FALSE;
-bool connection_complete = FALSE;
-
 
 /* UART Buffers  */
 static u8 rx_buf[BUF_LEN] = {0};   // Initialize buffer
 static u8 tx_buf[BUF_LEN] = {0};   // Initialize buffer
+static u8 stdin_buf[BUF_LEN] = {0};
 static u8 circ_buf[CIRC_BUF_LEN] = {0};
 static u8 message0[BUF_LEN] = "ATE1\r\n";
 static u8 message1[BUF_LEN] = "AT+CWMODE=1\r\n";
@@ -65,10 +65,10 @@ static u8 message2[BUF_LEN] = WIFI_LOGIN_INFO;
 static u8 message3[BUF_LEN] = "AT+CWJAP?\r\n";
 static u8 message4[BUF_LEN] = "AT+CIPMUX=0\r\n";
 // static u8 message5[BUF_LEN] = "AT+CIPSTART=\"SSL\",\"iotirrigationv1r1.firebaseio.com\",443,3600\r\n";
-static u8 message5[BUF_LEN] = "AT+CIPSTART=\"SSL\",\"final-524b8.firebaseio.com\",443,3600\r\n";
+static u8 message5[BUF_LEN] = "AT+CIPSTART=\"SSL\",\"final-524b8.firebaseio.com\",443,5\r\n";
 static u8 message6[BUF_LEN] = "AT+CIPSTATUS\r\n";
 static u8 message7[BUF_LEN] = "AT+CIPSENDEX=256\r\n";
-static u8 message8[BUF_LEN] = "GET /status0.json HTTP/1.1\r\nHost: final-524b8.firebaseio.com\r\n\r\n\\0";
+// static u8 message8[BUF_LEN] = "GET /status0.json HTTP/1.1\r\nHost: final-524b8.firebaseio.com\r\n\r\n\\0";
 static u8 message9[BUF_LEN] = "GET /.json HTTP/1.1\r\nHost: final-524b8.firebaseio.com\r\n\r\n\\0";
 // static u8 message10[BUF_LEN] = "POST /status2.json HTTP/1.1\r\nHost: final-524b8.firebaseio.com\r\nAccept: text/plain\r\n\r\n\\0";
 // static u8 message8[BUF_LEN] = "GET /OfficeBusProject/hb/Last Updated Stop.json HTTP/1.1\r\nHost: iotirrigationv1r1.firebaseio.com\r\nAccept: text/plain\r\n\r\n\\0";
@@ -95,6 +95,9 @@ XUartLite inst_uart0;
 
 /* ESP32    */
 PmodESP32 inst_esp;
+
+/* HB3  */
+
 
 /*  Task Handles    */
 /*******************************************************************/
@@ -166,7 +169,7 @@ static void rx_uart1(void *pvUnused)
 
         if(strncmp(circ_buf, "CLOSED", strsize) == 0)
         {
-            send_message(message5);
+            connected = FALSE;
         }
 
         for(int i = 0; i < (CIRC_BUF_LEN - 1); i++)     
@@ -217,7 +220,6 @@ int main(void)
 void task_master(void *p)
 {
     /* Variables    */
-    int count = 0;
     
 	/* Create the queue */
 
@@ -242,6 +244,9 @@ void task_master(void *p)
     XUartLite_SetSendHandler(&inst_esp.ESP32_Uart, tx_uart1, NULL);
     XUartLite_EnableInterrupt(&inst_esp.ESP32_Uart);
 
+    /* Connect to Server    */
+    connect_to_wifi();
+
 	/* Enable WDT	*/
     #ifndef DEBUG_NO_WDT
 
@@ -258,16 +263,48 @@ void task_master(void *p)
    	/*	Quiescent operations	*/
 	for( ; ; ){
 
-        if(connection_complete == FALSE) connect_to_wifi();
+        if(connected == FALSE) send_message(message5);
 
         int recv_count = 0;
-        int send_count = 0;
 
-        recv_count = XUartLite_Recv(&inst_uart0, tx_buf, BUF_LEN);
+        int* p = HB3_HIGH_PULSE_ADDR;
 
-        if(recv_count > 0){
-            xil_printf("%s", tx_buf);
+        do
+        {
+            vTaskDelay(1);
+            recv_count = XUartLite_Recv(&inst_uart0, stdin_buf, BUF_LEN);
+
+            if(recv_count > 0){
+                xil_printf("\r\n%s", stdin_buf);
+            }
+
+        }while( recv_count > 0);
+
+        if(strncmp(stdin_buf, "ON", strlen("ON")) == 0)
+        {
+			 *p = 0xFFFFFFFF;
         }
+        else if(strncmp(stdin_buf, "OFF", strlen("OFF")) == 0)
+        {
+			 *p = 0;
+        }
+       else if(strncmp(stdin_buf, "DIR0", strlen("DIR0")) == 0)
+        {
+             p = HB3_DIR_ADDR;
+			 *p = 0;
+        }
+       else if(strncmp(stdin_buf, "DIR1", strlen("DIR1")) == 0)
+        {
+            p = HB3_DIR_ADDR;
+			 *p = 0x1;
+        }
+       else if(strncmp(stdin_buf, "READ", strlen("READ")) == 0)
+        {
+            p = HB3_LPM_ADDR;
+			xil_printf("FROM REG: %d\r\n", *p);
+        }
+
+        memset(stdin_buf, 0x0, sizeof(stdin_buf));
 
 		/*	Set Health check	*/
 		master_health_check = TRUE;
@@ -454,13 +491,14 @@ void connect_to_wifi(void)
 
     send_message(message7);
 
-    send_message(message8);
+//    send_message(message8);
 
-    send_message(message7);
+    // send_message(message7);
 
     send_message(message9);
 
-    connection_complete = TRUE;
+    connected = TRUE;
+
  }
 
 void send_message(u8 *message)
@@ -475,4 +513,3 @@ void send_message(u8 *message)
         xSemaphoreTake(esp_binary_semaphore, portMAX_DELAY); // Block until relased by isr.
     
 }
-

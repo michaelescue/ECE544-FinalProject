@@ -468,6 +468,17 @@
 
 /******************************************************************/
 
+/* Definitions for driver HB3 */
+#define XPAR_HB3_NUM_INSTANCES 1
+
+/* Definitions for peripheral HB3_0 */
+#define XPAR_HB3_0_DEVICE_ID 0
+#define XPAR_HB3_0_S00_AXI_BASEADDR 0x44A30000
+#define XPAR_HB3_0_S00_AXI_HIGHADDR 0x44A3FFFF
+
+
+/******************************************************************/
+
 /* Definitions for driver PMODESP32 */
 #define XPAR_PMODESP32_NUM_INSTANCES 1
 
@@ -555,14 +566,6 @@
 
 /******************************************************************/
 
-
-/* Definitions for peripheral PMOD_HB3_AXI_CUSTOM_0 */
-#define XPAR_PMOD_HB3_AXI_CUSTOM_0_S00_AXI_BASEADDR 0x44A50000
-#define XPAR_PMOD_HB3_AXI_CUSTOM_0_S00_AXI_HIGHADDR 0x44A5FFFF
-
-
-/******************************************************************/
-
 /* Definitions for driver GPIO */
 #define XPAR_XGPIO_NUM_INSTANCES 1
 
@@ -586,7 +589,7 @@
 
 /******************************************************************/
 
-#define XPAR_INTC_MAX_NUM_INTR_INPUTS 5
+#define XPAR_INTC_MAX_NUM_INTR_INPUTS 6
 #define XPAR_XINTC_HAS_IPR 1
 #define XPAR_XINTC_HAS_SIE 1
 #define XPAR_XINTC_HAS_CIE 1
@@ -598,10 +601,10 @@
 #define XPAR_MICROBLAZE_0_AXI_INTC_DEVICE_ID 0
 #define XPAR_MICROBLAZE_0_AXI_INTC_BASEADDR 0x41200000
 #define XPAR_MICROBLAZE_0_AXI_INTC_HIGHADDR 0x4120FFFF
-#define XPAR_MICROBLAZE_0_AXI_INTC_KIND_OF_INTR 0xFFFFFFF2
+#define XPAR_MICROBLAZE_0_AXI_INTC_KIND_OF_INTR 0xFFFFFFD2
 #define XPAR_MICROBLAZE_0_AXI_INTC_HAS_FAST 1
 #define XPAR_MICROBLAZE_0_AXI_INTC_IVAR_RESET_VALUE 0x00000010
-#define XPAR_MICROBLAZE_0_AXI_INTC_NUM_INTR_INPUTS 5
+#define XPAR_MICROBLAZE_0_AXI_INTC_NUM_INTR_INPUTS 6
 
 
 /******************************************************************/
@@ -620,6 +623,8 @@
 #define XPAR_MICROBLAZE_0_AXI_INTC_FIT_TIMER_0_INTERRUPT_INTR 3U
 #define XPAR_AXI_UARTLITE_0_INTERRUPT_MASK 0X000010U
 #define XPAR_MICROBLAZE_0_AXI_INTC_AXI_UARTLITE_0_INTERRUPT_INTR 4U
+#define XPAR_HB3_0_INTERRUPT_MASK 0X000020U
+#define XPAR_MICROBLAZE_0_AXI_INTC_HB3_0_INTERRUPT_INTR 5U
 
 /******************************************************************/
 
@@ -627,16 +632,17 @@
 #define XPAR_INTC_0_DEVICE_ID XPAR_MICROBLAZE_0_AXI_INTC_DEVICE_ID
 #define XPAR_INTC_0_BASEADDR 0x41200000U
 #define XPAR_INTC_0_HIGHADDR 0x4120FFFFU
-#define XPAR_INTC_0_KIND_OF_INTR 0xFFFFFFF2U
+#define XPAR_INTC_0_KIND_OF_INTR 0xFFFFFFD2U
 #define XPAR_INTC_0_HAS_FAST 1U
 #define XPAR_INTC_0_IVAR_RESET_VALUE 0x00000010U
-#define XPAR_INTC_0_NUM_INTR_INPUTS 5U
+#define XPAR_INTC_0_NUM_INTR_INPUTS 6U
 #define XPAR_INTC_0_INTC_TYPE 0U
 
 #define XPAR_INTC_0_WDTTB_0_VEC_ID XPAR_MICROBLAZE_0_AXI_INTC_AXI_TIMEBASE_WDT_0_WDT_INTERRUPT_INTR
 #define XPAR_INTC_0_PMODESP32_0_VEC_ID XPAR_MICROBLAZE_0_AXI_INTC_PMODESP32_0_UART_INTERRUPT_INTR
 #define XPAR_INTC_0_TMRCTR_0_VEC_ID XPAR_MICROBLAZE_0_AXI_INTC_AXI_TIMER_0_INTERRUPT_INTR
 #define XPAR_INTC_0_UARTLITE_0_VEC_ID XPAR_MICROBLAZE_0_AXI_INTC_AXI_UARTLITE_0_INTERRUPT_INTR
+#define XPAR_INTC_0_HB3_0_VEC_ID XPAR_MICROBLAZE_0_AXI_INTC_HB3_0_INTERRUPT_INTR
 
 /******************************************************************/
 
@@ -645,8 +651,8 @@
 
 /* Definitions for peripheral NEXYS4IO_0 */
 #define XPAR_NEXYS4IO_0_DEVICE_ID 0
-#define XPAR_NEXYS4IO_0_S00_AXI_BASEADDR 0x44a00000
-#define XPAR_NEXYS4IO_0_S00_AXI_HIGHADDR 0x44a0ffff
+#define XPAR_NEXYS4IO_0_S00_AXI_BASEADDR 0xFFFFFFFF
+#define XPAR_NEXYS4IO_0_S00_AXI_HIGHADDR 0x00000000
 
 
 /******************************************************************/
