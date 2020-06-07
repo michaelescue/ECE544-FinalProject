@@ -1,7 +1,7 @@
 /**
  * @file myapp.c
  * @author Michael Escue (michael.escue@outlook.com)
- * @brief 
+ * @brief Written for ECE 544 Final project. Spring 2020.
  * @version 0.1
  * @date 2020-05-25
  * 
@@ -40,7 +40,7 @@
 
 /* Semaphores   */
 xSemaphoreHandle binarysemaphore;
-xSemaphoreHandle countingsemaphore;
+xSemaphoreHandle esp_binary_semaphore;
 
 /* Mutexes  */
 
@@ -49,6 +49,11 @@ xSemaphoreHandle countingsemaphore;
 
 /*  Health Checks   */
 static bool  master_health_check = TRUE; // Initial health of Master is TRUE.
+
+/* Conditional Flags    */
+bool error_message = FALSE;
+bool connection_complete = FALSE;
+
 
 /* UART Buffers  */
 static u8 rx_buf[BUF_LEN] = {0};   // Initialize buffer
@@ -59,23 +64,21 @@ static u8 message1[BUF_LEN] = "AT+CWMODE=1\r\n";
 static u8 message2[BUF_LEN] = WIFI_LOGIN_INFO;
 static u8 message3[BUF_LEN] = "AT+CWJAP?\r\n";
 static u8 message4[BUF_LEN] = "AT+CIPMUX=0\r\n";
-static u8 message5[BUF_LEN] = "AT+CIPSTART=\"SSL\",\"final-524b8.firebaseio.com\",443,15\r\n";
+// static u8 message5[BUF_LEN] = "AT+CIPSTART=\"SSL\",\"iotirrigationv1r1.firebaseio.com\",443,3600\r\n";
+static u8 message5[BUF_LEN] = "AT+CIPSTART=\"SSL\",\"final-524b8.firebaseio.com\",443,3600\r\n";
 static u8 message6[BUF_LEN] = "AT+CIPSTATUS\r\n";
-static u8 message7[BUF_LEN] = "AT+CIPSENDEX=128\r\n";
-static u8 message8[BUF_LEN] = "GET /status0.json HTTP/1.1\r\nHost: final-524b8.firebaseio.com\r\nAccept: text/plain\r\n\r\n\\0";
-static u8 message9[BUF_LEN] = "GET /status1.json HTTP/1.1\r\nHost: final-524b8.firebaseio.com\r\nAccept: text/plain\r\n\r\n\\0";
-// Request-Line = Method SP Request-URI SP HTTP-Version CRLF
+static u8 message7[BUF_LEN] = "AT+CIPSENDEX=256\r\n";
+static u8 message8[BUF_LEN] = "GET /status0.json HTTP/1.1\r\nHost: final-524b8.firebaseio.com\r\n\r\n\\0";
+static u8 message9[BUF_LEN] = "GET /.json HTTP/1.1\r\nHost: final-524b8.firebaseio.com\r\n\r\n\\0";
+// static u8 message10[BUF_LEN] = "POST /status2.json HTTP/1.1\r\nHost: final-524b8.firebaseio.com\r\nAccept: text/plain\r\n\r\n\\0";
+// static u8 message8[BUF_LEN] = "GET /OfficeBusProject/hb/Last Updated Stop.json HTTP/1.1\r\nHost: iotirrigationv1r1.firebaseio.com\r\nAccept: text/plain\r\n\r\n\\0";
+// static u8 message9[BUF_LEN] = "GET /OfficeBusProject/hb/Comments.json HTTP/1.1\r\nHost: iotirrigationv1r1.firebaseio.com\r\nAccept: text/plain\r\n\r\n\\0";
 
-static u8 *circ_buf_p = circ_buf;
-
+/*  Message Length  */
 static u32 length = 0;   // Number of bytes to read/write.
 
 /* Return Checks    */
 static BaseType_t xStatus;
-
-/* Read Send Flags  */
-static bool rx_valid = FALSE;
-static bool tx_empty = FALSE;
 
 
 /*  Device Instances    */
@@ -135,21 +138,36 @@ static void isr_wdt(void *pvUnused)
 
 static void tx_uart1(void *pvUnused)
 {
-    // xSemaphoreTakeFromISR(countingsemaphore, pdFALSE);
-    tx_empty = Xil_In32(ESP32_STATUS_REG & MASK_TX_EMPTY);
-    if(tx_empty);
-        // xSemaphoreGiveFromISR(countingsemaphore, pdFALSE); // Give sempahore (decrement counting semaphore to 1);
 
 }
 
 static void rx_uart1(void *pvUnused)
 {
+        u32 strsize = 0;
+        u8 *circ_buf_p = NULL;
+
         while(XUartLite_Recv(&inst_esp.ESP32_Uart, rx_buf, 1) != 0);
         xil_printf("%s", rx_buf);
         circ_buf[CIRC_BUF_LEN - 1] = rx_buf[0];
 
-        if(strncmp(circ_buf, "OK\r", sizeof(circ_buf)) == 0)    // If circ_buf is equal to trigger, give up semaphore.
-            xSemaphoreGiveFromISR(countingsemaphore, pdFALSE);
+        strsize = strlen("OK\r");
+
+        circ_buf_p = circ_buf + (CIRC_BUF_LEN - strsize);
+
+        if(strncmp(circ_buf_p, "OK\r", strsize) == 0)    // If circ_buf is equal to trigger, give up semaphore.
+        {
+            error_message = FALSE;
+            xSemaphoreGiveFromISR(esp_binary_semaphore, pdFALSE);
+        }
+
+        strsize = strlen("CLOSED");
+
+        circ_buf_p = circ_buf + (CIRC_BUF_LEN - strsize);
+
+        if(strncmp(circ_buf, "CLOSED", strsize) == 0)
+        {
+            send_message(message5);
+        }
 
         for(int i = 0; i < (CIRC_BUF_LEN - 1); i++)     
         {
@@ -172,7 +190,7 @@ int main(void)
 
     /*  Initialize O/S Concurrency Mechanisms   */
     binarysemaphore = xSemaphoreCreateBinary();
-    countingsemaphore = xSemaphoreCreateCounting(1, 0);
+    esp_binary_semaphore = xSemaphoreCreateBinary();
 
     /* Create Master Task   */
 	#ifndef DEBUG_NO_MASTER
@@ -224,11 +242,6 @@ void task_master(void *p)
     XUartLite_SetSendHandler(&inst_esp.ESP32_Uart, tx_uart1, NULL);
     XUartLite_EnableInterrupt(&inst_esp.ESP32_Uart);
 
-    /* Initialize ESP32 */
-    connect_to_wifi();
-
-    // print("Tx FIFO emptied\r\n");
-
 	/* Enable WDT	*/
     #ifndef DEBUG_NO_WDT
 
@@ -245,6 +258,8 @@ void task_master(void *p)
    	/*	Quiescent operations	*/
 	for( ; ; ){
 
+        if(connection_complete == FALSE) connect_to_wifi();
+
         int recv_count = 0;
         int send_count = 0;
 
@@ -253,7 +268,6 @@ void task_master(void *p)
         if(recv_count > 0){
             xil_printf("%s", tx_buf);
         }
-
 
 		/*	Set Health check	*/
 		master_health_check = TRUE;
@@ -266,7 +280,6 @@ void task_master(void *p)
 
     #endif
 }
-
 
 /* Initialization Routines    */    
 /*******************************************************************/
@@ -427,55 +440,39 @@ void connect_to_wifi(void)
 {
     send_message(message0);
 
-    xSemaphoreTake(countingsemaphore, portMAX_DELAY); // Block until relased by isr.
-
     send_message(message1);
-
-    xSemaphoreTake(countingsemaphore, portMAX_DELAY); // Block until relased by isr.
-
-    send_message(message2);
-
-    xSemaphoreTake(countingsemaphore, portMAX_DELAY); // Block until relased by isr.
-
-    send_message(message3);
-
-    xSemaphoreTake(countingsemaphore, portMAX_DELAY); // Block until relased by isr.
 
     send_message(message4);
 
-    xSemaphoreTake(countingsemaphore, portMAX_DELAY); // Block until relased by isr.
+    send_message(message2);
+
+    send_message(message3);
 
     send_message(message5);
 
-    xSemaphoreTake(countingsemaphore, portMAX_DELAY); // Block until relased by isr.
-
     send_message(message6);
 
-    xSemaphoreTake(countingsemaphore, portMAX_DELAY); // Block until relased by isr.
-
     send_message(message7);
-
-    xSemaphoreTake(countingsemaphore, portMAX_DELAY); // Block until relased by isr.
 
     send_message(message8);
 
-    xSemaphoreTake(countingsemaphore, portMAX_DELAY); // Block until relased by isr.
-
     send_message(message7);
-
-    xSemaphoreTake(countingsemaphore, portMAX_DELAY); // Block until relased by isr.
 
     send_message(message9);
 
-    xSemaphoreTake(countingsemaphore, portMAX_DELAY); // Block until relased by isr.
+    connection_complete = TRUE;
  }
 
 void send_message(u8 *message)
 {
-    strncpy(tx_buf, message, sizeof(tx_buf));
 
-    length = strlen(message);
+        strncpy(tx_buf, message, sizeof(tx_buf));
 
-    XUartLite_Send(&inst_esp.ESP32_Uart, message, length);
+        length = strlen(message);
+
+        XUartLite_Send(&inst_esp.ESP32_Uart, message, length);
+
+        xSemaphoreTake(esp_binary_semaphore, portMAX_DELAY); // Block until relased by isr.
+    
 }
 
