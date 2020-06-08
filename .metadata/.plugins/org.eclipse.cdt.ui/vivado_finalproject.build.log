@@ -1,6 +1,6 @@
-03:44:34 **** Incremental Build of configuration Debug for project vivado_finalproject ****
+08:45:00 **** Incremental Build of configuration Debug for project vivado_finalproject ****
 make all 
 make: Nothing to be done for `all'.
 
-03:44:34 Build Finished (took 260ms)
+08:45:00 Build Finished (took 265ms)
 

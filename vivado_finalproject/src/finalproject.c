@@ -54,6 +54,7 @@ static bool connected = TRUE;
 /* Conditional Fl   ags    */
 static bool error_message = FALSE;
 static bool data_collect = FALSE;
+static bool register_values = FALSE;
 
 /* UART Buffers  */
 static u8 rx_buf[BUF_LEN] = {0};   // Initialize buffer
@@ -63,20 +64,22 @@ static u8 circ_buf[CIRC_BUF_LEN] = {0};
 static u8 value_buf[BUF_LEN] = {0};
 
 /* ESP32 Commands   */
-static u8 close[BUF_LEN] = "AT+CWQAP" CRLF;
+static u8 reset[BUF_LEN] = "AT+RST" CRLF;
+static u8 close[BUF_LEN] = "AT+CIPCLOSE" CRLF;
 static u8 ate0[BUF_LEN] = "ATE0" CRLF;
 static u8 ate1[BUF_LEN] = "ATE1" CRLF;
 static u8 cwmode[BUF_LEN] = "AT+CWMODE=1" CRLF;
 static u8 connectwifi[BUF_LEN] = WIFI_LOGIN_INFO;
 static u8 connect_status[BUF_LEN] = "AT+CWJAP?\r\n";
 static u8 num_of_connects[BUF_LEN] = "AT+CIPMUX=0" CRLF;
-static u8 ssl_connect[BUF_LEN] = "AT+CIPSTART=\"SSL\",\"final-524b8.firebaseio.com\",443,3600" CRLF;
+static u8 ssl_connect[BUF_LEN] = "AT+CIPSTART=\"SSL\",\"final-524b8.firebaseio.com\",443,7200" CRLF;
 // static u8 ssl_connect[BUF_LEN] = "AT+CIPSTART=\"SSL\",\"iotirrigationv1r1.firebaseio.com\",443,3600" CRLF;
 static u8 ssl_status[BUF_LEN] = "AT+CIPSTATUS" CRLF;
 static u8 presend[BUF_LEN] = "AT+CIPSENDEX=512" CRLF;
 
 static u8 ssl_get1[BUF_LEN] =       "GET /.json HTTP/1.1" CRLF \
                                     "Host: final-524b8.firebaseio.com" CRLF \
+                                    "Connection: keep-alive" CRLF \
                                     CRLF NULLCH;
 
 // static u8 ssl_get1[BUF_LEN] =       "GET /final_prj_544/global_motor_status.json HTTP/1.1" CRLF \
@@ -109,13 +112,15 @@ static BaseType_t xStatus;
 static u32 strsize = 0;
 static u8 *circ_buf_p = NULL;
 static u8 *value_buf_p = NULL;
-
+static u8 *val_p = value_buf;
 /*  HB3 */
 static u8 status = 0;
 static u8 control = 0;
+static u16 setpoint = 0;
 static u8  position = 0;
 static int error = 0;
 static u8 lpm = 0;
+static u8 direction = 0;
 
 /* PID  */
 static bool updatePID = FALSE;
@@ -195,8 +200,16 @@ static void rx_uart1(void *pvUnused)
 {
 
         while(XUartLite_Recv(&inst_esp.ESP32_Uart, rx_buf, 1) != 0);
-        xil_printf("%s", rx_buf);
+        // xil_printf("%s", rx_buf);
         circ_buf[CIRC_BUF_LEN - 1] = rx_buf[0];      
+
+         circ_buf_p = circ_buf + (CIRC_BUF_LEN - 1);
+         
+         if(*circ_buf_p == '>')
+         {
+             xSemaphoreGiveFromISR(esp_binary_semaphore, pdFALSE);
+         }
+
 
         strsize = strlen("OK\r");
 
@@ -224,6 +237,8 @@ static void rx_uart1(void *pvUnused)
         if(strncmp(circ_buf_p, "}", strsize) == 0)
         {
             data_collect = FALSE;
+            *value_buf_p = ',';
+            register_values = TRUE;
             xSemaphoreGiveFromISR(ssl_binarysemaphore, pdFALSE);
 
         }
@@ -257,10 +272,11 @@ static void hb3_handler(void *pvUnused)
 {
     u32 *p = NULL;
     p = HB3_LPM_ADDR;
-    position = *p;
+    position = *p & 0x3FF;
     if(control > 0) status = 1;
     else status = 0;
-    error = control - position;
+    error = setpoint - position;
+    xil_printf("\r\npos:%u,set:%u,ctrl:%u", position, setpoint, control);
     ssl_send_data(status, control, *p, ssl_binarysemaphore);
 }
 
@@ -316,9 +332,9 @@ void task_master(void *p)
     pid.intergratState = 0;
     pid.intergratMax = 0;
     pid.intergratMin = 0;
-    pid.intergratGain = 0;
-    pid.propGain = 0;
-    pid.derGain = 0;
+    pid.intergratGain = 1;
+    pid.propGain = 1;
+    pid.derGain = 1;
 	
     /* Create the queue */
 
@@ -341,6 +357,14 @@ void task_master(void *p)
                                 hb3_handler,
                                 NULL,
                                 "HB3");
+    Xil_Out32(HB3_DIR_ADDR, 1);
+
+    for(int p = 0; p < 256; p++){
+        vTaskDelay(50);
+        Xil_Out32(HB3_HIGH_PULSE_ADDR, p);
+    }
+
+    Xil_Out32(HB3_HIGH_PULSE_ADDR, 0);
 
     // Register ESP UART handlers
     register_interrupt_handler(XPAR_MICROBLAZE_0_AXI_INTC_PMODESP32_0_UART_INTERRUPT_INTR,
@@ -372,26 +396,106 @@ void task_master(void *p)
         int length = 0;
         int temp = 0;
         TickType_t ticks = 0;
-
+   
         ticks = xTaskGetTickCount();
 
         memset(stdin_buf, 0x0, sizeof(stdin_buf));
 
-        control += UpdatePID(&pid);
+        control = UpdatePID(&pid);
 
-        Xil_Out8(HB3_LPM_ADDR, control);
+        Xil_Out32(HB3_HIGH_PULSE_ADDR, control);
+        Xil_Out32(HB3_DIR_ADDR, direction);
 
         if(connected == FALSE)
         {
+            vTaskDelay(2);
             send_message(ssl_connect, esp_binary_semaphore);
             connected = TRUE;
+ 
         }
 
-        if(!(ticks % 100))
+        if(!(ticks % 200))
         {
             ssl_send_message(ssl_get1);
         }
 
+        
+        if(register_values)
+        {
+            val_p = value_buf;
+            
+            val_p++;
+
+            temp = 0;
+
+            length = strlen("status0");
+
+            if( strncmp(val_p,"status0", length) == 0 )
+            {
+                val_p += length + 2; // \":x
+
+                while((*val_p != ','))
+                {
+                    temp = (temp * 10) + (*val_p & 0xF);
+                    val_p++;
+                }
+                
+                dispense_target = temp;
+                val_p += 1;
+
+
+            } 
+
+            val_p++;
+
+            temp = 0;
+
+            length = strlen("status1");
+
+            if( strncmp(val_p,"status1", length) == 0 )
+            {
+                val_p += length + 2; // \":x
+
+                while((*val_p != ','))
+                {
+                    temp = (temp * 10) + (*val_p & 0xF);
+                    val_p++;
+                }
+                
+                direction = temp;
+                val_p += 1;
+
+            }
+
+            val_p++;
+
+            temp = 0;
+
+            length = strlen("status2");
+
+            if( strncmp(val_p,"status2", length) == 0 )
+            {
+                val_p += length + 2; // \":x
+
+                length = strlen(val_p);
+
+                while((*val_p != ','))
+                {
+                    temp = (temp * 10) + (*val_p & 0xF);
+                    val_p += 1;
+                }
+                
+                setpoint = (u16*) temp;
+                error = setpoint - position;
+            }
+
+            register_values = FALSE;
+
+        }
+        else
+        {
+            val_p++;
+        }
 
         do
         {
@@ -433,7 +537,8 @@ void task_master(void *p)
                 }
                 else if( ( length = ( strlen(stdin_buf) - 1 ) ) < MAX_GAIN_SIZE)
                 {
-                int temp = 0;
+                
+                    temp = 0;
 
 
                     for(int i = 0; i < length; i++)
@@ -658,6 +763,10 @@ void connect_to_wifi(void)
 {    
     send_message(close, esp_binary_semaphore);
 
+    send_message(reset, esp_binary_semaphore);
+
+    vTaskDelay(200);
+
     send_message(ate1, esp_binary_semaphore);
 
     send_message(cwmode, esp_binary_semaphore);
@@ -687,7 +796,7 @@ void send_message(u8 *message, QueueHandle_t queue)
 
         XUartLite_Send(&inst_esp.ESP32_Uart, message, length);
 
-        xSemaphoreTake(esp_binary_semaphore, 600); // Block until relased by isr.
+        xSemaphoreTake(queue, 800); // Block until relased by isr.
     
 }
 
@@ -708,6 +817,8 @@ void ssl_send_message(u8 *message)
 {
 
         send_message(presend, esp_binary_semaphore);
+
+        vTaskDelay(1);
 
         send_message(message, ssl_binarysemaphore);
     

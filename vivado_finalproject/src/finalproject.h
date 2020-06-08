@@ -37,13 +37,9 @@
 #define RAMSDATA "iotirrigationv1r1.firebaseio.com"
 #define MYDATA  "final-524b8.firebaseio.com"
 
-/* HB3  */
-#define HB3_HIGH_PULSE_ADDR     XPAR_HB3_0_S00_AXI_BASEADDR | HB3_HIGH_PULSE_REG0_OFFSET
-#define HB3_LPM_ADDR            XPAR_HB3_0_S00_AXI_BASEADDR | HB3_LPM_REG1_OFFSET
-#define HB3_DIR_ADDR            XPAR_HB3_0_S00_AXI_BASEADDR | HB3_DIR_OUT_REG2_OFFSET
-
 /* PID  */
 #define MAX_GAIN_SIZE 4
+#define MAX_VAL_SIZE 3
 
 /*******************************************************************/
 /* Data Structures    */
