@@ -59,20 +59,35 @@ static u8 rx_buf[BUF_LEN] = {0};   // Initialize buffer
 static u8 tx_buf[BUF_LEN] = {0};   // Initialize buffer
 static u8 stdin_buf[BUF_LEN] = {0};
 static u8 circ_buf[CIRC_BUF_LEN] = {0};
-static u8 message0[BUF_LEN] = "ATE1\r\n";
-static u8 message1[BUF_LEN] = "AT+CWMODE=1\r\n";
-static u8 message2[BUF_LEN] = WIFI_LOGIN_INFO;
-static u8 message3[BUF_LEN] = "AT+CWJAP?\r\n";
-static u8 message4[BUF_LEN] = "AT+CIPMUX=0\r\n";
-// static u8 message5[BUF_LEN] = "AT+CIPSTART=\"SSL\",\"iotirrigationv1r1.firebaseio.com\",443,3600\r\n";
-static u8 message5[BUF_LEN] = "AT+CIPSTART=\"SSL\",\"final-524b8.firebaseio.com\",443,5\r\n";
-static u8 message6[BUF_LEN] = "AT+CIPSTATUS\r\n";
-static u8 message7[BUF_LEN] = "AT+CIPSENDEX=256\r\n";
+static u8 ate[BUF_LEN] = "ATE1" CRLF;
+static u8 cwmode[BUF_LEN] = "AT+CWMODE=1" CRLF;
+static u8 connectwifi[BUF_LEN] = WIFI_LOGIN_INFO;
+static u8 connect_status[BUF_LEN] = "AT+CWJAP?\r\n";
+static u8 num_of_connects[BUF_LEN] = "AT+CIPMUX=0" CRLF;
+// static u8 ssl_connect[BUF_LEN] = "AT+CIPSTART=\"SSL\",\"iotirrigationv1r1.firebaseio.com\",443,3600" CRLF;
+static u8 ssl_connect[BUF_LEN] = "AT+CIPSTART=\"SSL\",\"final-524b8.firebaseio.com\",443,5" CRLF;
+static u8 ssl_status[BUF_LEN] = "AT+CIPSTATUS" CRLF;
+static u8 presend[BUF_LEN] = "AT+CIPSENDEX=256" CRLF;
 // static u8 message8[BUF_LEN] = "GET /status0.json HTTP/1.1\r\nHost: final-524b8.firebaseio.com\r\n\r\n\\0";
-static u8 message9[BUF_LEN] = "GET /.json HTTP/1.1\r\nHost: final-524b8.firebaseio.com\r\n\r\n\\0";
-// static u8 message10[BUF_LEN] = "POST /status2.json HTTP/1.1\r\nHost: final-524b8.firebaseio.com\r\nAccept: text/plain\r\n\r\n\\0";
-// static u8 message8[BUF_LEN] = "GET /OfficeBusProject/hb/Last Updated Stop.json HTTP/1.1\r\nHost: iotirrigationv1r1.firebaseio.com\r\nAccept: text/plain\r\n\r\n\\0";
-// static u8 message9[BUF_LEN] = "GET /OfficeBusProject/hb/Comments.json HTTP/1.1\r\nHost: iotirrigationv1r1.firebaseio.com\r\nAccept: text/plain\r\n\r\n\\0";
+
+static u8 get1[BUF_LEN] =       "GET /.json HTTP/1.1" CRLF \
+                                "Host: final-524b8.firebaseio.com" CRLF \
+                                CRLF NULLCH;
+
+static u8 options1[BUF_LEN] =   "OPTIONS /status0.json HTTP/1.1" CRLF\
+                                "Host: final-524b8.firebaseio.com" CRLF\
+                                CRLF NULLCH;
+
+static u8 patch1[BUF_LEN] =     "PATCH /.json HTTP/1.1" CRLF \
+                                "Host: final-524b8.firebaseio.com" CRLF \
+                                "Content-Type: application/x-www-form-urlencoded" CRLF \
+                                "Content-Length: 15"  CRLF \
+                                CRLF\
+                                "{\"status0\":4}"
+                                CRLF NULLCH;
+
+// static u8 get2[BUF_LEN] = "GET /OfficeBusProject/hb/Last Updated Stop.json HTTP/1.1\r\nHost: iotirrigationv1r1.firebaseio.com\r\nAccept: text/plain\r\n\r\n\\0";
+// static u8 get1[BUF_LEN] = "GET /OfficeBusProject/hb/Comments.json HTTP/1.1\r\nHost: iotirrigationv1r1.firebaseio.com\r\nAccept: text/plain\r\n\r\n\\0";
 
 /*  Message Length  */
 static u32 length = 0;   // Number of bytes to read/write.
@@ -80,6 +95,9 @@ static u32 length = 0;   // Number of bytes to read/write.
 /* Return Checks    */
 static BaseType_t xStatus;
 
+/* ISR  */
+static u32 strsize = 0;
+static u8 *circ_buf_p = NULL;
 
 /*  Device Instances    */
 /*******************************************************************/
@@ -127,7 +145,7 @@ static void isr_wdt(void *pvUnused)
     {
 		if(master_health_check == FALSE)
         {
-			print("WDT:\tMaster Thread Crashed.\r\n");
+			print("WDT:\tMaster Thread Crashed." CRLF);
 		}
         else
 		    XWdtTb_IntrClear(&inst_wdt);
@@ -146,8 +164,6 @@ static void tx_uart1(void *pvUnused)
 
 static void rx_uart1(void *pvUnused)
 {
-        u32 strsize = 0;
-        u8 *circ_buf_p = NULL;
 
         while(XUartLite_Recv(&inst_esp.ESP32_Uart, rx_buf, 1) != 0);
         xil_printf("%s", rx_buf);
@@ -262,8 +278,6 @@ void task_master(void *p)
 
    	/*	Quiescent operations	*/
 	for( ; ; ){
-
-        if(connected == FALSE) send_message(message5);
 
         int recv_count = 0;
 
@@ -474,28 +488,26 @@ void register_interrupt_handler(uint8_t ucInterruptID, XInterruptHandler pxHandl
 /*******************************************************************/
 
 void connect_to_wifi(void)
-{
-    send_message(message0);
+{    
+    send_message(ate);
 
-    send_message(message1);
+    send_message(cwmode);
 
-    send_message(message4);
+    send_message(num_of_connects);
 
-    send_message(message2);
+    send_message(connectwifi);
 
-    send_message(message3);
+    send_message(connect_status);
 
-    send_message(message5);
+    send_message(ssl_connect);
 
-    send_message(message6);
+    send_message(ssl_status);
 
-    send_message(message7);
+    ssl_send_message(get1);
 
-//    send_message(message8);
+    ssl_send_message(options1);
 
-    // send_message(message7);
-
-    send_message(message9);
+    ssl_send_message(patch1);
 
     connected = TRUE;
 
@@ -510,6 +522,20 @@ void send_message(u8 *message)
 
         XUartLite_Send(&inst_esp.ESP32_Uart, message, length);
 
-        xSemaphoreTake(esp_binary_semaphore, portMAX_DELAY); // Block until relased by isr.
+        xSemaphoreTake(esp_binary_semaphore, 600); // Block until relased by isr.
+    
+}
+
+void ssl_send_message(u8 *message)
+{
+        if(connected == FALSE)
+        {
+            send_message(ssl_connect);
+            connected = TRUE;
+        }
+
+        send_message(presend);
+
+        send_message(message);
     
 }

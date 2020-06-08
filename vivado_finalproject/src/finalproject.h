@@ -19,10 +19,10 @@
 /*******************************************************************/
 
 /* Send Buffer Length   */
-#define BUF_LEN 128
+#define BUF_LEN 256
 
 /* Circ Buffer Length   */
-#define CIRC_BUF_LEN 5
+#define CIRC_BUF_LEN 8
 
 /* Esp32 */
 #define ESP32_STATUS_REG  XPAR_PMODESP32_0_AXI_LITE_UART_BASEADDR & 0x8
@@ -32,6 +32,8 @@
 #define MASK_TX_EMPTY 0x4
 // #define WIFI_LOGIN_INFO "AT+CWJAP=\"Me\",\"1Chester\"\r\n"
 #define WIFI_LOGIN_INFO "AT+CWJAP=\"freecandy\",\"!1Chester\"\r\n"
+#define CRLF "\r\n"
+#define NULLCH "\\0"
 
 /* HB3  */
 #define HB3_HIGH_PULSE_ADDR     XPAR_HB3_0_S00_AXI_BASEADDR | HB3_HIGH_PULSE_REG0_OFFSET
