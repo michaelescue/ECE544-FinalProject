@@ -10811,3 +10811,2755 @@ java.lang.NullPointerException
 
 !ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:04:02.316
 !MESSAGE XSCT command with result: [dow C:/Users/ME/Vivado_Projects/vivado_finalproject/544fp.sdk/vivado_finalproject/Debug/vivado_finalproject.elf], Result: [null, ]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:37.497
+!MESSAGE XSCT Command: [disconnect tcfchan#143], Thread: Thread-7480
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:37.505
+!MESSAGE XSCT command with result: [disconnect tcfchan#143], Result: [null, ]. Thread: Thread-7480
+
+!ENTRY org.eclipse.core.jobs 4 2 2020-06-08 03:14:37.532
+!MESSAGE An internal error occurred during: "GDB process monitor job.".
+!STACK 0
+java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@26113177 rejected from org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor@5c5adb46[Shutting down, pool size = 1, active threads = 0, queued tasks = 1, completed tasks = 2357]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2047)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:823)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.delayedExecute(ScheduledThreadPoolExecutor.java:326)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.schedule(ScheduledThreadPoolExecutor.java:533)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.schedule(DefaultDsfExecutor.java:438)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.submit(ScheduledThreadPoolExecutor.java:632)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.submit(DefaultDsfExecutor.java:470)
+	at org.eclipse.cdt.dsf.gdb.service.GDBBackend$MonitorJob.run(GDBBackend.java:829)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:38.502
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:38.532
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#144]. Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:38.532
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:38.545
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:38.546
+!MESSAGE XSCT Command: [version -server], Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:38.547
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2018.2]. Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:38.547
+!MESSAGE XSCT Command: [version], Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:38.548
+!MESSAGE XSCT command with result: [version], Result: [null, 2018.2]. Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:38.548
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:38.554
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:38.554
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:38.577
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:38.577
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:38.585
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:38.586
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:38.602
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:38.602
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:38.607
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:38.608
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:38.624
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:38.625
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:38.630
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:38.631
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:38.650
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:38.650
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level == 0}], Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:38.666
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level == 0}], Result: [null, ]. Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:38.667
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:38.668
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:38.682
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:38.687
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:38.688
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:38.703
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:38.704
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==0} -index 0], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:38.755
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==0} -index 0], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:38.755
+!MESSAGE XSCT Command: [fpga -file C:/Users/ME/Vivado_Projects/vivado_finalproject/544fp.sdk/nexysA7fpga_hw_platform_0/download.bit], Thread: ModalContext
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2020-06-08 03:14:39.497
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.internal.ui.actions.DsfTerminateCommand$3$1@4c1e65cc): Status OK: unknown code=0 OK null' resulted in a rejected execution exception.
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:40.062
+!MESSAGE XSCT command with result: [fpga -file C:/Users/ME/Vivado_Projects/vivado_finalproject/544fp.sdk/nexysA7fpga_hw_platform_0/download.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:40.091
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:40.094
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:40.095
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:40.132
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Result: [null, ]. Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:40.132
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:40.241
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:40.241
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-47
+
+!ENTRY org.eclipse.debug.core 4 125 2020-06-08 03:14:41.885
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Pipe broken
+	at java.io.PipedInputStream.read(PipedInputStream.java:321)
+	at java.io.PipedInputStream.read(PipedInputStream.java:377)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:147)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.access$1(OutputStreamMonitor.java:137)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor$1.run(OutputStreamMonitor.java:212)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.debug.core 4 125 2020-06-08 03:14:42.378
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Pipe broken
+	at java.io.PipedInputStream.read(PipedInputStream.java:321)
+	at java.io.PipedInputStream.read(PipedInputStream.java:377)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:147)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.access$1(OutputStreamMonitor.java:137)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor$1.run(OutputStreamMonitor.java:212)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:43.244
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:43.244
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:43.274
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Result: [null, ]. Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:43.275
+!MESSAGE XSCT Command: [dow C:/Users/ME/Vivado_Projects/vivado_finalproject/544fp.sdk/vivado_finalproject/Debug/vivado_finalproject.elf], Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:14:43.576
+!MESSAGE XSCT command with result: [dow C:/Users/ME/Vivado_Projects/vivado_finalproject/544fp.sdk/vivado_finalproject/Debug/vivado_finalproject.elf], Result: [null, ]. Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:15.015
+!MESSAGE XSCT Command: [disconnect tcfchan#144], Thread: Thread-7610
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:15.044
+!MESSAGE XSCT command with result: [disconnect tcfchan#144], Result: [null, ]. Thread: Thread-7610
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:16.027
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:16.051
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#145]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:16.052
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:16.060
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:16.061
+!MESSAGE XSCT Command: [version -server], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:16.062
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2018.2]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:16.063
+!MESSAGE XSCT Command: [version], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:16.064
+!MESSAGE XSCT command with result: [version], Result: [null, 2018.2]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:16.064
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:16.069
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:16.069
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:16.085
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:16.086
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:16.091
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:16.092
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:16.107
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:16.108
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:16.113
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:16.114
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:16.129
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:16.130
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:16.135
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:16.136
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:16.151
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:16.152
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level == 0}], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:16.168
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level == 0}], Result: [null, ]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:16.168
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:16.169
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:16.184
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:16.189
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:16.190
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:16.207
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:16.207
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==0} -index 0], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:16.230
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==0} -index 0], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:16.230
+!MESSAGE XSCT Command: [fpga -file C:/Users/ME/Vivado_Projects/vivado_finalproject/544fp.sdk/nexysA7fpga_hw_platform_0/download.bit], Thread: ModalContext
+
+!ENTRY org.eclipse.debug.core 4 125 2020-06-08 03:22:17.102
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Pipe broken
+	at java.io.PipedInputStream.read(PipedInputStream.java:321)
+	at java.io.PipedInputStream.read(PipedInputStream.java:377)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:147)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.access$1(OutputStreamMonitor.java:137)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor$1.run(OutputStreamMonitor.java:212)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:17.511
+!MESSAGE XSCT command with result: [fpga -file C:/Users/ME/Vivado_Projects/vivado_finalproject/544fp.sdk/nexysA7fpga_hw_platform_0/download.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:17.545
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:17.547
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:17.548
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:17.585
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Result: [null, ]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:17.585
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:17.692
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:17.692
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-41
+
+!ENTRY org.eclipse.debug.core 4 125 2020-06-08 03:22:17.935
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Pipe broken
+	at java.io.PipedInputStream.read(PipedInputStream.java:321)
+	at java.io.PipedInputStream.read(PipedInputStream.java:377)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:147)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.access$1(OutputStreamMonitor.java:137)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor$1.run(OutputStreamMonitor.java:212)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:20.695
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:20.697
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:20.727
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Result: [null, ]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:20.728
+!MESSAGE XSCT Command: [dow C:/Users/ME/Vivado_Projects/vivado_finalproject/544fp.sdk/vivado_finalproject/Debug/vivado_finalproject.elf], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:22:21.019
+!MESSAGE XSCT command with result: [dow C:/Users/ME/Vivado_Projects/vivado_finalproject/544fp.sdk/vivado_finalproject/Debug/vivado_finalproject.elf], Result: [null, ]. Thread: Worker-41
+
+!ENTRY org.eclipse.ui 4 4 2020-06-08 03:22:22.434
+!MESSAGE An internal error has occurred.
+!STACK 0
+java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@7e96c0a4 rejected from org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor@47494ba8[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 24726]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2047)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:823)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.delayedExecute(ScheduledThreadPoolExecutor.java:326)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.schedule(ScheduledThreadPoolExecutor.java:533)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.schedule(DefaultDsfExecutor.java:438)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.execute(ScheduledThreadPoolExecutor.java:622)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.execute(DefaultDsfExecutor.java:462)
+	at org.eclipse.cdt.dsf.debug.internal.ui.CSourceNotFoundDescriptionFactory$1.getDescription(CSourceNotFoundDescriptionFactory.java:72)
+	at org.eclipse.cdt.debug.internal.core.sourcelookup.CSourceNotFoundElement.getDescription(CSourceNotFoundElement.java:55)
+	at org.eclipse.cdt.debug.internal.ui.sourcelookup.CSourceNotFoundEditorInput.getName(CSourceNotFoundEditorInput.java:26)
+	at org.eclipse.cdt.debug.internal.ui.sourcelookup.CSourceNotFoundEditorInput.equals(CSourceNotFoundEditorInput.java:37)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob$3.run(DsfSourceDisplayAdapter.java:405)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob.openEditor(DsfSourceDisplayAdapter.java:415)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob.openEditor(DsfSourceDisplayAdapter.java:384)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob.runInUIThread(DsfSourceDisplayAdapter.java:320)
+	at org.eclipse.ui.progress.UIJob$1.run(UIJob.java:97)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:182)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4203)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3819)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:687)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:604)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+
+!ENTRY org.eclipse.ui 4 4 2020-06-08 03:22:48.027
+!MESSAGE An internal error has occurred.
+!STACK 0
+java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@4a21ce7f rejected from org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor@47494ba8[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 24726]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2047)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:823)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.delayedExecute(ScheduledThreadPoolExecutor.java:326)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.schedule(ScheduledThreadPoolExecutor.java:533)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.schedule(DefaultDsfExecutor.java:438)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.execute(ScheduledThreadPoolExecutor.java:622)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.execute(DefaultDsfExecutor.java:462)
+	at org.eclipse.cdt.dsf.debug.internal.ui.CSourceNotFoundDescriptionFactory$1.getDescription(CSourceNotFoundDescriptionFactory.java:72)
+	at org.eclipse.cdt.debug.internal.core.sourcelookup.CSourceNotFoundElement.getDescription(CSourceNotFoundElement.java:55)
+	at org.eclipse.cdt.debug.internal.ui.sourcelookup.CSourceNotFoundEditorInput.getName(CSourceNotFoundEditorInput.java:26)
+	at org.eclipse.cdt.debug.internal.ui.sourcelookup.CSourceNotFoundEditorInput.equals(CSourceNotFoundEditorInput.java:37)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob$3.run(DsfSourceDisplayAdapter.java:405)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob.openEditor(DsfSourceDisplayAdapter.java:415)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob.openEditor(DsfSourceDisplayAdapter.java:384)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob.runInUIThread(DsfSourceDisplayAdapter.java:320)
+	at org.eclipse.ui.progress.UIJob$1.run(UIJob.java:97)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:182)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4203)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3819)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:687)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:604)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:45.907
+!MESSAGE XSCT Command: [disconnect tcfchan#145], Thread: Thread-7690
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:45.922
+!MESSAGE XSCT command with result: [disconnect tcfchan#145], Result: [null, ]. Thread: Thread-7690
+
+!ENTRY org.eclipse.core.jobs 4 2 2020-06-08 03:35:45.940
+!MESSAGE An internal error occurred during: "GDB process monitor job.".
+!STACK 0
+java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@45ef1ea5 rejected from org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor@67bfa9a0[Shutting down, pool size = 1, active threads = 0, queued tasks = 1, completed tasks = 2148]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2047)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:823)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.delayedExecute(ScheduledThreadPoolExecutor.java:326)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.schedule(ScheduledThreadPoolExecutor.java:533)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.schedule(DefaultDsfExecutor.java:438)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.submit(ScheduledThreadPoolExecutor.java:632)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.submit(DefaultDsfExecutor.java:470)
+	at org.eclipse.cdt.dsf.gdb.service.GDBBackend$MonitorJob.run(GDBBackend.java:829)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:46.910
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-43
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:46.934
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#146]. Thread: Worker-43
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:46.935
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-43
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:46.945
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-43
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:46.945
+!MESSAGE XSCT Command: [version -server], Thread: Worker-43
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:46.946
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2018.2]. Thread: Worker-43
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:46.947
+!MESSAGE XSCT Command: [version], Thread: Worker-43
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:46.948
+!MESSAGE XSCT command with result: [version], Result: [null, 2018.2]. Thread: Worker-43
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:46.948
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-43
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:46.953
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-43
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:46.954
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-43
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:46.969
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-43
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:46.970
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-43
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:46.977
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-43
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:46.977
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-43
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:46.995
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-43
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:46.996
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-43
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:47.002
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-43
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:47.002
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-43
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:47.019
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-43
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:47.019
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-43
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:47.025
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-43
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:47.025
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-43
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:47.041
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-43
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:47.042
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level == 0}], Thread: Worker-43
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:47.059
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level == 0}], Result: [null, ]. Thread: Worker-43
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:47.059
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-43
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:47.061
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-43
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:47.075
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:47.080
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:47.081
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:47.096
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:47.097
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==0} -index 0], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:47.122
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==0} -index 0], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:47.123
+!MESSAGE XSCT Command: [fpga -file C:/Users/ME/Vivado_Projects/vivado_finalproject/544fp.sdk/nexysA7fpga_hw_platform_0/download.bit], Thread: ModalContext
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2020-06-08 03:35:47.906
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.internal.ui.actions.DsfTerminateCommand$3$1@2f29744a): Status OK: unknown code=0 OK null' resulted in a rejected execution exception.
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:48.409
+!MESSAGE XSCT command with result: [fpga -file C:/Users/ME/Vivado_Projects/vivado_finalproject/544fp.sdk/nexysA7fpga_hw_platform_0/download.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:48.437
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-43
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:48.439
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-43
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:48.439
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Thread: Worker-43
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:48.476
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Result: [null, ]. Thread: Worker-43
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:48.477
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-43
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:48.584
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-43
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:48.585
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-43
+
+!ENTRY org.eclipse.debug.core 4 125 2020-06-08 03:35:50.369
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Pipe broken
+	at java.io.PipedInputStream.read(PipedInputStream.java:321)
+	at java.io.PipedInputStream.read(PipedInputStream.java:377)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:147)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.access$1(OutputStreamMonitor.java:137)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor$1.run(OutputStreamMonitor.java:212)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.debug.core 4 125 2020-06-08 03:35:50.771
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Pipe broken
+	at java.io.PipedInputStream.read(PipedInputStream.java:321)
+	at java.io.PipedInputStream.read(PipedInputStream.java:377)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:147)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.access$1(OutputStreamMonitor.java:137)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor$1.run(OutputStreamMonitor.java:212)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:51.587
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-43
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:51.588
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Thread: Worker-43
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:51.622
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Result: [null, ]. Thread: Worker-43
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:51.622
+!MESSAGE XSCT Command: [dow C:/Users/ME/Vivado_Projects/vivado_finalproject/544fp.sdk/vivado_finalproject/Debug/vivado_finalproject.elf], Thread: Worker-43
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:35:51.919
+!MESSAGE XSCT command with result: [dow C:/Users/ME/Vivado_Projects/vivado_finalproject/544fp.sdk/vivado_finalproject/Debug/vivado_finalproject.elf], Result: [null, ]. Thread: Worker-43
+
+!ENTRY org.eclipse.ui 4 4 2020-06-08 03:35:53.333
+!MESSAGE An internal error has occurred.
+!STACK 0
+java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@6fead0df rejected from org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor@47494ba8[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 24726]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2047)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:823)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.delayedExecute(ScheduledThreadPoolExecutor.java:326)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.schedule(ScheduledThreadPoolExecutor.java:533)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.schedule(DefaultDsfExecutor.java:438)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.execute(ScheduledThreadPoolExecutor.java:622)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.execute(DefaultDsfExecutor.java:462)
+	at org.eclipse.cdt.dsf.debug.internal.ui.CSourceNotFoundDescriptionFactory$1.getDescription(CSourceNotFoundDescriptionFactory.java:72)
+	at org.eclipse.cdt.debug.internal.core.sourcelookup.CSourceNotFoundElement.getDescription(CSourceNotFoundElement.java:55)
+	at org.eclipse.cdt.debug.internal.ui.sourcelookup.CSourceNotFoundEditorInput.getName(CSourceNotFoundEditorInput.java:26)
+	at org.eclipse.cdt.debug.internal.ui.sourcelookup.CSourceNotFoundEditorInput.equals(CSourceNotFoundEditorInput.java:37)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob$3.run(DsfSourceDisplayAdapter.java:405)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob.openEditor(DsfSourceDisplayAdapter.java:415)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob.openEditor(DsfSourceDisplayAdapter.java:384)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob.runInUIThread(DsfSourceDisplayAdapter.java:320)
+	at org.eclipse.ui.progress.UIJob$1.run(UIJob.java:97)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:182)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4203)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3819)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:687)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:604)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2020-06-08 03:36:14.779
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2020-06-08 03:36:14.779
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  null children=[]' resulted in a rejected execution exception.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2020-06-08 03:36:14.779
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@1ab847b5): Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  null children=[]' resulted in a rejected execution exception. null' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2020-06-08 03:36:14.780
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2020-06-08 03:36:14.780
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  null children=[]' resulted in a rejected execution exception.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2020-06-08 03:36:14.780
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@4e399c06): Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  null children=[]' resulted in a rejected execution exception. null' resulted in a rejected execution exception.
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:18.922
+!MESSAGE XSCT Command: [disconnect tcfchan#146], Thread: Thread-7739
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:18.935
+!MESSAGE XSCT command with result: [disconnect tcfchan#146], Result: [null, ]. Thread: Thread-7739
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:19.929
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:19.951
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#147]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:19.952
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:19.962
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:19.962
+!MESSAGE XSCT Command: [version -server], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:19.964
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2018.2]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:19.964
+!MESSAGE XSCT Command: [version], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:19.965
+!MESSAGE XSCT command with result: [version], Result: [null, 2018.2]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:19.965
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:19.971
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:19.971
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:19.987
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:19.988
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:19.995
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:19.996
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:20.014
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:20.015
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:20.019
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:20.021
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:20.035
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:20.036
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:20.041
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:20.042
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:20.059
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:20.059
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level == 0}], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:20.076
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level == 0}], Result: [null, ]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:20.076
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:20.078
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:20.093
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:20.099
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:20.100
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:20.116
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:20.116
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==0} -index 0], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:20.139
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==0} -index 0], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:20.139
+!MESSAGE XSCT Command: [fpga -file C:/Users/ME/Vivado_Projects/vivado_finalproject/544fp.sdk/nexysA7fpga_hw_platform_0/download.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:21.420
+!MESSAGE XSCT command with result: [fpga -file C:/Users/ME/Vivado_Projects/vivado_finalproject/544fp.sdk/nexysA7fpga_hw_platform_0/download.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:21.458
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:21.460
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:21.461
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:21.491
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Result: [null, ]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:21.492
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:21.597
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:21.597
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-42
+
+!ENTRY org.eclipse.debug.core 4 125 2020-06-08 03:36:24.227
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Pipe broken
+	at java.io.PipedInputStream.read(PipedInputStream.java:321)
+	at java.io.PipedInputStream.read(PipedInputStream.java:377)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:147)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.access$1(OutputStreamMonitor.java:137)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor$1.run(OutputStreamMonitor.java:212)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:24.603
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:24.605
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:24.645
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Result: [null, ]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:24.645
+!MESSAGE XSCT Command: [dow C:/Users/ME/Vivado_Projects/vivado_finalproject/544fp.sdk/vivado_finalproject/Debug/vivado_finalproject.elf], Thread: Worker-42
+
+!ENTRY org.eclipse.debug.core 4 125 2020-06-08 03:36:24.820
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Pipe broken
+	at java.io.PipedInputStream.read(PipedInputStream.java:321)
+	at java.io.PipedInputStream.read(PipedInputStream.java:377)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:147)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.access$1(OutputStreamMonitor.java:137)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor$1.run(OutputStreamMonitor.java:212)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:36:24.944
+!MESSAGE XSCT command with result: [dow C:/Users/ME/Vivado_Projects/vivado_finalproject/544fp.sdk/vivado_finalproject/Debug/vivado_finalproject.elf], Result: [null, ]. Thread: Worker-42
+
+!ENTRY org.eclipse.ui 4 4 2020-06-08 03:36:26.401
+!MESSAGE An internal error has occurred.
+!STACK 0
+java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@10027d5e rejected from org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor@47494ba8[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 24726]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2047)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:823)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.delayedExecute(ScheduledThreadPoolExecutor.java:326)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.schedule(ScheduledThreadPoolExecutor.java:533)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.schedule(DefaultDsfExecutor.java:438)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.execute(ScheduledThreadPoolExecutor.java:622)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.execute(DefaultDsfExecutor.java:462)
+	at org.eclipse.cdt.dsf.debug.internal.ui.CSourceNotFoundDescriptionFactory$1.getDescription(CSourceNotFoundDescriptionFactory.java:72)
+	at org.eclipse.cdt.debug.internal.core.sourcelookup.CSourceNotFoundElement.getDescription(CSourceNotFoundElement.java:55)
+	at org.eclipse.cdt.debug.internal.ui.sourcelookup.CSourceNotFoundEditorInput.getName(CSourceNotFoundEditorInput.java:26)
+	at org.eclipse.cdt.debug.internal.ui.sourcelookup.CSourceNotFoundEditorInput.equals(CSourceNotFoundEditorInput.java:37)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob$3.run(DsfSourceDisplayAdapter.java:405)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob.openEditor(DsfSourceDisplayAdapter.java:415)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob.openEditor(DsfSourceDisplayAdapter.java:384)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob.runInUIThread(DsfSourceDisplayAdapter.java:320)
+	at org.eclipse.ui.progress.UIJob$1.run(UIJob.java:97)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:182)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4203)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3819)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:687)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:604)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:33.153
+!MESSAGE XSCT Command: [disconnect tcfchan#147], Thread: Thread-7787
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:33.178
+!MESSAGE XSCT command with result: [disconnect tcfchan#147], Result: [null, ]. Thread: Thread-7787
+
+!ENTRY org.eclipse.core.jobs 4 2 2020-06-08 03:37:33.214
+!MESSAGE An internal error occurred during: "GDB process monitor job.".
+!STACK 0
+java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@7877a57 rejected from org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor@25e4a87d[Shutting down, pool size = 1, active threads = 0, queued tasks = 1, completed tasks = 6999]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2047)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:823)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.delayedExecute(ScheduledThreadPoolExecutor.java:326)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.schedule(ScheduledThreadPoolExecutor.java:533)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.schedule(DefaultDsfExecutor.java:438)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.submit(ScheduledThreadPoolExecutor.java:632)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.submit(DefaultDsfExecutor.java:470)
+	at org.eclipse.cdt.dsf.gdb.service.GDBBackend$MonitorJob.run(GDBBackend.java:829)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:34.158
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-20
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:34.180
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#148]. Thread: Worker-20
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:34.180
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-20
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:34.189
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-20
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:34.189
+!MESSAGE XSCT Command: [version -server], Thread: Worker-20
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:34.191
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2018.2]. Thread: Worker-20
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:34.191
+!MESSAGE XSCT Command: [version], Thread: Worker-20
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:34.192
+!MESSAGE XSCT command with result: [version], Result: [null, 2018.2]. Thread: Worker-20
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:34.192
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-20
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:34.197
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-20
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:34.197
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-20
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:34.213
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-20
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:34.214
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-20
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:34.219
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-20
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:34.220
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-20
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:34.236
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-20
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:34.237
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-20
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:34.243
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-20
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:34.243
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-20
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:34.259
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-20
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:34.259
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-20
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:34.267
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-20
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:34.268
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-20
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:34.284
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-20
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:34.285
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level == 0}], Thread: Worker-20
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:34.302
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level == 0}], Result: [null, ]. Thread: Worker-20
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:34.302
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-20
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:34.303
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-20
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:34.316
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:34.322
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:34.322
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:34.338
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:34.338
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==0} -index 0], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:34.361
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==0} -index 0], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:34.361
+!MESSAGE XSCT Command: [fpga -file C:/Users/ME/Vivado_Projects/vivado_finalproject/544fp.sdk/nexysA7fpga_hw_platform_0/download.bit], Thread: ModalContext
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2020-06-08 03:37:35.151
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.internal.ui.actions.DsfTerminateCommand$3$1@4dd9cd6b): Status OK: unknown code=0 OK null' resulted in a rejected execution exception.
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:35.667
+!MESSAGE XSCT command with result: [fpga -file C:/Users/ME/Vivado_Projects/vivado_finalproject/544fp.sdk/nexysA7fpga_hw_platform_0/download.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:35.680
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-20
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:35.682
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-20
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:35.682
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Thread: Worker-20
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:35.713
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Result: [null, ]. Thread: Worker-20
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:35.713
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-20
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:35.818
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-20
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:35.818
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-20
+
+!ENTRY org.eclipse.debug.core 4 125 2020-06-08 03:37:37.267
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Pipe broken
+	at java.io.PipedInputStream.read(PipedInputStream.java:321)
+	at java.io.PipedInputStream.read(PipedInputStream.java:377)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:147)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.access$1(OutputStreamMonitor.java:137)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor$1.run(OutputStreamMonitor.java:212)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.debug.core 4 125 2020-06-08 03:37:38.021
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Pipe broken
+	at java.io.PipedInputStream.read(PipedInputStream.java:321)
+	at java.io.PipedInputStream.read(PipedInputStream.java:377)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:147)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.access$1(OutputStreamMonitor.java:137)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor$1.run(OutputStreamMonitor.java:212)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:38.820
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-20
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:38.825
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Thread: Worker-20
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:38.860
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Result: [null, ]. Thread: Worker-20
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:38.861
+!MESSAGE XSCT Command: [dow C:/Users/ME/Vivado_Projects/vivado_finalproject/544fp.sdk/vivado_finalproject/Debug/vivado_finalproject.elf], Thread: Worker-20
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:37:39.125
+!MESSAGE XSCT command with result: [dow C:/Users/ME/Vivado_Projects/vivado_finalproject/544fp.sdk/vivado_finalproject/Debug/vivado_finalproject.elf], Result: [null, ]. Thread: Worker-20
+
+!ENTRY org.eclipse.ui 4 4 2020-06-08 03:37:40.846
+!MESSAGE An internal error has occurred.
+!STACK 0
+java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@177c2ddd rejected from org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor@47494ba8[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 24726]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2047)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:823)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.delayedExecute(ScheduledThreadPoolExecutor.java:326)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.schedule(ScheduledThreadPoolExecutor.java:533)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.schedule(DefaultDsfExecutor.java:438)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.execute(ScheduledThreadPoolExecutor.java:622)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.execute(DefaultDsfExecutor.java:462)
+	at org.eclipse.cdt.dsf.debug.internal.ui.CSourceNotFoundDescriptionFactory$1.getDescription(CSourceNotFoundDescriptionFactory.java:72)
+	at org.eclipse.cdt.debug.internal.core.sourcelookup.CSourceNotFoundElement.getDescription(CSourceNotFoundElement.java:55)
+	at org.eclipse.cdt.debug.internal.ui.sourcelookup.CSourceNotFoundEditorInput.getName(CSourceNotFoundEditorInput.java:26)
+	at org.eclipse.cdt.debug.internal.ui.sourcelookup.CSourceNotFoundEditorInput.equals(CSourceNotFoundEditorInput.java:37)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob$3.run(DsfSourceDisplayAdapter.java:405)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob.openEditor(DsfSourceDisplayAdapter.java:415)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob.openEditor(DsfSourceDisplayAdapter.java:384)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob.runInUIThread(DsfSourceDisplayAdapter.java:320)
+	at org.eclipse.ui.progress.UIJob$1.run(UIJob.java:97)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:182)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4203)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3819)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:687)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:604)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:36.693
+!MESSAGE XSCT Command: [disconnect tcfchan#148], Thread: Thread-7831
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:36.709
+!MESSAGE XSCT command with result: [disconnect tcfchan#148], Result: [null, ]. Thread: Thread-7831
+
+!ENTRY org.eclipse.core.jobs 4 2 2020-06-08 03:38:36.722
+!MESSAGE An internal error occurred during: "GDB process monitor job.".
+!STACK 0
+java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@1efd4ea0 rejected from org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor@62866d04[Shutting down, pool size = 1, active threads = 0, queued tasks = 1, completed tasks = 1508]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2047)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:823)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.delayedExecute(ScheduledThreadPoolExecutor.java:326)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.schedule(ScheduledThreadPoolExecutor.java:533)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.schedule(DefaultDsfExecutor.java:438)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.submit(ScheduledThreadPoolExecutor.java:632)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.submit(DefaultDsfExecutor.java:470)
+	at org.eclipse.cdt.dsf.gdb.service.GDBBackend$MonitorJob.run(GDBBackend.java:829)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:37.698
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:37.717
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#149]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:37.717
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:37.727
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:37.727
+!MESSAGE XSCT Command: [version -server], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:37.729
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2018.2]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:37.729
+!MESSAGE XSCT Command: [version], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:37.730
+!MESSAGE XSCT command with result: [version], Result: [null, 2018.2]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:37.730
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:37.735
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:37.736
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:37.752
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:37.752
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:37.758
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:37.758
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:37.774
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:37.775
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:37.780
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:37.781
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:37.796
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:37.797
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:37.802
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:37.802
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:37.820
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:37.820
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level == 0}], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:37.836
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level == 0}], Result: [null, ]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:37.837
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:37.838
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:37.852
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:37.858
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:37.859
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:37.875
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:37.875
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==0} -index 0], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:37.902
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==0} -index 0], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:37.902
+!MESSAGE XSCT Command: [fpga -file C:/Users/ME/Vivado_Projects/vivado_finalproject/544fp.sdk/nexysA7fpga_hw_platform_0/download.bit], Thread: ModalContext
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2020-06-08 03:38:38.692
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.internal.ui.actions.DsfTerminateCommand$3$1@4cc9dd24): Status OK: unknown code=0 OK null' resulted in a rejected execution exception.
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:39.188
+!MESSAGE XSCT command with result: [fpga -file C:/Users/ME/Vivado_Projects/vivado_finalproject/544fp.sdk/nexysA7fpga_hw_platform_0/download.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:39.220
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:39.227
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:39.228
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:39.257
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Result: [null, ]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:39.257
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:39.361
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:39.362
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-42
+
+!ENTRY org.eclipse.debug.core 4 125 2020-06-08 03:38:40.873
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Pipe broken
+	at java.io.PipedInputStream.read(PipedInputStream.java:321)
+	at java.io.PipedInputStream.read(PipedInputStream.java:377)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:147)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.access$1(OutputStreamMonitor.java:137)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor$1.run(OutputStreamMonitor.java:212)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.debug.core 4 125 2020-06-08 03:38:41.664
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Pipe broken
+	at java.io.PipedInputStream.read(PipedInputStream.java:321)
+	at java.io.PipedInputStream.read(PipedInputStream.java:377)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:147)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.access$1(OutputStreamMonitor.java:137)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor$1.run(OutputStreamMonitor.java:212)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:42.364
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:42.365
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:42.401
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Result: [null, ]. Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:42.402
+!MESSAGE XSCT Command: [dow C:/Users/ME/Vivado_Projects/vivado_finalproject/544fp.sdk/vivado_finalproject/Debug/vivado_finalproject.elf], Thread: Worker-42
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:38:42.692
+!MESSAGE XSCT command with result: [dow C:/Users/ME/Vivado_Projects/vivado_finalproject/544fp.sdk/vivado_finalproject/Debug/vivado_finalproject.elf], Result: [null, ]. Thread: Worker-42
+
+!ENTRY org.eclipse.ui 4 4 2020-06-08 03:38:44.124
+!MESSAGE An internal error has occurred.
+!STACK 0
+java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@725af9d1 rejected from org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor@47494ba8[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 24726]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2047)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:823)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.delayedExecute(ScheduledThreadPoolExecutor.java:326)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.schedule(ScheduledThreadPoolExecutor.java:533)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.schedule(DefaultDsfExecutor.java:438)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.execute(ScheduledThreadPoolExecutor.java:622)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.execute(DefaultDsfExecutor.java:462)
+	at org.eclipse.cdt.dsf.debug.internal.ui.CSourceNotFoundDescriptionFactory$1.getDescription(CSourceNotFoundDescriptionFactory.java:72)
+	at org.eclipse.cdt.debug.internal.core.sourcelookup.CSourceNotFoundElement.getDescription(CSourceNotFoundElement.java:55)
+	at org.eclipse.cdt.debug.internal.ui.sourcelookup.CSourceNotFoundEditorInput.getName(CSourceNotFoundEditorInput.java:26)
+	at org.eclipse.cdt.debug.internal.ui.sourcelookup.CSourceNotFoundEditorInput.equals(CSourceNotFoundEditorInput.java:37)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob$3.run(DsfSourceDisplayAdapter.java:405)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob.openEditor(DsfSourceDisplayAdapter.java:415)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob.openEditor(DsfSourceDisplayAdapter.java:384)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob.runInUIThread(DsfSourceDisplayAdapter.java:320)
+	at org.eclipse.ui.progress.UIJob$1.run(UIJob.java:97)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:182)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4203)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3819)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:687)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:604)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2020-06-08 03:39:02.892
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2020-06-08 03:39:02.892
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  null children=[]' resulted in a rejected execution exception.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2020-06-08 03:39:02.892
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@67430e06): Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  null children=[]' resulted in a rejected execution exception. null' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2020-06-08 03:39:02.893
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2020-06-08 03:39:02.893
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  null children=[]' resulted in a rejected execution exception.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2020-06-08 03:39:02.893
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@4834a91a): Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  null children=[]' resulted in a rejected execution exception. null' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2020-06-08 03:39:02.893
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2020-06-08 03:39:02.893
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  null children=[]' resulted in a rejected execution exception.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2020-06-08 03:39:02.893
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@3b50026f): Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  null children=[]' resulted in a rejected execution exception. null' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2020-06-08 03:39:02.894
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2020-06-08 03:39:02.894
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  null children=[]' resulted in a rejected execution exception.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2020-06-08 03:39:02.894
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@7b3f4175): Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  null children=[]' resulted in a rejected execution exception. null' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2020-06-08 03:39:02.894
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2020-06-08 03:39:02.894
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  null children=[]' resulted in a rejected execution exception.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2020-06-08 03:39:02.894
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@2a7db22b): Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  null children=[]' resulted in a rejected execution exception. null' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2020-06-08 03:39:02.895
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2020-06-08 03:39:02.895
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  null children=[]' resulted in a rejected execution exception.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2020-06-08 03:39:02.895
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@12bf214c): Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  null children=[]' resulted in a rejected execution exception. null' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2020-06-08 03:39:02.895
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2020-06-08 03:39:02.895
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  null children=[]' resulted in a rejected execution exception.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2020-06-08 03:39:02.895
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@fe3b858): Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  null children=[]' resulted in a rejected execution exception. null' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2020-06-08 03:39:02.895
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2020-06-08 03:39:02.895
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  null children=[]' resulted in a rejected execution exception.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2020-06-08 03:39:02.895
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@35e4f4ef): Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  null children=[]' resulted in a rejected execution exception. null' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2020-06-08 03:39:02.896
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2020-06-08 03:39:02.896
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  null children=[]' resulted in a rejected execution exception.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2020-06-08 03:39:02.896
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@21827a83): Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  null children=[]' resulted in a rejected execution exception. null' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2020-06-08 03:39:02.896
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2020-06-08 03:39:02.896
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  null children=[]' resulted in a rejected execution exception.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2020-06-08 03:39:02.896
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@4ffb1725): Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  null children=[]' resulted in a rejected execution exception. null' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2020-06-08 03:39:02.896
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2020-06-08 03:39:02.896
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  null children=[]' resulted in a rejected execution exception.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2020-06-08 03:39:02.896
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@526f89b6): Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  null children=[]' resulted in a rejected execution exception. null' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2020-06-08 03:39:02.897
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2020-06-08 03:39:02.897
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  null children=[]' resulted in a rejected execution exception.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2020-06-08 03:39:02.897
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@7066f4c9): Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  null children=[]' resulted in a rejected execution exception. null' resulted in a rejected execution exception.
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:06.810
+!MESSAGE XSCT Command: [disconnect tcfchan#149], Thread: Thread-7881
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:06.820
+!MESSAGE XSCT command with result: [disconnect tcfchan#149], Result: [null, ]. Thread: Thread-7881
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:07.814
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-50
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:07.841
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#150]. Thread: Worker-50
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:07.842
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-50
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:07.852
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-50
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:07.852
+!MESSAGE XSCT Command: [version -server], Thread: Worker-50
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:07.854
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2018.2]. Thread: Worker-50
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:07.854
+!MESSAGE XSCT Command: [version], Thread: Worker-50
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:07.854
+!MESSAGE XSCT command with result: [version], Result: [null, 2018.2]. Thread: Worker-50
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:07.855
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-50
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:07.860
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-50
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:07.861
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-50
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:07.879
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-50
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:07.879
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-50
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:07.886
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-50
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:07.886
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-50
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:07.902
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-50
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:07.902
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-50
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:07.908
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-50
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:07.908
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-50
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:07.923
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-50
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:07.924
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-50
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:07.930
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-50
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:07.930
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-50
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:07.947
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-50
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:07.948
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level == 0}], Thread: Worker-50
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:07.963
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level == 0}], Result: [null, ]. Thread: Worker-50
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:07.963
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-50
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:07.965
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-50
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:07.980
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:07.986
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:07.987
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:08.006
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:08.006
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==0} -index 0], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:08.033
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==0} -index 0], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:08.033
+!MESSAGE XSCT Command: [fpga -file C:/Users/ME/Vivado_Projects/vivado_finalproject/544fp.sdk/nexysA7fpga_hw_platform_0/download.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:09.342
+!MESSAGE XSCT command with result: [fpga -file C:/Users/ME/Vivado_Projects/vivado_finalproject/544fp.sdk/nexysA7fpga_hw_platform_0/download.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:09.374
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-50
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:09.377
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-50
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:09.377
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Thread: Worker-50
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:09.420
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Result: [null, ]. Thread: Worker-50
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:09.420
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-50
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:09.525
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-50
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:09.526
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-50
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:12.527
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-50
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:12.528
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Thread: Worker-50
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:12.560
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Result: [null, ]. Thread: Worker-50
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:12.560
+!MESSAGE XSCT Command: [dow C:/Users/ME/Vivado_Projects/vivado_finalproject/544fp.sdk/vivado_finalproject/Debug/vivado_finalproject.elf], Thread: Worker-50
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:39:12.831
+!MESSAGE XSCT command with result: [dow C:/Users/ME/Vivado_Projects/vivado_finalproject/544fp.sdk/vivado_finalproject/Debug/vivado_finalproject.elf], Result: [null, ]. Thread: Worker-50
+
+!ENTRY org.eclipse.ui 4 4 2020-06-08 03:39:14.296
+!MESSAGE An internal error has occurred.
+!STACK 0
+java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@75e8dff7 rejected from org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor@47494ba8[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 24726]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2047)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:823)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.delayedExecute(ScheduledThreadPoolExecutor.java:326)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.schedule(ScheduledThreadPoolExecutor.java:533)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.schedule(DefaultDsfExecutor.java:438)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.execute(ScheduledThreadPoolExecutor.java:622)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.execute(DefaultDsfExecutor.java:462)
+	at org.eclipse.cdt.dsf.debug.internal.ui.CSourceNotFoundDescriptionFactory$1.getDescription(CSourceNotFoundDescriptionFactory.java:72)
+	at org.eclipse.cdt.debug.internal.core.sourcelookup.CSourceNotFoundElement.getDescription(CSourceNotFoundElement.java:55)
+	at org.eclipse.cdt.debug.internal.ui.sourcelookup.CSourceNotFoundEditorInput.getName(CSourceNotFoundEditorInput.java:26)
+	at org.eclipse.cdt.debug.internal.ui.sourcelookup.CSourceNotFoundEditorInput.equals(CSourceNotFoundEditorInput.java:37)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob$3.run(DsfSourceDisplayAdapter.java:405)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob.openEditor(DsfSourceDisplayAdapter.java:415)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob.openEditor(DsfSourceDisplayAdapter.java:384)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob.runInUIThread(DsfSourceDisplayAdapter.java:320)
+	at org.eclipse.ui.progress.UIJob$1.run(UIJob.java:97)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:182)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4203)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3819)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:687)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:604)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+
+!ENTRY org.eclipse.debug.core 4 125 2020-06-08 03:39:14.999
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Pipe broken
+	at java.io.PipedInputStream.read(PipedInputStream.java:321)
+	at java.io.PipedInputStream.read(PipedInputStream.java:377)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:147)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.access$1(OutputStreamMonitor.java:137)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor$1.run(OutputStreamMonitor.java:212)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.debug.core 4 125 2020-06-08 03:39:15.961
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Pipe broken
+	at java.io.PipedInputStream.read(PipedInputStream.java:321)
+	at java.io.PipedInputStream.read(PipedInputStream.java:377)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:147)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.access$1(OutputStreamMonitor.java:137)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor$1.run(OutputStreamMonitor.java:212)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:40:55.712
+!MESSAGE XSCT Command: [disconnect tcfchan#150], Thread: Thread-7938
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:40:55.729
+!MESSAGE XSCT command with result: [disconnect tcfchan#150], Result: [null, ]. Thread: Thread-7938
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:40:56.717
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:40:56.743
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#151]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:40:56.744
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:40:56.762
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:40:56.763
+!MESSAGE XSCT Command: [version -server], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:40:56.764
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2018.2]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:40:56.765
+!MESSAGE XSCT Command: [version], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:40:56.766
+!MESSAGE XSCT command with result: [version], Result: [null, 2018.2]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:40:56.766
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:40:56.772
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:40:56.772
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:40:56.787
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:40:56.787
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:40:56.793
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:40:56.793
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:40:56.812
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:40:56.812
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:40:56.818
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:40:56.818
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:40:56.837
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:40:56.837
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:40:56.843
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:40:56.843
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:40:56.860
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:40:56.860
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level == 0}], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:40:56.875
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level == 0}], Result: [null, ]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:40:56.876
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:40:56.877
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:40:56.893
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:40:56.899
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:40:56.899
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:40:56.915
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:40:56.915
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==0} -index 0], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:40:56.943
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==0} -index 0], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:40:56.944
+!MESSAGE XSCT Command: [fpga -file C:/Users/ME/Vivado_Projects/vivado_finalproject/544fp.sdk/nexysA7fpga_hw_platform_0/download.bit], Thread: ModalContext
+
+!ENTRY org.eclipse.debug.core 4 125 2020-06-08 03:40:58.198
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Pipe broken
+	at java.io.PipedInputStream.read(PipedInputStream.java:321)
+	at java.io.PipedInputStream.read(PipedInputStream.java:377)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:147)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.access$1(OutputStreamMonitor.java:137)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor$1.run(OutputStreamMonitor.java:212)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:40:58.238
+!MESSAGE XSCT command with result: [fpga -file C:/Users/ME/Vivado_Projects/vivado_finalproject/544fp.sdk/nexysA7fpga_hw_platform_0/download.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:40:58.271
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:40:58.272
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:40:58.273
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:40:58.301
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Result: [null, ]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:40:58.302
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-41
+
+!ENTRY org.eclipse.debug.core 4 125 2020-06-08 03:40:58.350
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Pipe broken
+	at java.io.PipedInputStream.read(PipedInputStream.java:321)
+	at java.io.PipedInputStream.read(PipedInputStream.java:377)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:147)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.access$1(OutputStreamMonitor.java:137)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor$1.run(OutputStreamMonitor.java:212)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:40:58.432
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:40:58.432
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:41:01.435
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:41:01.436
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:41:01.471
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Result: [null, ]. Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:41:01.471
+!MESSAGE XSCT Command: [dow C:/Users/ME/Vivado_Projects/vivado_finalproject/544fp.sdk/vivado_finalproject/Debug/vivado_finalproject.elf], Thread: Worker-41
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:41:01.769
+!MESSAGE XSCT command with result: [dow C:/Users/ME/Vivado_Projects/vivado_finalproject/544fp.sdk/vivado_finalproject/Debug/vivado_finalproject.elf], Result: [null, ]. Thread: Worker-41
+
+!ENTRY org.eclipse.ui 4 4 2020-06-08 03:41:03.235
+!MESSAGE An internal error has occurred.
+!STACK 0
+java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@47486a44 rejected from org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor@47494ba8[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 24726]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2047)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:823)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.delayedExecute(ScheduledThreadPoolExecutor.java:326)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.schedule(ScheduledThreadPoolExecutor.java:533)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.schedule(DefaultDsfExecutor.java:438)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.execute(ScheduledThreadPoolExecutor.java:622)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.execute(DefaultDsfExecutor.java:462)
+	at org.eclipse.cdt.dsf.debug.internal.ui.CSourceNotFoundDescriptionFactory$1.getDescription(CSourceNotFoundDescriptionFactory.java:72)
+	at org.eclipse.cdt.debug.internal.core.sourcelookup.CSourceNotFoundElement.getDescription(CSourceNotFoundElement.java:55)
+	at org.eclipse.cdt.debug.internal.ui.sourcelookup.CSourceNotFoundEditorInput.getName(CSourceNotFoundEditorInput.java:26)
+	at org.eclipse.cdt.debug.internal.ui.sourcelookup.CSourceNotFoundEditorInput.equals(CSourceNotFoundEditorInput.java:37)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob$3.run(DsfSourceDisplayAdapter.java:405)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob.openEditor(DsfSourceDisplayAdapter.java:415)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob.openEditor(DsfSourceDisplayAdapter.java:384)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob.runInUIThread(DsfSourceDisplayAdapter.java:320)
+	at org.eclipse.ui.progress.UIJob$1.run(UIJob.java:97)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:182)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4203)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3819)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:687)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:604)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:06.809
+!MESSAGE XSCT Command: [disconnect tcfchan#151], Thread: Thread-7986
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:06.823
+!MESSAGE XSCT command with result: [disconnect tcfchan#151], Result: [null, ]. Thread: Thread-7986
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:07.816
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-36
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:07.841
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#152]. Thread: Worker-36
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:07.841
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-36
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:07.852
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-36
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:07.852
+!MESSAGE XSCT Command: [version -server], Thread: Worker-36
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:07.854
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2018.2]. Thread: Worker-36
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:07.854
+!MESSAGE XSCT Command: [version], Thread: Worker-36
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:07.855
+!MESSAGE XSCT command with result: [version], Result: [null, 2018.2]. Thread: Worker-36
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:07.855
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-36
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:07.860
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-36
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:07.861
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-36
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:07.877
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-36
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:07.877
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-36
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:07.883
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-36
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:07.883
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-36
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:07.900
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-36
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:07.901
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-36
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:07.906
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-36
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:07.907
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-36
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:07.930
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-36
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:07.931
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-36
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:07.937
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-36
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:07.937
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-36
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:07.955
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-36
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:07.956
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level == 0}], Thread: Worker-36
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:07.976
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level == 0}], Result: [null, ]. Thread: Worker-36
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:07.977
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-36
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:07.983
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-36
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:07.997
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:08.003
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:08.003
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:08.019
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:08.019
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==0} -index 0], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:08.041
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==0} -index 0], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:08.042
+!MESSAGE XSCT Command: [fpga -file C:/Users/ME/Vivado_Projects/vivado_finalproject/544fp.sdk/nexysA7fpga_hw_platform_0/download.bit], Thread: ModalContext
+
+!ENTRY org.eclipse.debug.core 4 125 2020-06-08 03:42:09.102
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Pipe broken
+	at java.io.PipedInputStream.read(PipedInputStream.java:321)
+	at java.io.PipedInputStream.read(PipedInputStream.java:377)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:147)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.access$1(OutputStreamMonitor.java:137)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor$1.run(OutputStreamMonitor.java:212)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.debug.core 4 125 2020-06-08 03:42:09.281
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Pipe broken
+	at java.io.PipedInputStream.read(PipedInputStream.java:321)
+	at java.io.PipedInputStream.read(PipedInputStream.java:377)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:147)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.access$1(OutputStreamMonitor.java:137)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor$1.run(OutputStreamMonitor.java:212)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:09.326
+!MESSAGE XSCT command with result: [fpga -file C:/Users/ME/Vivado_Projects/vivado_finalproject/544fp.sdk/nexysA7fpga_hw_platform_0/download.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:09.355
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-36
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:09.359
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-36
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:09.360
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Thread: Worker-36
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:09.391
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Result: [null, ]. Thread: Worker-36
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:09.391
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-36
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:09.497
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-36
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:09.498
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-36
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:12.501
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-36
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:12.502
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Thread: Worker-36
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:12.531
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Result: [null, ]. Thread: Worker-36
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:12.532
+!MESSAGE XSCT Command: [dow C:/Users/ME/Vivado_Projects/vivado_finalproject/544fp.sdk/vivado_finalproject/Debug/vivado_finalproject.elf], Thread: Worker-36
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:42:12.828
+!MESSAGE XSCT command with result: [dow C:/Users/ME/Vivado_Projects/vivado_finalproject/544fp.sdk/vivado_finalproject/Debug/vivado_finalproject.elf], Result: [null, ]. Thread: Worker-36
+
+!ENTRY org.eclipse.ui 4 4 2020-06-08 03:42:14.261
+!MESSAGE An internal error has occurred.
+!STACK 0
+java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@48f6a52c rejected from org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor@47494ba8[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 24726]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2047)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:823)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.delayedExecute(ScheduledThreadPoolExecutor.java:326)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.schedule(ScheduledThreadPoolExecutor.java:533)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.schedule(DefaultDsfExecutor.java:438)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.execute(ScheduledThreadPoolExecutor.java:622)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.execute(DefaultDsfExecutor.java:462)
+	at org.eclipse.cdt.dsf.debug.internal.ui.CSourceNotFoundDescriptionFactory$1.getDescription(CSourceNotFoundDescriptionFactory.java:72)
+	at org.eclipse.cdt.debug.internal.core.sourcelookup.CSourceNotFoundElement.getDescription(CSourceNotFoundElement.java:55)
+	at org.eclipse.cdt.debug.internal.ui.sourcelookup.CSourceNotFoundEditorInput.getName(CSourceNotFoundEditorInput.java:26)
+	at org.eclipse.cdt.debug.internal.ui.sourcelookup.CSourceNotFoundEditorInput.equals(CSourceNotFoundEditorInput.java:37)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob$3.run(DsfSourceDisplayAdapter.java:405)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob.openEditor(DsfSourceDisplayAdapter.java:415)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob.openEditor(DsfSourceDisplayAdapter.java:384)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob.runInUIThread(DsfSourceDisplayAdapter.java:320)
+	at org.eclipse.ui.progress.UIJob$1.run(UIJob.java:97)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:182)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4203)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3819)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:687)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:604)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+
+!ENTRY org.eclipse.ui 4 4 2020-06-08 03:42:41.305
+!MESSAGE An internal error has occurred.
+!STACK 0
+java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@75e4116b rejected from org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor@47494ba8[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 24726]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2047)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:823)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.delayedExecute(ScheduledThreadPoolExecutor.java:326)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.schedule(ScheduledThreadPoolExecutor.java:533)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.schedule(DefaultDsfExecutor.java:438)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.execute(ScheduledThreadPoolExecutor.java:622)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.execute(DefaultDsfExecutor.java:462)
+	at org.eclipse.cdt.dsf.debug.internal.ui.CSourceNotFoundDescriptionFactory$1.getDescription(CSourceNotFoundDescriptionFactory.java:72)
+	at org.eclipse.cdt.debug.internal.core.sourcelookup.CSourceNotFoundElement.getDescription(CSourceNotFoundElement.java:55)
+	at org.eclipse.cdt.debug.internal.ui.sourcelookup.CSourceNotFoundEditorInput.getName(CSourceNotFoundEditorInput.java:26)
+	at org.eclipse.cdt.debug.internal.ui.sourcelookup.CSourceNotFoundEditorInput.equals(CSourceNotFoundEditorInput.java:37)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob$3.run(DsfSourceDisplayAdapter.java:405)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob.openEditor(DsfSourceDisplayAdapter.java:415)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob.openEditor(DsfSourceDisplayAdapter.java:384)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob.runInUIThread(DsfSourceDisplayAdapter.java:320)
+	at org.eclipse.ui.progress.UIJob$1.run(UIJob.java:97)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:182)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4203)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3819)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:687)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:604)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:00.684
+!MESSAGE XSCT Command: [disconnect tcfchan#152], Thread: Thread-8029
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:00.696
+!MESSAGE XSCT command with result: [disconnect tcfchan#152], Result: [null, ]. Thread: Thread-8029
+
+!ENTRY org.eclipse.core.jobs 4 2 2020-06-08 03:44:00.732
+!MESSAGE An internal error occurred during: "GDB process monitor job.".
+!STACK 0
+java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@85c335c rejected from org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor@34af5dc8[Shutting down, pool size = 1, active threads = 0, queued tasks = 1, completed tasks = 3588]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2047)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:823)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.delayedExecute(ScheduledThreadPoolExecutor.java:326)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.schedule(ScheduledThreadPoolExecutor.java:533)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.schedule(DefaultDsfExecutor.java:438)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.submit(ScheduledThreadPoolExecutor.java:632)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.submit(DefaultDsfExecutor.java:470)
+	at org.eclipse.cdt.dsf.gdb.service.GDBBackend$MonitorJob.run(GDBBackend.java:829)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:01.707
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-51
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:01.731
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#153]. Thread: Worker-51
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:01.732
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-51
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:01.741
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-51
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:01.741
+!MESSAGE XSCT Command: [version -server], Thread: Worker-51
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:01.742
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2018.2]. Thread: Worker-51
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:01.743
+!MESSAGE XSCT Command: [version], Thread: Worker-51
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:01.744
+!MESSAGE XSCT command with result: [version], Result: [null, 2018.2]. Thread: Worker-51
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:01.744
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-51
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:01.749
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-51
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:01.749
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-51
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:01.766
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-51
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:01.766
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-51
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:01.772
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-51
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:01.772
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-51
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:01.788
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-51
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:01.788
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-51
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:01.794
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-51
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:01.794
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-51
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:01.810
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-51
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:01.810
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-51
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:01.816
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-51
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:01.816
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-51
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:01.832
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-51
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:01.833
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level == 0}], Thread: Worker-51
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:01.849
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level == 0}], Result: [null, ]. Thread: Worker-51
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:01.849
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-51
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:01.852
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-51
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:01.867
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:01.872
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:01.873
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:01.889
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:01.889
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==0} -index 0], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:01.911
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==0} -index 0], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:01.912
+!MESSAGE XSCT Command: [fpga -file C:/Users/ME/Vivado_Projects/vivado_finalproject/544fp.sdk/nexysA7fpga_hw_platform_0/download.bit], Thread: ModalContext
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2020-06-08 03:44:02.684
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.internal.ui.actions.DsfTerminateCommand$3$1@2e242a51): Status OK: unknown code=0 OK null' resulted in a rejected execution exception.
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:03.199
+!MESSAGE XSCT command with result: [fpga -file C:/Users/ME/Vivado_Projects/vivado_finalproject/544fp.sdk/nexysA7fpga_hw_platform_0/download.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:03.232
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-51
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:03.235
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-51
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:03.236
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Thread: Worker-51
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:03.267
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Result: [null, ]. Thread: Worker-51
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:03.268
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-51
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:03.374
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-51
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:03.374
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-51
+
+!ENTRY org.eclipse.debug.core 4 125 2020-06-08 03:44:04.786
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Pipe broken
+	at java.io.PipedInputStream.read(PipedInputStream.java:321)
+	at java.io.PipedInputStream.read(PipedInputStream.java:377)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:147)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.access$1(OutputStreamMonitor.java:137)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor$1.run(OutputStreamMonitor.java:212)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.debug.core 4 125 2020-06-08 03:44:05.167
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Pipe broken
+	at java.io.PipedInputStream.read(PipedInputStream.java:321)
+	at java.io.PipedInputStream.read(PipedInputStream.java:377)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:147)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.access$1(OutputStreamMonitor.java:137)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor$1.run(OutputStreamMonitor.java:212)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:06.375
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-51
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:06.376
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Thread: Worker-51
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:06.414
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Result: [null, ]. Thread: Worker-51
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:06.414
+!MESSAGE XSCT Command: [dow C:/Users/ME/Vivado_Projects/vivado_finalproject/544fp.sdk/vivado_finalproject/Debug/vivado_finalproject.elf], Thread: Worker-51
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:06.709
+!MESSAGE XSCT command with result: [dow C:/Users/ME/Vivado_Projects/vivado_finalproject/544fp.sdk/vivado_finalproject/Debug/vivado_finalproject.elf], Result: [null, ]. Thread: Worker-51
+
+!ENTRY org.eclipse.ui 4 4 2020-06-08 03:44:08.205
+!MESSAGE An internal error has occurred.
+!STACK 0
+java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@4628beaa rejected from org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor@47494ba8[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 24726]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2047)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:823)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.delayedExecute(ScheduledThreadPoolExecutor.java:326)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.schedule(ScheduledThreadPoolExecutor.java:533)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.schedule(DefaultDsfExecutor.java:438)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.execute(ScheduledThreadPoolExecutor.java:622)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.execute(DefaultDsfExecutor.java:462)
+	at org.eclipse.cdt.dsf.debug.internal.ui.CSourceNotFoundDescriptionFactory$1.getDescription(CSourceNotFoundDescriptionFactory.java:72)
+	at org.eclipse.cdt.debug.internal.core.sourcelookup.CSourceNotFoundElement.getDescription(CSourceNotFoundElement.java:55)
+	at org.eclipse.cdt.debug.internal.ui.sourcelookup.CSourceNotFoundEditorInput.getName(CSourceNotFoundEditorInput.java:26)
+	at org.eclipse.cdt.debug.internal.ui.sourcelookup.CSourceNotFoundEditorInput.equals(CSourceNotFoundEditorInput.java:37)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob$3.run(DsfSourceDisplayAdapter.java:405)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob.openEditor(DsfSourceDisplayAdapter.java:415)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob.openEditor(DsfSourceDisplayAdapter.java:384)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob.runInUIThread(DsfSourceDisplayAdapter.java:320)
+	at org.eclipse.ui.progress.UIJob$1.run(UIJob.java:97)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:182)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4203)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3819)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:687)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:604)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:36.505
+!MESSAGE XSCT Command: [disconnect tcfchan#153], Thread: Thread-8075
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:36.519
+!MESSAGE XSCT command with result: [disconnect tcfchan#153], Result: [null, ]. Thread: Thread-8075
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:37.513
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:37.533
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#154]. Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:37.534
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:37.546
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:37.546
+!MESSAGE XSCT Command: [version -server], Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:37.548
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2018.2]. Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:37.548
+!MESSAGE XSCT Command: [version], Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:37.549
+!MESSAGE XSCT command with result: [version], Result: [null, 2018.2]. Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:37.549
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:37.554
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:37.555
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:37.574
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:37.574
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:37.579
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:37.579
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:37.595
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:37.595
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:37.601
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:37.602
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:37.617
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:37.617
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:37.623
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:37.624
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:37.643
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:37.643
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level == 0}], Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:37.659
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level == 0}], Result: [null, ]. Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:37.659
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:37.661
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:37.677
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:37.684
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -50T 210292AA7EAAA]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:37.684
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:37.703
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==1}], Result: [null,      2  xc7a50t (idcode 0362c093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:37.703
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==0} -index 0], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:37.744
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA" && level==0} -index 0], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:37.745
+!MESSAGE XSCT Command: [fpga -file C:/Users/ME/Vivado_Projects/vivado_finalproject/544fp.sdk/nexysA7fpga_hw_platform_0/download.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:39.023
+!MESSAGE XSCT command with result: [fpga -file C:/Users/ME/Vivado_Projects/vivado_finalproject/544fp.sdk/nexysA7fpga_hw_platform_0/download.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:39.053
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:39.055
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:39.056
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Thread: Worker-47
+
+!ENTRY org.eclipse.debug.core 4 125 2020-06-08 03:44:39.059
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Pipe broken
+	at java.io.PipedInputStream.read(PipedInputStream.java:321)
+	at java.io.PipedInputStream.read(PipedInputStream.java:377)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:147)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.access$1(OutputStreamMonitor.java:137)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor$1.run(OutputStreamMonitor.java:212)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:39.086
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Result: [null, ]. Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:39.087
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:39.196
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:39.197
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-47
+
+!ENTRY org.eclipse.debug.core 4 125 2020-06-08 03:44:39.261
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Pipe broken
+	at java.io.PipedInputStream.read(PipedInputStream.java:321)
+	at java.io.PipedInputStream.read(PipedInputStream.java:377)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:147)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.access$1(OutputStreamMonitor.java:137)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor$1.run(OutputStreamMonitor.java:212)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:42.199
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:42.200
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:42.241
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys A7 -50T 210292AA7EAAA"} -index 0], Result: [null, ]. Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:42.241
+!MESSAGE XSCT Command: [dow C:/Users/ME/Vivado_Projects/vivado_finalproject/544fp.sdk/vivado_finalproject/Debug/vivado_finalproject.elf], Thread: Worker-47
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-06-08 03:44:42.540
+!MESSAGE XSCT command with result: [dow C:/Users/ME/Vivado_Projects/vivado_finalproject/544fp.sdk/vivado_finalproject/Debug/vivado_finalproject.elf], Result: [null, ]. Thread: Worker-47
+
+!ENTRY org.eclipse.ui 4 4 2020-06-08 03:44:44.003
+!MESSAGE An internal error has occurred.
+!STACK 0
+java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@319b98 rejected from org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor@47494ba8[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 24726]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2047)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:823)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.delayedExecute(ScheduledThreadPoolExecutor.java:326)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.schedule(ScheduledThreadPoolExecutor.java:533)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.schedule(DefaultDsfExecutor.java:438)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.execute(ScheduledThreadPoolExecutor.java:622)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.execute(DefaultDsfExecutor.java:462)
+	at org.eclipse.cdt.dsf.debug.internal.ui.CSourceNotFoundDescriptionFactory$1.getDescription(CSourceNotFoundDescriptionFactory.java:72)
+	at org.eclipse.cdt.debug.internal.core.sourcelookup.CSourceNotFoundElement.getDescription(CSourceNotFoundElement.java:55)
+	at org.eclipse.cdt.debug.internal.ui.sourcelookup.CSourceNotFoundEditorInput.getName(CSourceNotFoundEditorInput.java:26)
+	at org.eclipse.cdt.debug.internal.ui.sourcelookup.CSourceNotFoundEditorInput.equals(CSourceNotFoundEditorInput.java:37)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob$3.run(DsfSourceDisplayAdapter.java:405)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob.openEditor(DsfSourceDisplayAdapter.java:415)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob.openEditor(DsfSourceDisplayAdapter.java:384)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob.runInUIThread(DsfSourceDisplayAdapter.java:320)
+	at org.eclipse.ui.progress.UIJob$1.run(UIJob.java:97)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:182)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4203)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3819)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:687)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:604)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+
+!ENTRY org.eclipse.ui 4 4 2020-06-08 03:44:54.931
+!MESSAGE An internal error has occurred.
+!STACK 0
+java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@52cbbbf7 rejected from org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor@47494ba8[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 24726]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2047)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:823)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.delayedExecute(ScheduledThreadPoolExecutor.java:326)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.schedule(ScheduledThreadPoolExecutor.java:533)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.schedule(DefaultDsfExecutor.java:438)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.execute(ScheduledThreadPoolExecutor.java:622)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.execute(DefaultDsfExecutor.java:462)
+	at org.eclipse.cdt.dsf.debug.internal.ui.CSourceNotFoundDescriptionFactory$1.getDescription(CSourceNotFoundDescriptionFactory.java:72)
+	at org.eclipse.cdt.debug.internal.core.sourcelookup.CSourceNotFoundElement.getDescription(CSourceNotFoundElement.java:55)
+	at org.eclipse.cdt.debug.internal.ui.sourcelookup.CSourceNotFoundEditorInput.getName(CSourceNotFoundEditorInput.java:26)
+	at org.eclipse.cdt.debug.internal.ui.sourcelookup.CSourceNotFoundEditorInput.equals(CSourceNotFoundEditorInput.java:37)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob$3.run(DsfSourceDisplayAdapter.java:405)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob.openEditor(DsfSourceDisplayAdapter.java:415)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob.openEditor(DsfSourceDisplayAdapter.java:384)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$DisplayJob.runInUIThread(DsfSourceDisplayAdapter.java:320)
+	at org.eclipse.ui.progress.UIJob$1.run(UIJob.java:97)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:182)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4203)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3819)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:687)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:604)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)

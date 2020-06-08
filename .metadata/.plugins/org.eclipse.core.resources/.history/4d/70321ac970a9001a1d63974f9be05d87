@@ -39,7 +39,7 @@
 /* Queues   */
 
 /* Semaphores   */
-xSemaphoreHandle ssl_binarysemaphore;
+xSemaphoreHandle binarysemaphore;
 xSemaphoreHandle esp_binary_semaphore;
 
 /* Mutexes  */
@@ -224,8 +224,6 @@ static void rx_uart1(void *pvUnused)
         if(strncmp(circ_buf_p, "}", strsize) == 0)
         {
             data_collect = FALSE;
-            xSemaphoreGiveFromISR(ssl_binarysemaphore, pdFALSE);
-
         }
 
         if(data_collect)
@@ -261,7 +259,7 @@ static void hb3_handler(void *pvUnused)
     if(control > 0) status = 1;
     else status = 0;
     error = control - position;
-    ssl_send_data(status, control, *p, ssl_binarysemaphore);
+    ssl_send_data(status, control, *p);
 }
 
 /*  Main Program    */
@@ -278,7 +276,7 @@ int main(void)
 	prvSetupHardware();
 
     /*  Initialize O/S Concurrency Mechanisms   */
-    ssl_binarysemaphore = xSemaphoreCreateBinary();
+    binarysemaphore = xSemaphoreCreateBinary();
     esp_binary_semaphore = xSemaphoreCreateBinary();
 
     /* Create Master Task   */
@@ -383,15 +381,12 @@ void task_master(void *p)
 
         if(connected == FALSE)
         {
-            send_message(ssl_connect, esp_binary_semaphore);
+            send_message(ssl_connect);
             connected = TRUE;
         }
 
-        if(!(ticks % 100))
-        {
+        if(!(ticks % 200))
             ssl_send_message(ssl_get1);
-        }
-
 
         do
         {
@@ -656,29 +651,29 @@ void register_interrupt_handler(uint8_t ucInterruptID, XInterruptHandler pxHandl
 
 void connect_to_wifi(void)
 {    
-    send_message(close, esp_binary_semaphore);
+    send_message(close);
 
-    send_message(ate1, esp_binary_semaphore);
+    send_message(ate1);
 
-    send_message(cwmode, esp_binary_semaphore);
+    send_message(cwmode);
 
-    send_message(num_of_connects, esp_binary_semaphore);
+    send_message(num_of_connects);
 
-    send_message(connectwifi, esp_binary_semaphore);
+    send_message(connectwifi);
 
-    send_message(connect_status, esp_binary_semaphore);
+    send_message(connect_status);
 
-    send_message(ssl_connect, esp_binary_semaphore);
+    send_message(ssl_connect);
 
-    send_message(ssl_status, esp_binary_semaphore);
+    send_message(ssl_status);
 
-    send_message(ate0, esp_binary_semaphore);
+    send_message(ate0);
 
     connected = TRUE;
 
  }
 
-void send_message(u8 *message, QueueHandle_t queue)
+void send_message(u8 *message)
 {
 
         strncpy(tx_buf, message, sizeof(tx_buf));
@@ -691,7 +686,7 @@ void send_message(u8 *message, QueueHandle_t queue)
     
 }
 
-void send_nb_message(u8 *message, QueueHandle_t queue)
+void send_nb_message(u8 *message)
 {
 
         strncpy(tx_buf, message, sizeof(tx_buf));
@@ -707,20 +702,20 @@ void send_nb_message(u8 *message, QueueHandle_t queue)
 void ssl_send_message(u8 *message)
 {
 
-        send_message(presend, esp_binary_semaphore);
+        send_message(presend);
 
-        send_message(message, ssl_binarysemaphore);
+        send_message(message);
     
 }
 
 
-void ssl_send_data(u8 status, u8 control, u32 lpm, QueueHandle_t queue)
+void ssl_send_data(u8 status, u8 control, u32 lpm)
 {
     // MUST BE NON BLOCKING
 
-//    send_nb_message(presend);
+    send_nb_message(presend);
 
-//    send_nb_message();
+    send_nb_message()
 
     
 

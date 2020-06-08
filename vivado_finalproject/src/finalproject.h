@@ -110,8 +110,12 @@ void task_master(void *p); // Master Task
 void rx_task(void *p); // UART1 rx_task/
 
 /* ESP32    */
-void send_message(u8 *message);
+void send_message(u8 *message, QueueHandle_t queue);
+void ssl_send_message(u8 *message);
+void send_nb_message(u8 *message, QueueHandle_t queue);
+void ssl_send_data(u8 status, u8 control, u32 lpm, QueueHandle_t queue);
 void connect_to_wifi(void);
+
 
 /* PID  */
 int UpdatePID(SPid * pid);
