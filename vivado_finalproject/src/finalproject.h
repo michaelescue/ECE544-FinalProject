@@ -19,7 +19,7 @@
 /*******************************************************************/
 
 /* Send Buffer Length   */
-#define BUF_LEN 256
+#define BUF_LEN 512
 
 /* Circ Buffer Length   */
 #define CIRC_BUF_LEN 8
@@ -34,12 +34,30 @@
 #define WIFI_LOGIN_INFO "AT+CWJAP=\"freecandy\",\"!1Chester\"\r\n"
 #define CRLF "\r\n"
 #define NULLCH "\\0"
+#define RAMSDATA "iotirrigationv1r1.firebaseio.com"
+#define MYDATA  "final-524b8.firebaseio.com"
 
 /* HB3  */
 #define HB3_HIGH_PULSE_ADDR     XPAR_HB3_0_S00_AXI_BASEADDR | HB3_HIGH_PULSE_REG0_OFFSET
 #define HB3_LPM_ADDR            XPAR_HB3_0_S00_AXI_BASEADDR | HB3_LPM_REG1_OFFSET
 #define HB3_DIR_ADDR            XPAR_HB3_0_S00_AXI_BASEADDR | HB3_DIR_OUT_REG2_OFFSET
 
+/* PID  */
+#define MAX_GAIN_SIZE 4
+
+/*******************************************************************/
+/* Data Structures    */
+/*******************************************************************/
+
+typedef struct pid{
+	int derState;	// Last position input
+	int intergratState; // Integrator state
+	int intergratMax,		// Maximum and Minimum
+        intergratMin;	// allowable state
+	int intergratGain,	// Integral gain
+        propGain,		// Proportional gain
+        derGain;		// Derivative gain
+}SPid;
 
 /*******************************************************************/
 /* Debug Options    */
@@ -85,6 +103,7 @@ void init_uart(XUartLite *UartLite, u16 DeviceId);
 static void isr_wdt(void *pvUnused); // WDT Interrupt Handler 
 static void rx_uart1(void *pvUnused);
 static void tx_uart1(void *pvUnused);
+static void hb3_handler(void *pvUnused);
 
 /* Tasks    */
 void task_master(void *p); // Master Task
@@ -93,5 +112,8 @@ void rx_task(void *p); // UART1 rx_task/
 /* ESP32    */
 void send_message(u8 *message);
 void connect_to_wifi(void);
+
+/* PID  */
+int UpdatePID(SPid * pid);
 
 #endif

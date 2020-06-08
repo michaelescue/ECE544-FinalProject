@@ -49,45 +49,54 @@ xSemaphoreHandle esp_binary_semaphore;
 
 /*  Health Checks   */
 static bool  master_health_check = TRUE; // Initial health of Master is TRUE.
-static bool connected = FALSE;
+static bool connected = TRUE;
 
-/* Conditional Flags    */
-bool error_message = FALSE;
+/* Conditional Fl   ags    */
+static bool error_message = FALSE;
+static bool data_collect = FALSE;
 
 /* UART Buffers  */
 static u8 rx_buf[BUF_LEN] = {0};   // Initialize buffer
 static u8 tx_buf[BUF_LEN] = {0};   // Initialize buffer
 static u8 stdin_buf[BUF_LEN] = {0};
 static u8 circ_buf[CIRC_BUF_LEN] = {0};
+static u8 value_buf[BUF_LEN] = {0};
+
+/* ESP32 Commands   */
+static u8 close[BUF_LEN] = "AT+CWQAP" CRLF;
 static u8 ate[BUF_LEN] = "ATE1" CRLF;
 static u8 cwmode[BUF_LEN] = "AT+CWMODE=1" CRLF;
 static u8 connectwifi[BUF_LEN] = WIFI_LOGIN_INFO;
 static u8 connect_status[BUF_LEN] = "AT+CWJAP?\r\n";
 static u8 num_of_connects[BUF_LEN] = "AT+CIPMUX=0" CRLF;
+static u8 ssl_connect[BUF_LEN] = "AT+CIPSTART=\"SSL\",\"final-524b8.firebaseio.com\",443,3600" CRLF;
 // static u8 ssl_connect[BUF_LEN] = "AT+CIPSTART=\"SSL\",\"iotirrigationv1r1.firebaseio.com\",443,3600" CRLF;
-static u8 ssl_connect[BUF_LEN] = "AT+CIPSTART=\"SSL\",\"final-524b8.firebaseio.com\",443,5" CRLF;
 static u8 ssl_status[BUF_LEN] = "AT+CIPSTATUS" CRLF;
-static u8 presend[BUF_LEN] = "AT+CIPSENDEX=256" CRLF;
-// static u8 message8[BUF_LEN] = "GET /status0.json HTTP/1.1\r\nHost: final-524b8.firebaseio.com\r\n\r\n\\0";
+static u8 presend[BUF_LEN] = "AT+CIPSENDEX=512" CRLF;
 
 static u8 get1[BUF_LEN] =       "GET /.json HTTP/1.1" CRLF \
                                 "Host: final-524b8.firebaseio.com" CRLF \
                                 CRLF NULLCH;
 
-static u8 options1[BUF_LEN] =   "OPTIONS /status0.json HTTP/1.1" CRLF\
-                                "Host: final-524b8.firebaseio.com" CRLF\
-                                CRLF NULLCH;
+// static u8 get1[BUF_LEN] =       "GET /final_prj_544/global_motor_status.json HTTP/1.1" CRLF \
+//                                 "Host: iotirrigationv1r1.firebaseio.com" CRLF \
+//                                 CRLF NULLCH;                                
 
 static u8 patch1[BUF_LEN] =     "PATCH /.json HTTP/1.1" CRLF \
                                 "Host: final-524b8.firebaseio.com" CRLF \
-                                "Content-Type: application/x-www-form-urlencoded" CRLF \
+                                "Content-Type: application/application/x-www-form-urlencoded" CRLF \
                                 "Content-Length: 15"  CRLF \
                                 CRLF\
-                                "{\"status0\":4}"
+                                "{\"status0\":2}"
                                 CRLF NULLCH;
 
-// static u8 get2[BUF_LEN] = "GET /OfficeBusProject/hb/Last Updated Stop.json HTTP/1.1\r\nHost: iotirrigationv1r1.firebaseio.com\r\nAccept: text/plain\r\n\r\n\\0";
-// static u8 get1[BUF_LEN] = "GET /OfficeBusProject/hb/Comments.json HTTP/1.1\r\nHost: iotirrigationv1r1.firebaseio.com\r\nAccept: text/plain\r\n\r\n\\0";
+// static u8 patch1[BUF_LEN] =     "PATCH /final_prj_544.json HTTP/1.1" CRLF \
+//                                 "Host: iotirrigationv1r1.firebaseio.com" CRLF \
+//                                 "Content-Type: application/x-www-form-urlencoded" CRLF \
+//                                 "Content-Length: 27"  CRLF \
+//                                 CRLF\
+//                                 "{\"global_motor_status\":1}"
+//                                 CRLF NULLCH;
 
 /*  Message Length  */
 static u32 length = 0;   // Number of bytes to read/write.
@@ -98,6 +107,25 @@ static BaseType_t xStatus;
 /* ISR  */
 static u32 strsize = 0;
 static u8 *circ_buf_p = NULL;
+static u8 *value_buf_p = NULL;
+
+/*  HB3 */
+static u8 status = 0;
+static u8 control = 0;
+static u8  position = 0;
+static int error = 0;
+static u8 lpm = 0;
+
+/* PID  */
+static bool updatePID = FALSE;
+static u32 pTerm = 0;
+static u32 dTerm = 0;
+static u32 iTerm = 0;
+
+
+/* Dispense */
+u32 dispense_target = 0;
+u32 amount_dispensed = 0;
 
 /*  Device Instances    */
 /*******************************************************************/
@@ -167,7 +195,7 @@ static void rx_uart1(void *pvUnused)
 
         while(XUartLite_Recv(&inst_esp.ESP32_Uart, rx_buf, 1) != 0);
         xil_printf("%s", rx_buf);
-        circ_buf[CIRC_BUF_LEN - 1] = rx_buf[0];
+        circ_buf[CIRC_BUF_LEN - 1] = rx_buf[0];      
 
         strsize = strlen("OK\r");
 
@@ -183,15 +211,54 @@ static void rx_uart1(void *pvUnused)
 
         circ_buf_p = circ_buf + (CIRC_BUF_LEN - strsize);
 
-        if(strncmp(circ_buf, "CLOSED", strsize) == 0)
+        if(strncmp(circ_buf_p, "CLOSED", strsize) == 0)
         {
             connected = FALSE;
+        }
+
+        strsize = strlen("}");
+
+        circ_buf_p = circ_buf + (CIRC_BUF_LEN - strsize);
+
+        if(strncmp(circ_buf_p, "}", strsize) == 0)
+        {
+            data_collect = FALSE;
+        }
+
+        if(data_collect)
+        {
+            *value_buf_p = rx_buf[0];
+            value_buf_p += 1;
+        }
+        else
+        {
+            value_buf_p =value_buf;
+        }
+
+        strsize = strlen("{");
+
+        circ_buf_p = circ_buf + (CIRC_BUF_LEN - strsize);
+
+        if(strncmp(circ_buf_p, "{", strsize) == 0)
+        {
+            data_collect = TRUE;
         }
 
         for(int i = 0; i < (CIRC_BUF_LEN - 1); i++)     
         {
             circ_buf[i] = circ_buf[i+1];
         }
+}
+
+static void hb3_handler(void *pvUnused)
+{
+    u32 *p = NULL;
+    p = HB3_LPM_ADDR;
+    position = *p;
+    if(control > 0) status = 1;
+    else status = 0;
+    error = control - position;
+    ssl_send_data(status, control, *p);
 }
 
 /*  Main Program    */
@@ -236,8 +303,21 @@ int main(void)
 void task_master(void *p)
 {
     /* Variables    */
-    
-	/* Create the queue */
+    int *pid_param = NULL;
+
+    // Create PID struct
+	SPid pid;
+
+    // Initial PID values
+    pid.derState = 0;
+    pid.intergratState = 0;
+    pid.intergratMax = 0;
+    pid.intergratMin = 0;
+    pid.intergratGain = 0;
+    pid.propGain = 0;
+    pid.derGain = 0;
+	
+    /* Create the queue */
 
 	/* Sanity check that the queue was created. */
 
@@ -252,6 +332,12 @@ void task_master(void *p)
                                     "WDT");
 
     #endif
+
+    // Register HB3 Interrupt
+    register_interrupt_handler( XPAR_MICROBLAZE_0_AXI_INTC_HB3_0_INTERRUPT_INTR,
+                                hb3_handler,
+                                NULL,
+                                "HB3");
 
     // Register ESP UART handlers
     register_interrupt_handler(XPAR_MICROBLAZE_0_AXI_INTC_PMODESP32_0_UART_INTERRUPT_INTR,
@@ -280,8 +366,10 @@ void task_master(void *p)
 	for( ; ; ){
 
         int recv_count = 0;
+        int length = 0;
+        int temp = 0;
 
-        int* p = HB3_HIGH_PULSE_ADDR;
+        memset(stdin_buf, 0x0, sizeof(stdin_buf));
 
         do
         {
@@ -289,36 +377,105 @@ void task_master(void *p)
             recv_count = XUartLite_Recv(&inst_uart0, stdin_buf, BUF_LEN);
 
             if(recv_count > 0){
+
                 xil_printf("\r\n%s", stdin_buf);
+
+                if( strncmp(stdin_buf, "kp", strlen("kp")) == 0 )
+                {
+                    pid_param = &pid.propGain;
+                    print(CRLF"kp selected");
+                }
+                else if( strncmp(stdin_buf, "ki", strlen("ki")) == 0 )
+                {
+                    pid_param = &pid.intergratGain;
+                    print(CRLF"ki selected");
+
+                }
+                else if( strncmp(stdin_buf, "kd", strlen("kd")) == 0 )
+                {
+                    pid_param = &pid.derGain;
+                    print(CRLF"kd selected");
+
+                }
+                 else if( strncmp(stdin_buf, "kimax", strlen("kimax")) == 0 )
+                {
+                    pid_param = &pid.intergratMax;
+                    print(CRLF"kimax selected");
+
+                }
+                 else if( strncmp(stdin_buf, "kimin", strlen("kimin")) == 0 )
+                {
+                    pid_param = &pid.intergratMin;
+                    print(CRLF"kimin selected");
+
+                }
+                else if( ( length = ( strlen(stdin_buf) - 1 ) ) < MAX_GAIN_SIZE)
+                {
+                int temp = 0;
+
+
+                    for(int i = 0; i < length; i++)
+                    {
+                        int decade = 1;
+
+                        for(int k = i; k < (length - 1); k++)
+                        {
+                            decade *= 10;
+                        }
+
+                        switch(stdin_buf[i]){
+                            case '1':
+                                temp += ( 1 * decade);
+                                break;
+                            case '2':
+                                temp += ( 2 * decade);
+                                break;
+                            case '3':
+                                temp += ( 3 * decade);
+                                break;
+                            case '4':
+                                temp += ( 4 * decade);
+                                break;
+                            case '5':
+                                temp += ( 5 * decade);
+                                break;
+                            case '6':
+                                temp += ( 6 * decade);
+                                break;
+                            case '7':
+                                temp += ( 7 * decade);
+                                break;
+                            case '8':
+                                temp += ( 8 * decade);
+                                break;
+                            case '9':
+                                temp += ( 9 * decade);
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                    
+                    xil_printf(CRLF"%d", temp);
+
+                    *pid_param = temp;
+
+                }
             }
 
         }while( recv_count > 0);
 
-        if(strncmp(stdin_buf, "ON", strlen("ON")) == 0)
-        {
-			 *p = 0xFFFFFFFF;
-        }
-        else if(strncmp(stdin_buf, "OFF", strlen("OFF")) == 0)
-        {
-			 *p = 0;
-        }
-       else if(strncmp(stdin_buf, "DIR0", strlen("DIR0")) == 0)
-        {
-             p = HB3_DIR_ADDR;
-			 *p = 0;
-        }
-       else if(strncmp(stdin_buf, "DIR1", strlen("DIR1")) == 0)
-        {
-            p = HB3_DIR_ADDR;
-			 *p = 0x1;
-        }
-       else if(strncmp(stdin_buf, "READ", strlen("READ")) == 0)
-        {
-            p = HB3_LPM_ADDR;
-			xil_printf("FROM REG: %d\r\n", *p);
-        }
 
-        memset(stdin_buf, 0x0, sizeof(stdin_buf));
+
+        control += UpdatePID(&pid);
+
+        Xil_Out8(HB3_LPM_ADDR, control);
+
+        if(connected == FALSE)
+        {
+            send_message(ssl_connect);
+            connected = TRUE;
+        }
 
 		/*	Set Health check	*/
 		master_health_check = TRUE;
@@ -489,6 +646,8 @@ void register_interrupt_handler(uint8_t ucInterruptID, XInterruptHandler pxHandl
 
 void connect_to_wifi(void)
 {    
+    send_message(close);
+
     send_message(ate);
 
     send_message(cwmode);
@@ -503,11 +662,9 @@ void connect_to_wifi(void)
 
     send_message(ssl_status);
 
-    ssl_send_message(get1);
-
-    ssl_send_message(options1);
-
     ssl_send_message(patch1);
+
+    ssl_send_message(get1);
 
     connected = TRUE;
 
@@ -526,16 +683,67 @@ void send_message(u8 *message)
     
 }
 
+void send_nb_message(u8 *message)
+{
+
+        strncpy(tx_buf, message, sizeof(tx_buf));
+
+        length = strlen(message);
+
+        XUartLite_Send(&inst_esp.ESP32_Uart, message, length);
+
+        xSemaphoreTakeFromISR(esp_binary_semaphore, pdFALSE); // Block until relased by isr.
+    
+}
+
 void ssl_send_message(u8 *message)
 {
-        if(connected == FALSE)
-        {
-            send_message(ssl_connect);
-            connected = TRUE;
-        }
 
         send_message(presend);
 
         send_message(message);
     
+}
+
+
+void ssl_send_data(u8 status, u8 control, u32 lpm)
+{
+    // MUST BE NON BLOCKING
+
+    // send_nb_message(presend);
+
+
+
+    
+
+}
+
+/* PID   */
+/*******************************************************************/
+
+int UpdatePID(SPid * pid)
+{
+
+	pTerm = (pid->propGain * error); // calculate the proportional term
+
+	/* Calculate the integral state with appropriate limiting	*/
+	pid->intergratState += error;
+
+//	Limit te integrator state if necessary
+	if(pid->intergratState > pid->intergratMax){
+		pid->intergratState = pid->intergratMax;
+	}
+	else if (pid->intergratState < pid->intergratMin){
+		pid->intergratState = pid->intergratMin;
+	}
+
+	// Calculate the integral term
+	iTerm =(pid->intergratGain * pid->intergratState);
+
+	// Calculate the derivative
+	dTerm = (pid->derGain * (pid->derState - position));
+	pid->derState = position;
+
+	// Return control value
+	return pTerm + dTerm + iTerm;
 }

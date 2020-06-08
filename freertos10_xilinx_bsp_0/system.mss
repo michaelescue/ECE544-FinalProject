@@ -11,6 +11,7 @@ BEGIN OS
  PARAMETER SYSTMR_SPEC = true
  PARAMETER stdin = axi_uartlite_0
  PARAMETER stdout = axi_uartlite_0
+ PARAMETER tick_rate = 200
 END
 
 
