@@ -22,7 +22,7 @@
 #define BUF_LEN 512
 
 /* Circ Buffer Length   */
-#define CIRC_BUF_LEN 8
+#define CIRC_BUF_LEN 20
 
 /* Esp32 */
 #define ESP32_STATUS_REG  XPAR_PMODESP32_0_AXI_LITE_UART_BASEADDR & 0x8
@@ -30,8 +30,8 @@
 #define MASK_RX_VALID_DATA 0x1
 #define MASK_TX_FULL 0x8
 #define MASK_TX_EMPTY 0x4
-// #define WIFI_LOGIN_INFO "AT+CWJAP=\"Me\",\"1Chester\"\r\n"
-#define WIFI_LOGIN_INFO "AT+CWJAP=\"freecandy\",\"!1Chester\"\r\n"
+#define WIFI_LOGIN_INFO "AT+CWJAP=\"Me\",\"1Chester\"\r\n"
+// #define WIFI_LOGIN_INFO "AT+CWJAP=\"freecandy\",\"!1Chester\"\r\n"
 #define CRLF "\r\n"
 #define NULLCH "\\0"
 #define RAMSDATA "iotirrigationv1r1.firebaseio.com"
@@ -40,6 +40,11 @@
 /* PID  */
 #define MAX_GAIN_SIZE 4
 #define MAX_VAL_SIZE 3
+
+#define HB3_DIR_ADDR 0x44A30008
+#define HB3_LPM_ADDR 0x44A30004
+#define HB3_HIGH_PULSE_ADDR	0x44A30000
+#define REG3	0x44A30012
 
 /*******************************************************************/
 /* Data Structures    */
@@ -108,7 +113,6 @@ void rx_task(void *p); // UART1 rx_task/
 /* ESP32    */
 void send_message(u8 *message, QueueHandle_t queue);
 void ssl_send_message(u8 *message);
-void send_nb_message(u8 *message, QueueHandle_t queue);
 void ssl_send_data(u8 status, u8 control, u32 lpm, QueueHandle_t queue);
 void connect_to_wifi(void);
 

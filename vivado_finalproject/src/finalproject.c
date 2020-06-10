@@ -32,6 +32,7 @@
 
 /*  Function Prototypes Includes    */
 #include "finalproject.h"
+#include "HB3.h"
 
 /*  O/S Concurrency Mechanisms    */
 /*******************************************************************/
@@ -55,38 +56,39 @@ static bool connected = TRUE;
 static bool error_message = FALSE;
 static bool data_collect = FALSE;
 static bool register_values = FALSE;
+static bool write_pid   = TRUE;
 
 /* UART Buffers  */
 static u8 rx_buf[BUF_LEN] = {0};   // Initialize buffer
 static u8 tx_buf[BUF_LEN] = {0};   // Initialize buffer
-static u8 stdin_buf[BUF_LEN] = {0};
+static u8 stdin_buf[16] = {0};
 static u8 circ_buf[CIRC_BUF_LEN] = {0};
 static u8 value_buf[BUF_LEN] = {0};
 
 /* ESP32 Commands   */
-static u8 reset[BUF_LEN] = "AT+RST" CRLF;
-static u8 close[BUF_LEN] = "AT+CIPCLOSE" CRLF;
-static u8 ate0[BUF_LEN] = "ATE0" CRLF;
-static u8 ate1[BUF_LEN] = "ATE1" CRLF;
-static u8 cwmode[BUF_LEN] = "AT+CWMODE=1" CRLF;
-static u8 connectwifi[BUF_LEN] = WIFI_LOGIN_INFO;
-static u8 connect_status[BUF_LEN] = "AT+CWJAP?\r\n";
-static u8 num_of_connects[BUF_LEN] = "AT+CIPMUX=0" CRLF;
-static u8 ssl_connect[BUF_LEN] = "AT+CIPSTART=\"SSL\",\"final-524b8.firebaseio.com\",443,7200" CRLF;
+static u8 reset[32] = "AT+RST" CRLF;
+static u8 close[32] = "AT+CIPCLOSE" CRLF;
+static u8 ate0[16] = "ATE0" CRLF;
+static u8 ate1[16] = "ATE1" CRLF;
+static u8 cwmode[32] = "AT+CWMODE=1" CRLF;
+static u8 connectwifi[64] = WIFI_LOGIN_INFO;
+static u8 connect_status[32] = "AT+CWJAP?\r\n";
+static u8 num_of_connects[32] = "AT+CIPMUX=0" CRLF;
+static u8 ssl_connect[128] = "AT+CIPSTART=\"SSL\",\"final-524b8.firebaseio.com\",443,7200" CRLF;
 // static u8 ssl_connect[BUF_LEN] = "AT+CIPSTART=\"SSL\",\"iotirrigationv1r1.firebaseio.com\",443,3600" CRLF;
-static u8 ssl_status[BUF_LEN] = "AT+CIPSTATUS" CRLF;
-static u8 presend[BUF_LEN] = "AT+CIPSENDEX=512" CRLF;
+static u8 ssl_status[32] = "AT+CIPSTATUS" CRLF;
+static u8 presend[32] = "AT+CIPSENDEX=512" CRLF;
 
-static u8 ssl_get1[BUF_LEN] =       "GET /.json HTTP/1.1" CRLF \
+static u8 ssl_get1[128] =       "GET /.json HTTP/1.1" CRLF \
                                     "Host: final-524b8.firebaseio.com" CRLF \
                                     "Connection: keep-alive" CRLF \
                                     CRLF NULLCH;
 
-// static u8 ssl_get1[BUF_LEN] =       "GET /final_prj_544/global_motor_status.json HTTP/1.1" CRLF \
+// static u8 ssl_get1[128] =       "GET /final_prj_544/global_motor_status.json HTTP/1.1" CRLF \
 //                                 "Host: iotirrigationv1r1.firebaseio.com" CRLF \
 //                                 CRLF NULLCH;                                
 
-static u8 ssl_patch1[BUF_LEN] =     "PATCH /.json HTTP/1.1" CRLF \
+static u8 ssl_patch1[200] =     "PATCH /.json HTTP/1.1" CRLF \
                                 "Host: final-524b8.firebaseio.com" CRLF \
                                 "Content-Type: application/application/x-www-form-urlencoded" CRLF \
                                 "Content-Length: 15"  CRLF \
@@ -94,7 +96,7 @@ static u8 ssl_patch1[BUF_LEN] =     "PATCH /.json HTTP/1.1" CRLF \
                                 "{\"status0\":2}"
                                 CRLF NULLCH;
 
-// static u8 patch1[BUF_LEN] =     "PATCH /final_prj_544.json HTTP/1.1" CRLF \
+// static u8 patch1[200] =     "PATCH /final_prj_544.json HTTP/1.1" CRLF \
 //                                 "Host: iotirrigationv1r1.firebaseio.com" CRLF \
 //                                 "Content-Type: application/x-www-form-urlencoded" CRLF \
 //                                 "Content-Length: 27"  CRLF \
@@ -113,20 +115,26 @@ static u32 strsize = 0;
 static u8 *circ_buf_p = NULL;
 static u8 *value_buf_p = NULL;
 static u8 *val_p = value_buf;
+static int backoff = 1;
+static int adjustment = 0;
+
 /*  HB3 */
 static u8 status = 0;
-static u8 control = 0;
-static u16 setpoint = 0;
-static u8  position = 0;
-static int error = 0;
+static int control_dc = 0;
+static u16 setpoint_dc = 0;
+static u16 setpoint_lpm = 0;
+static u8  position_lpm = 0;
+static u8  position_dc = 0;
+static int error_dc = 0;
 static u8 lpm = 0;
 static u8 direction = 0;
+static u32 last_values = 0;
 
 /* PID  */
 static bool updatePID = FALSE;
-static u32 pTerm = 0;
-static u32 dTerm = 0;
-static u32 iTerm = 0;
+static int pTerm = 0;
+static int dTerm = 0;
+static int iTerm = 0;
 
 
 /* Dispense */
@@ -200,7 +208,7 @@ static void rx_uart1(void *pvUnused)
 {
 
         while(XUartLite_Recv(&inst_esp.ESP32_Uart, rx_buf, 1) != 0);
-        // xil_printf("%s", rx_buf);
+        //  xil_printf("%s", rx_buf);
         circ_buf[CIRC_BUF_LEN - 1] = rx_buf[0];      
 
          circ_buf_p = circ_buf + (CIRC_BUF_LEN - 1);
@@ -228,6 +236,17 @@ static void rx_uart1(void *pvUnused)
         if(strncmp(circ_buf_p, "CLOSED", strsize) == 0)
         {
             connected = FALSE;
+            backoff = 1;
+        }
+
+        strsize = strlen("ERR");
+
+        circ_buf_p = circ_buf + (CIRC_BUF_LEN - strsize);
+
+        if(strncmp(circ_buf_p, "ERR", strsize) == 0)
+        {
+            backoff = backoff * 10;
+            print("ERROR");
         }
 
         strsize = strlen("}");
@@ -271,13 +290,18 @@ static void rx_uart1(void *pvUnused)
 static void hb3_handler(void *pvUnused)
 {
     u32 *p = NULL;
+    u32 *c = NULL;
     p = HB3_LPM_ADDR;
-    position = *p & 0x3FF;
-    if(control > 0) status = 1;
+    c = HB3_COUNTER_COUNT_ADDR;
+    *p = (*p)*(100000000/(*c));
+    position_lpm = *p & 0x3FF;
+    if(control_dc > 0) status = 1;
     else status = 0;
-    error = setpoint - position;
-    xil_printf("\r\npos:%u,set:%u,ctrl:%u", position, setpoint, control);
-    ssl_send_data(status, control, *p, ssl_binarysemaphore);
+    if(position_lpm == 0) position_dc = 0;
+    else position_dc = ((position_lpm*100)+18200)/163;
+    error_dc = setpoint_dc - position_dc;
+    write_pid = TRUE;
+    xil_printf("\r\npos:%u,set:%u,ctrl:%u", position_dc, setpoint_dc, control_dc);
 }
 
 /*  Main Program    */
@@ -330,11 +354,11 @@ void task_master(void *p)
     // Initial PID values
     pid.derState = 0;
     pid.intergratState = 0;
-    pid.intergratMax = 0;
-    pid.intergratMin = 0;
-    pid.intergratGain = 1;
-    pid.propGain = 1;
-    pid.derGain = 1;
+    pid.intergratMax = 10;
+    pid.intergratMin = -10;
+    pid.intergratGain = 0;
+    pid.propGain = 60;
+    pid.derGain = 13;
 	
     /* Create the queue */
 
@@ -357,14 +381,6 @@ void task_master(void *p)
                                 hb3_handler,
                                 NULL,
                                 "HB3");
-    Xil_Out32(HB3_DIR_ADDR, 1);
-
-    for(int p = 0; p < 256; p++){
-        vTaskDelay(50);
-        Xil_Out32(HB3_HIGH_PULSE_ADDR, p);
-    }
-
-    Xil_Out32(HB3_HIGH_PULSE_ADDR, 0);
 
     // Register ESP UART handlers
     register_interrupt_handler(XPAR_MICROBLAZE_0_AXI_INTC_PMODESP32_0_UART_INTERRUPT_INTR,
@@ -372,6 +388,22 @@ void task_master(void *p)
     XUartLite_SetRecvHandler(&inst_esp.ESP32_Uart, rx_uart1, NULL);
     XUartLite_SetSendHandler(&inst_esp.ESP32_Uart, tx_uart1, NULL);
     XUartLite_EnableInterrupt(&inst_esp.ESP32_Uart);
+
+    /* Characterize the system	*/
+	#ifdef CHARACTERIZE
+		for(int i = 50; i < 255; i++)
+		{
+			int * addrp = NULL;
+			addrp = HB3_DIR_ADDR;
+			*addrp = 0;
+			addrp = HB3_HIGH_PULSE_ADDR;
+			setpoint = i;
+			*addrp = setpoint;
+			addrp = HB3_COUNTER_COUNT_ADDR;
+			*addrp = 100000000;
+			vTaskDelay(200);
+		}
+	#endif
 
     /* Connect to Server    */
     connect_to_wifi();
@@ -389,6 +421,9 @@ void task_master(void *p)
 
     #endif
 
+
+
+
    	/*	Quiescent operations	*/
 	for( ; ; ){
 
@@ -396,25 +431,57 @@ void task_master(void *p)
         int length = 0;
         int temp = 0;
         TickType_t ticks = 0;
+        int *addr = NULL;
    
         ticks = xTaskGetTickCount();
 
         memset(stdin_buf, 0x0, sizeof(stdin_buf));
 
-        control = UpdatePID(&pid);
+        if(write_pid)
+        {
+            temp = UpdatePID(&pid);
 
-        Xil_Out32(HB3_HIGH_PULSE_ADDR, control);
-        Xil_Out32(HB3_DIR_ADDR, direction);
+            control_dc += temp;
+            if(setpoint_dc == 0)
+            {
+            	control_dc =0;
+            }
+            else if (control_dc > 255)
+            {
+                control_dc = 255;
+            }
+            else if(control_dc < 0)
+            {
+                control_dc = 0;
+            }
+
+            addr = HB3_HIGH_PULSE_ADDR;
+
+            *addr = control_dc & 0xFF;
+
+            addr = HB3_DIR_ADDR;
+
+            *addr = 1;
+
+            addr = HB3_COUNTER_COUNT_ADDR;
+			
+            *addr = 100000000;
+
+            write_pid = FALSE;
+        }
+
 
         if(connected == FALSE)
         {
-            vTaskDelay(2);
+            print("Connection lost. Connecting.");
+            vTaskDelay(backoff);
             send_message(ssl_connect, esp_binary_semaphore);
             connected = TRUE;
- 
+            vTaskDelay(800);
+            print("Reconnected.");
         }
 
-        if(!(ticks % 200))
+        if(!(ticks % 100))
         {
             ssl_send_message(ssl_get1);
         }
@@ -424,70 +491,118 @@ void task_master(void *p)
         {
             val_p = value_buf;
             
-            val_p++;
-
             temp = 0;
 
             length = strlen("status0");
 
-            if( strncmp(val_p,"status0", length) == 0 )
+            for(int l = 0; l < strlen(value_buf); l++)
             {
-                val_p += length + 2; // \":x
+                val_p++;
 
-                while((*val_p != ','))
+                if( strncmp(val_p,"status0", length) == 0 )
                 {
-                    temp = (temp * 10) + (*val_p & 0xF);
-                    val_p++;
-                }
-                
-                dispense_target = temp;
-                val_p += 1;
+                    val_p += length + 2; // \":x
 
+                    while((*val_p != ','))
+                    {
+                        temp = (temp * 10) + (*val_p & 0xF);
+                        val_p++;
+                    }
+                    
+                    dispense_target = temp;
 
-            } 
+                    break;                
+                } 
+            }
 
-            val_p++;
-
+            val_p = value_buf;
+            
             temp = 0;
 
             length = strlen("status1");
 
-            if( strncmp(val_p,"status1", length) == 0 )
+            for(int l = 0; l < strlen(value_buf); l++)
             {
-                val_p += length + 2; // \":x
+                val_p++;
 
-                while((*val_p != ','))
+                if( strncmp(val_p,"status1", length) == 0 )
                 {
-                    temp = (temp * 10) + (*val_p & 0xF);
-                    val_p++;
-                }
-                
-                direction = temp;
-                val_p += 1;
+                    val_p += length + 2; // \":x
 
+                    while((*val_p != ','))
+                    {
+                        temp = (temp * 10) + (*val_p & 0xF);
+                        val_p++;
+                    }
+
+                    direction = temp;
+                    val_p += 1;
+
+                    break;                
+                } 
             }
 
-            val_p++;
-
+            val_p = value_buf;
+            
             temp = 0;
 
             length = strlen("status2");
 
-            if( strncmp(val_p,"status2", length) == 0 )
+            for(int l = 0; l < strlen(value_buf); l++)
             {
-                val_p += length + 2; // \":x
+                val_p++;
 
-                length = strlen(val_p);
-
-                while((*val_p != ','))
+                if( strncmp(val_p,"status2", length) == 0 )
                 {
-                    temp = (temp * 10) + (*val_p & 0xF);
-                    val_p += 1;
-                }
-                
-                setpoint = (u16*) temp;
-                error = setpoint - position;
+                    val_p += length + 2; // \":x
+
+                    while((*val_p != ','))
+                    {
+                        temp = (temp * 10) + (*val_p & 0xF);
+                        val_p++;
+                    }
+
+                    last_values = temp;
+                    
+                    if(temp > 115) setpoint_lpm = 115;
+                    else if (temp == 0) setpoint_dc = 0;
+                    else
+                    	{
+                    	setpoint_lpm = temp;
+                        setpoint_dc = ((setpoint_lpm*100)+18200)/163;
+                    	}
+
+                    break;                
+                } 
             }
+
+            val_p = value_buf;
+            
+            temp = 0;
+
+            length = strlen("status3");
+
+            for(int l = 0; l < strlen(value_buf); l++)
+            {
+                val_p++;
+
+                if( strncmp(val_p,"status3", length) == 0 )
+                {
+                    val_p += length + 2; // \":x
+
+                    while((*val_p != ','))
+                    {
+                        temp = (temp * 10) + (*val_p & 0xF);
+                        val_p++;
+                    }
+
+                    val_p = HB3_COUNTER_COUNT_ADDR;
+                    *val_p = temp;
+
+                    break;                
+                } 
+            }
+
 
             register_values = FALSE;
 
@@ -499,9 +614,8 @@ void task_master(void *p)
 
         do
         {
-            vTaskDelay(1);
             recv_count = XUartLite_Recv(&inst_uart0, stdin_buf, BUF_LEN);
-
+            vTaskDelay(1);
             if(recv_count > 0){
 
                 xil_printf("\r\n%s", stdin_buf);
@@ -523,16 +637,16 @@ void task_master(void *p)
                     print(CRLF"kd selected");
 
                 }
-                 else if( strncmp(stdin_buf, "kimax", strlen("kimax")) == 0 )
+                 else if( strncmp(stdin_buf, "maxki", strlen("maxki")) == 0 )
                 {
                     pid_param = &pid.intergratMax;
-                    print(CRLF"kimax selected");
+                    print(CRLF"maxki selected");
 
                 }
-                 else if( strncmp(stdin_buf, "kimin", strlen("kimin")) == 0 )
+                 else if( strncmp(stdin_buf, "minki", strlen("minki")) == 0 )
                 {
                     pid_param = &pid.intergratMin;
-                    print(CRLF"kimin selected");
+                    print(CRLF"minki selected");
 
                 }
                 else if( ( length = ( strlen(stdin_buf) - 1 ) ) < MAX_GAIN_SIZE)
@@ -578,15 +692,19 @@ void task_master(void *p)
                             case '9':
                                 temp += ( 9 * decade);
                                 break;
+
                             default:
                                 break;
                         }
                     }
-                    
-                    xil_printf(CRLF"%d", temp);
 
+                    if(stdin_buf[0] == '-') temp = -(*pid_param);
+                    
                     *pid_param = temp;
 
+                    xil_printf(CRLF"%d", *pid_param);
+
+                    write_pid = TRUE;
                 }
             }
 
@@ -761,27 +879,37 @@ void register_interrupt_handler(uint8_t ucInterruptID, XInterruptHandler pxHandl
 
 void connect_to_wifi(void)
 {    
+    print("Connecting.");
     send_message(close, esp_binary_semaphore);
-
+    print(".");
     send_message(reset, esp_binary_semaphore);
+    print(".");
 
-    vTaskDelay(200);
+    vTaskDelay(400);
 
     send_message(ate1, esp_binary_semaphore);
+    print(".");
 
     send_message(cwmode, esp_binary_semaphore);
+    print(".");
 
     send_message(num_of_connects, esp_binary_semaphore);
+    print(".");
 
     send_message(connectwifi, esp_binary_semaphore);
+    print(".");
 
     send_message(connect_status, esp_binary_semaphore);
+    print(".");
 
     send_message(ssl_connect, esp_binary_semaphore);
+    print(".");
 
     send_message(ssl_status, esp_binary_semaphore);
+    print(".");
 
     send_message(ate0, esp_binary_semaphore);
+    print("\r\nConnected\r\n");
 
     connected = TRUE;
 
@@ -800,18 +928,6 @@ void send_message(u8 *message, QueueHandle_t queue)
     
 }
 
-void send_nb_message(u8 *message, QueueHandle_t queue)
-{
-
-        strncpy(tx_buf, message, sizeof(tx_buf));
-
-        length = strlen(message);
-
-        XUartLite_Send(&inst_esp.ESP32_Uart, message, length);
-
-        xSemaphoreTakeFromISR(esp_binary_semaphore, pdFALSE); // Block until relased by isr.
-    
-}
 
 void ssl_send_message(u8 *message)
 {
@@ -843,10 +959,10 @@ void ssl_send_data(u8 status, u8 control, u32 lpm, QueueHandle_t queue)
 int UpdatePID(SPid * pid)
 {
 
-	pTerm = (pid->propGain * error); // calculate the proportional term
+	pTerm = (pid->propGain * error_dc)>>7; // calculate the proportional term
 
 	/* Calculate the integral state with appropriate limiting	*/
-	pid->intergratState += error;
+	pid->intergratState += error_dc;
 
 //	Limit te integrator state if necessary
 	if(pid->intergratState > pid->intergratMax){
@@ -857,11 +973,11 @@ int UpdatePID(SPid * pid)
 	}
 
 	// Calculate the integral term
-	iTerm =(pid->intergratGain * pid->intergratState);
+	iTerm =(pid->intergratGain * pid->intergratState)>>7;
 
 	// Calculate the derivative
-	dTerm = (pid->derGain * (pid->derState - position));
-	pid->derState = position;
+	dTerm = (pid->derGain * (pid->derState - position_dc))>>7;
+	pid->derState = position_dc;
 
 	// Return control value
 	return pTerm + dTerm + iTerm;

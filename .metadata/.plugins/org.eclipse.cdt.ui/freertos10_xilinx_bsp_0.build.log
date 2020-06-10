@@ -1,4 +1,4 @@
-03:01:26 **** Auto Build of project freertos10_xilinx_bsp_0 ****
+19:23:23 **** Auto Build of project freertos10_xilinx_bsp_0 ****
 make -k all 
 "Running Make include in microblaze_0/libsrc/bram_v4_2/src"
 C:/Xilinx/SDK/2018.2/gnuwin/bin/make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mhard-float -mlittle-endian -mno-xl-soft-div -mxl-float-convert -mxl-float-sqrt -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
@@ -92,5 +92,5 @@ xwdttb.c:1229:5: note: declared here
      ^~~~~~~~~~~~~~~~~~~~~~
 'Finished building libraries'
 
-03:03:04 Build Finished (took 1m:38s.462ms)
+19:24:56 Build Finished (took 1m:32s.618ms)
 

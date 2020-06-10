@@ -1,6 +1,434 @@
-08:45:00 **** Incremental Build of configuration Debug for project vivado_finalproject ****
+21:10:23 **** Auto Build of configuration Debug for project vivado_finalproject ****
 make all 
-make: Nothing to be done for `all'.
+Building file: ../src/finalproject.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/finalproject.o" -I../../freertos10_xilinx_bsp_0/microblaze_0/include -mlittle-endian -mno-xl-soft-div -mcpu=v10.0 -mxl-soft-mul -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/finalproject.d" -MT"src/finalproject.o" -o "src/finalproject.o" "../src/finalproject.c"
+In file included from ../src/finalproject.c:34:0:
+../src/finalproject.h:44:0: warning: "HB3_DIR_ADDR" redefined
+ #define HB3_DIR_ADDR 0x44A30008
+ 
+In file included from ../src/finalproject.h:15:0,
+                 from ../src/finalproject.c:34:
+../../freertos10_xilinx_bsp_0/microblaze_0/include/HB3.h:18:0: note: this is the location of the previous definition
+ #define HB3_DIR_ADDR            XPAR_HB3_0_S00_AXI_BASEADDR | HB3_DIR_OUT_REG2_OFFSET
+ 
+In file included from ../src/finalproject.c:34:0:
+../src/finalproject.h:45:0: warning: "HB3_LPM_ADDR" redefined
+ #define HB3_LPM_ADDR 0x44A30004
+ 
+In file included from ../src/finalproject.h:15:0,
+                 from ../src/finalproject.c:34:
+../../freertos10_xilinx_bsp_0/microblaze_0/include/HB3.h:17:0: note: this is the location of the previous definition
+ #define HB3_LPM_ADDR            XPAR_HB3_0_S00_AXI_BASEADDR | HB3_LPM_REG1_OFFSET
+ 
+In file included from ../src/finalproject.c:34:0:
+../src/finalproject.h:46:0: warning: "HB3_HIGH_PULSE_ADDR" redefined
+ #define HB3_HIGH_PULSE_ADDR 0x44A30000
+ 
+In file included from ../src/finalproject.h:15:0,
+                 from ../src/finalproject.c:34:
+../../freertos10_xilinx_bsp_0/microblaze_0/include/HB3.h:16:0: note: this is the location of the previous definition
+ #define HB3_HIGH_PULSE_ADDR     XPAR_HB3_0_S00_AXI_BASEADDR | HB3_HIGH_PULSE_REG0_OFFSET
+ 
+../src/finalproject.c:87:1: warning: multi-line comment [-Wcomment]
+ // static u8 ssl_get1[128] =       "GET /final_prj_544/global_motor_status.json HTTP/1.1" CRLF \
+ ^
+../src/finalproject.c:99:1: warning: multi-line comment [-Wcomment]
+ // static u8 patch1[200] =     "PATCH /final_prj_544.json HTTP/1.1" CRLF \
+ ^
+../src/finalproject.c: In function 'rx_uart1':
+../src/finalproject.c:226:20: warning: pointer targets in passing argument 1 of 'strncmp' differ in signedness [-Wpointer-sign]
+         if(strncmp(circ_buf_p, "OK\r", strsize) == 0)    // If circ_buf is equal to trigger, give up semaphore.
+                    ^~~~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\ctype.h:4:0,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xil_printf.h:8,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xil_io.h:65,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr_l.h:77,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr.h:179,
+                 from ../src/finalproject.c:24:
+c:\xilinx\sdk\2018.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\string.h:35:6: note: expected 'const char *' but argument is of type 'u8 * {aka unsigned char *}'
+ int  _EXFUN(strncmp,(const char *, const char *, size_t));
+      ^
+../src/finalproject.c:236:20: warning: pointer targets in passing argument 1 of 'strncmp' differ in signedness [-Wpointer-sign]
+         if(strncmp(circ_buf_p, "CLOSED", strsize) == 0)
+                    ^~~~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\ctype.h:4:0,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xil_printf.h:8,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xil_io.h:65,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr_l.h:77,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr.h:179,
+                 from ../src/finalproject.c:24:
+c:\xilinx\sdk\2018.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\string.h:35:6: note: expected 'const char *' but argument is of type 'u8 * {aka unsigned char *}'
+ int  _EXFUN(strncmp,(const char *, const char *, size_t));
+      ^
+../src/finalproject.c:246:20: warning: pointer targets in passing argument 1 of 'strncmp' differ in signedness [-Wpointer-sign]
+         if(strncmp(circ_buf_p, "ERR", strsize) == 0)
+                    ^~~~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\ctype.h:4:0,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xil_printf.h:8,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xil_io.h:65,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr_l.h:77,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr.h:179,
+                 from ../src/finalproject.c:24:
+c:\xilinx\sdk\2018.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\string.h:35:6: note: expected 'const char *' but argument is of type 'u8 * {aka unsigned char *}'
+ int  _EXFUN(strncmp,(const char *, const char *, size_t));
+      ^
+../src/finalproject.c:256:20: warning: pointer targets in passing argument 1 of 'strncmp' differ in signedness [-Wpointer-sign]
+         if(strncmp(circ_buf_p, "}", strsize) == 0)
+                    ^~~~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\ctype.h:4:0,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xil_printf.h:8,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xil_io.h:65,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr_l.h:77,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr.h:179,
+                 from ../src/finalproject.c:24:
+c:\xilinx\sdk\2018.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\string.h:35:6: note: expected 'const char *' but argument is of type 'u8 * {aka unsigned char *}'
+ int  _EXFUN(strncmp,(const char *, const char *, size_t));
+      ^
+../src/finalproject.c:279:20: warning: pointer targets in passing argument 1 of 'strncmp' differ in signedness [-Wpointer-sign]
+         if(strncmp(circ_buf_p, "{", strsize) == 0)
+                    ^~~~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\ctype.h:4:0,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xil_printf.h:8,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xil_io.h:65,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr_l.h:77,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr.h:179,
+                 from ../src/finalproject.c:24:
+c:\xilinx\sdk\2018.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\string.h:35:6: note: expected 'const char *' but argument is of type 'u8 * {aka unsigned char *}'
+ int  _EXFUN(strncmp,(const char *, const char *, size_t));
+      ^
+../src/finalproject.c: In function 'hb3_handler':
+../src/finalproject.c:294:7: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+     p = HB3_LPM_ADDR;
+       ^
+../src/finalproject.c:295:7: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+     c = HB3_COUNTER_COUNT_ADDR;
+       ^
+../src/finalproject.c: In function 'task_master':
+../src/finalproject.c:387:33: warning: passing argument 2 of 'register_interrupt_handler' from incompatible pointer type [-Wincompatible-pointer-types]
+                                 XUartLite_InterruptHandler, &inst_esp.ESP32_Uart, "UARTESP");
+                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../src/finalproject.c:34:0:
+../src/finalproject.h:95:6: note: expected 'XInterruptHandler {aka void (*)(void *)}' but argument is of type 'void (*)(XUartLite *) {aka void (*)(struct <anonymous> *)}'
+ void register_interrupt_handler(uint8_t ucInterruptID, XInterruptHandler pxHandler, void *pvCallBackRef, char name[]);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/finalproject.c:388:52: warning: passing argument 2 of 'XUartLite_SetRecvHandler' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartLite_SetRecvHandler(&inst_esp.ESP32_Uart, rx_uart1, NULL);
+                                                    ^~~~~~~~
+In file included from ../src/finalproject.c:30:0:
+../../freertos10_xilinx_bsp_0/microblaze_0/include/xuartlite.h:280:6: note: expected 'XUartLite_Handler {aka void (*)(void *, unsigned int)}' but argument is of type 'void (*)(void *)'
+ void XUartLite_SetRecvHandler(XUartLite *InstancePtr, XUartLite_Handler FuncPtr,
+      ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/finalproject.c:389:52: warning: passing argument 2 of 'XUartLite_SetSendHandler' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartLite_SetSendHandler(&inst_esp.ESP32_Uart, tx_uart1, NULL);
+                                                    ^~~~~~~~
+In file included from ../src/finalproject.c:30:0:
+../../freertos10_xilinx_bsp_0/microblaze_0/include/xuartlite.h:282:6: note: expected 'XUartLite_Handler {aka void (*)(void *, unsigned int)}' but argument is of type 'void (*)(void *)'
+ void XUartLite_SetSendHandler(XUartLite *InstancePtr, XUartLite_Handler FuncPtr,
+      ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/finalproject.c:458:18: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+             addr = HB3_HIGH_PULSE_ADDR;
+                  ^
+../src/finalproject.c:462:18: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+             addr = HB3_DIR_ADDR;
+                  ^
+../src/finalproject.c:466:18: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+             addr = HB3_COUNTER_COUNT_ADDR;
+                  ^
+../src/finalproject.c:498:39: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+             for(int l = 0; l < strlen(value_buf); l++)
+                                       ^~~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\ctype.h:4:0,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xil_printf.h:8,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xil_io.h:65,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr_l.h:77,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr.h:179,
+                 from ../src/finalproject.c:24:
+c:\xilinx\sdk\2018.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\string.h:33:9: note: expected 'const char *' but argument is of type 'u8 * {aka unsigned char *}'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/finalproject.c:502:29: warning: pointer targets in passing argument 1 of 'strncmp' differ in signedness [-Wpointer-sign]
+                 if( strncmp(val_p,"status0", length) == 0 )
+                             ^~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\ctype.h:4:0,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xil_printf.h:8,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xil_io.h:65,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr_l.h:77,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr.h:179,
+                 from ../src/finalproject.c:24:
+c:\xilinx\sdk\2018.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\string.h:35:6: note: expected 'const char *' but argument is of type 'u8 * {aka unsigned char *}'
+ int  _EXFUN(strncmp,(const char *, const char *, size_t));
+      ^
+../src/finalproject.c:524:39: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+             for(int l = 0; l < strlen(value_buf); l++)
+                                       ^~~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\ctype.h:4:0,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xil_printf.h:8,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xil_io.h:65,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr_l.h:77,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr.h:179,
+                 from ../src/finalproject.c:24:
+c:\xilinx\sdk\2018.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\string.h:33:9: note: expected 'const char *' but argument is of type 'u8 * {aka unsigned char *}'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/finalproject.c:528:29: warning: pointer targets in passing argument 1 of 'strncmp' differ in signedness [-Wpointer-sign]
+                 if( strncmp(val_p,"status1", length) == 0 )
+                             ^~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\ctype.h:4:0,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xil_printf.h:8,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xil_io.h:65,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr_l.h:77,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr.h:179,
+                 from ../src/finalproject.c:24:
+c:\xilinx\sdk\2018.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\string.h:35:6: note: expected 'const char *' but argument is of type 'u8 * {aka unsigned char *}'
+ int  _EXFUN(strncmp,(const char *, const char *, size_t));
+      ^
+../src/finalproject.c:551:39: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+             for(int l = 0; l < strlen(value_buf); l++)
+                                       ^~~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\ctype.h:4:0,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xil_printf.h:8,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xil_io.h:65,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr_l.h:77,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr.h:179,
+                 from ../src/finalproject.c:24:
+c:\xilinx\sdk\2018.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\string.h:33:9: note: expected 'const char *' but argument is of type 'u8 * {aka unsigned char *}'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/finalproject.c:555:29: warning: pointer targets in passing argument 1 of 'strncmp' differ in signedness [-Wpointer-sign]
+                 if( strncmp(val_p,"status2", length) == 0 )
+                             ^~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\ctype.h:4:0,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xil_printf.h:8,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xil_io.h:65,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr_l.h:77,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr.h:179,
+                 from ../src/finalproject.c:24:
+c:\xilinx\sdk\2018.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\string.h:35:6: note: expected 'const char *' but argument is of type 'u8 * {aka unsigned char *}'
+ int  _EXFUN(strncmp,(const char *, const char *, size_t));
+      ^
+../src/finalproject.c:585:39: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+             for(int l = 0; l < strlen(value_buf); l++)
+                                       ^~~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\ctype.h:4:0,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xil_printf.h:8,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xil_io.h:65,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr_l.h:77,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr.h:179,
+                 from ../src/finalproject.c:24:
+c:\xilinx\sdk\2018.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\string.h:33:9: note: expected 'const char *' but argument is of type 'u8 * {aka unsigned char *}'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/finalproject.c:589:29: warning: pointer targets in passing argument 1 of 'strncmp' differ in signedness [-Wpointer-sign]
+                 if( strncmp(val_p,"status3", length) == 0 )
+                             ^~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\ctype.h:4:0,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xil_printf.h:8,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xil_io.h:65,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr_l.h:77,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr.h:179,
+                 from ../src/finalproject.c:24:
+c:\xilinx\sdk\2018.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\string.h:35:6: note: expected 'const char *' but argument is of type 'u8 * {aka unsigned char *}'
+ int  _EXFUN(strncmp,(const char *, const char *, size_t));
+      ^
+../src/finalproject.c:599:27: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+                     val_p = HB3_COUNTER_COUNT_ADDR;
+                           ^
+../src/finalproject.c:623:29: warning: pointer targets in passing argument 1 of 'strncmp' differ in signedness [-Wpointer-sign]
+                 if( strncmp(stdin_buf, "kp", strlen("kp")) == 0 )
+                             ^~~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\ctype.h:4:0,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xil_printf.h:8,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xil_io.h:65,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr_l.h:77,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr.h:179,
+                 from ../src/finalproject.c:24:
+c:\xilinx\sdk\2018.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\string.h:35:6: note: expected 'const char *' but argument is of type 'u8 * {aka unsigned char *}'
+ int  _EXFUN(strncmp,(const char *, const char *, size_t));
+      ^
+../src/finalproject.c:628:34: warning: pointer targets in passing argument 1 of 'strncmp' differ in signedness [-Wpointer-sign]
+                 else if( strncmp(stdin_buf, "ki", strlen("ki")) == 0 )
+                                  ^~~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\ctype.h:4:0,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xil_printf.h:8,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xil_io.h:65,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr_l.h:77,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr.h:179,
+                 from ../src/finalproject.c:24:
+c:\xilinx\sdk\2018.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\string.h:35:6: note: expected 'const char *' but argument is of type 'u8 * {aka unsigned char *}'
+ int  _EXFUN(strncmp,(const char *, const char *, size_t));
+      ^
+../src/finalproject.c:634:34: warning: pointer targets in passing argument 1 of 'strncmp' differ in signedness [-Wpointer-sign]
+                 else if( strncmp(stdin_buf, "kd", strlen("kd")) == 0 )
+                                  ^~~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\ctype.h:4:0,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xil_printf.h:8,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xil_io.h:65,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr_l.h:77,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr.h:179,
+                 from ../src/finalproject.c:24:
+c:\xilinx\sdk\2018.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\string.h:35:6: note: expected 'const char *' but argument is of type 'u8 * {aka unsigned char *}'
+ int  _EXFUN(strncmp,(const char *, const char *, size_t));
+      ^
+../src/finalproject.c:640:35: warning: pointer targets in passing argument 1 of 'strncmp' differ in signedness [-Wpointer-sign]
+                  else if( strncmp(stdin_buf, "maxki", strlen("maxki")) == 0 )
+                                   ^~~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\ctype.h:4:0,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xil_printf.h:8,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xil_io.h:65,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr_l.h:77,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr.h:179,
+                 from ../src/finalproject.c:24:
+c:\xilinx\sdk\2018.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\string.h:35:6: note: expected 'const char *' but argument is of type 'u8 * {aka unsigned char *}'
+ int  _EXFUN(strncmp,(const char *, const char *, size_t));
+      ^
+../src/finalproject.c:646:35: warning: pointer targets in passing argument 1 of 'strncmp' differ in signedness [-Wpointer-sign]
+                  else if( strncmp(stdin_buf, "minki", strlen("minki")) == 0 )
+                                   ^~~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\ctype.h:4:0,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xil_printf.h:8,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xil_io.h:65,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr_l.h:77,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr.h:179,
+                 from ../src/finalproject.c:24:
+c:\xilinx\sdk\2018.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\string.h:35:6: note: expected 'const char *' but argument is of type 'u8 * {aka unsigned char *}'
+ int  _EXFUN(strncmp,(const char *, const char *, size_t));
+      ^
+../src/finalproject.c:652:46: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+                 else if( ( length = ( strlen(stdin_buf) - 1 ) ) < MAX_GAIN_SIZE)
+                                              ^~~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\ctype.h:4:0,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xil_printf.h:8,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xil_io.h:65,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr_l.h:77,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr.h:179,
+                 from ../src/finalproject.c:24:
+c:\xilinx\sdk\2018.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\string.h:33:9: note: expected 'const char *' but argument is of type 'u8 * {aka unsigned char *}'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+In file included from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr.h:178:0,
+                 from ../src/finalproject.c:24:
+../src/finalproject.c: In function 'init_uart':
+../../freertos10_xilinx_bsp_0/microblaze_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/finalproject.c:778:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/finalproject.c:770:6: note: declared here
+ void init_uart(XUartLite *UartLite, u16 DeviceId)
+      ^~~~~~~~~
+In file included from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr.h:178:0,
+                 from ../src/finalproject.c:24:
+../../freertos10_xilinx_bsp_0/microblaze_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/finalproject.c:786:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/finalproject.c:770:6: note: declared here
+ void init_uart(XUartLite *UartLite, u16 DeviceId)
+      ^~~~~~~~~
+In file included from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr.h:178:0,
+                 from ../src/finalproject.c:24:
+../src/finalproject.c: In function 'init_wdt':
+../../freertos10_xilinx_bsp_0/microblaze_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/finalproject.c:806:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/finalproject.c:791:6: note: declared here
+ void init_wdt(void){
+      ^~~~~~~~
+In file included from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr.h:178:0,
+                 from ../src/finalproject.c:24:
+../../freertos10_xilinx_bsp_0/microblaze_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/finalproject.c:816:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/finalproject.c:791:6: note: declared here
+ void init_wdt(void){
+      ^~~~~~~~
+In file included from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr.h:178:0,
+                 from ../src/finalproject.c:24:
+../../freertos10_xilinx_bsp_0/microblaze_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/finalproject.c:825:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/finalproject.c:791:6: note: declared here
+ void init_wdt(void){
+      ^~~~~~~~
+../src/finalproject.c: In function 'send_message':
+../src/finalproject.c:921:17: warning: pointer targets in passing argument 1 of 'strncpy' differ in signedness [-Wpointer-sign]
+         strncpy(tx_buf, message, sizeof(tx_buf));
+                 ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\ctype.h:4:0,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xil_printf.h:8,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xil_io.h:65,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr_l.h:77,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr.h:179,
+                 from ../src/finalproject.c:24:
+c:\xilinx\sdk\2018.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\string.h:36:8: note: expected 'char * restrict' but argument is of type 'u8 * {aka unsigned char *}'
+ char  *_EXFUN(strncpy,(char *__restrict, const char *__restrict, size_t));
+        ^
+../src/finalproject.c:921:25: warning: pointer targets in passing argument 2 of 'strncpy' differ in signedness [-Wpointer-sign]
+         strncpy(tx_buf, message, sizeof(tx_buf));
+                         ^~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\ctype.h:4:0,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xil_printf.h:8,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xil_io.h:65,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr_l.h:77,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr.h:179,
+                 from ../src/finalproject.c:24:
+c:\xilinx\sdk\2018.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\string.h:36:8: note: expected 'const char * restrict' but argument is of type 'u8 * {aka unsigned char *}'
+ char  *_EXFUN(strncpy,(char *__restrict, const char *__restrict, size_t));
+        ^
+../src/finalproject.c:923:25: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+         length = strlen(message);
+                         ^~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\ctype.h:4:0,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xil_printf.h:8,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xil_io.h:65,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr_l.h:77,
+                 from ../../freertos10_xilinx_bsp_0/microblaze_0/include/xtmrctr.h:179,
+                 from ../src/finalproject.c:24:
+c:\xilinx\sdk\2018.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\string.h:33:9: note: expected 'const char *' but argument is of type 'u8 * {aka unsigned char *}'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+At top level:
+../src/finalproject.c:169:13: warning: 'isr_wdt' defined but not used [-Wunused-function]
+ static void isr_wdt(void *pvUnused)
+             ^~~~~~~
+../src/finalproject.c:134:13: warning: 'updatePID' defined but not used [-Wunused-variable]
+ static bool updatePID = FALSE;
+             ^~~~~~~~~
+../src/finalproject.c:129:11: warning: 'lpm' defined but not used [-Wunused-variable]
+ static u8 lpm = 0;
+           ^~~
+../src/finalproject.c:119:12: warning: 'adjustment' defined but not used [-Wunused-variable]
+ static int adjustment = 0;
+            ^~~~~~~~~~
+../src/finalproject.c:91:11: warning: 'ssl_patch1' defined but not used [-Wunused-variable]
+ static u8 ssl_patch1[200] =     "PATCH /.json HTTP/1.1" CRLF \
+           ^~~~~~~~~~
+Finished building: ../src/finalproject.c
+ 
+Building target: vivado_finalproject.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../freertos10_xilinx_bsp_0/microblaze_0/lib -mlittle-endian -mno-xl-soft-div -mcpu=v10.0 -mxl-soft-mul -mhard-float -mxl-float-convert -mxl-float-sqrt -Wl,--no-relax -Wl,--gc-sections -o "vivado_finalproject.elf"  ./src/finalproject.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: vivado_finalproject.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size vivado_finalproject.elf  |tee "vivado_finalproject.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  52000	   2132	  70412	 124544	  1e680	vivado_finalproject.elf
+Finished building: vivado_finalproject.elf.size
+ 
 
-08:45:00 Build Finished (took 265ms)
+21:10:26 Build Finished (took 2s.191ms)
 
