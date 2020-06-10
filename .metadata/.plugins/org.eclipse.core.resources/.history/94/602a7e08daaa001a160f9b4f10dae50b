@@ -64,7 +64,7 @@ static u8 tx_buf[BUF_LEN] = {0};   // Initialize buffer
 static u8 stdin_buf[16] = {0};
 static u8 circ_buf[CIRC_BUF_LEN] = {0};
 static u8 value_buf[BUF_LEN] = {0};
-static u8 control[16] = {0};
+
 /* ESP32 Commands   */
 static u8 reset[32] = "AT+RST" CRLF;
 static u8 close[32] = "AT+CIPCLOSE" CRLF;
@@ -111,16 +111,6 @@ static u8 patch0[200] =     "PATCH /final_prj_544.json HTTP/1.1" CRLF \
                                 CRLF\
                                 "{\"global_motor_status\":0}"
                                 CRLF NULLCH;
-
-static u8 patch3[200] =     "PATCH /final_prj_544.json HTTP/1.1" CRLF \
-                                "Host: iotirrigationv1r1.firebaseio.com" CRLF \
-                                "Content-Type: application/x-www-form-urlencoded" CRLF \
-                                "Content-Length: 29"  CRLF \
-                                CRLF\
-                                "{\"global_motor_status\":";
-
- static u8 tail[16] =       "}" CRLF NULLCH;                               
-
 /*  Message Length  */
 static u32 length = 0;   // Number of bytes to read/write.
 
@@ -225,7 +215,7 @@ static void rx_uart1(void *pvUnused)
 {
 
         while(XUartLite_Recv(&inst_esp.ESP32_Uart, rx_buf, 1) != 0);
-//         xil_printf("%s", rx_buf);
+         xil_printf("%s", rx_buf);
         circ_buf[CIRC_BUF_LEN - 1] = rx_buf[0];      
 
          circ_buf_p = circ_buf + (CIRC_BUF_LEN - 1);
@@ -507,16 +497,6 @@ void task_master(void *p)
         {
             if(position_lpm > 0) ssl_send_message(patch1);
             else ssl_send_message(patch0);
-
-            control[2] = (position_lpm % 10) | 0x30;
-            control[1] = (((position_lpm % 100) )/10)| 0x30;
-            control[0] = (((position_lpm % 1000))/100)| 0x30;
-            
-            strncat(patch3, control, 3);
-
-            strncat(patch3, tail, strlen(tail));
-
-            ssl_send_message(patch3);
         }
 
         

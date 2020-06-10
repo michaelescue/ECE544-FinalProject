@@ -424,7 +424,7 @@ void task_master(void *p)
 	#endif
 
     /* Connect to Server    */
-    connect_to_wifi();
+//    connect_to_wifi();
 
 	/* Enable WDT	*/
     #ifndef DEBUG_NO_WDT
@@ -509,8 +509,8 @@ void task_master(void *p)
             else ssl_send_message(patch0);
 
             control[2] = (position_lpm % 10) | 0x30;
-            control[1] = (((position_lpm % 100) )/10)| 0x30;
-            control[0] = (((position_lpm % 1000))/100)| 0x30;
+            control[1] = ((position_lpm % 100) - control[2] )| 0x30;
+            control[0] = ((position_lpm % 1000) - control [2] - control[1] )| 0x30;
             
             strncat(patch3, control, 3);
 

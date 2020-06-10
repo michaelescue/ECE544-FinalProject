@@ -424,7 +424,7 @@ void task_master(void *p)
 	#endif
 
     /* Connect to Server    */
-    connect_to_wifi();
+//    connect_to_wifi();
 
 	/* Enable WDT	*/
     #ifndef DEBUG_NO_WDT
