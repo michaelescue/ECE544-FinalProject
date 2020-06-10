@@ -74,36 +74,43 @@ static u8 cwmode[32] = "AT+CWMODE=1" CRLF;
 static u8 connectwifi[64] = WIFI_LOGIN_INFO;
 static u8 connect_status[32] = "AT+CWJAP?\r\n";
 static u8 num_of_connects[32] = "AT+CIPMUX=0" CRLF;
-static u8 ssl_connect[128] = "AT+CIPSTART=\"SSL\",\"final-524b8.firebaseio.com\",443,7200" CRLF;
-// static u8 ssl_connect[BUF_LEN] = "AT+CIPSTART=\"SSL\",\"iotirrigationv1r1.firebaseio.com\",443,3600" CRLF;
+// static u8 ssl_connect[128] = "AT+CIPSTART=\"SSL\",\"final-524b8.firebaseio.com\",443,7200" CRLF;
+static u8 ssl_connect[BUF_LEN] = "AT+CIPSTART=\"SSL\",\"iotirrigationv1r1.firebaseio.com\",443,3600" CRLF;
 static u8 ssl_status[32] = "AT+CIPSTATUS" CRLF;
 static u8 presend[32] = "AT+CIPSENDEX=512" CRLF;
 
-static u8 ssl_get1[128] =       "GET /.json HTTP/1.1" CRLF \
-                                    "Host: final-524b8.firebaseio.com" CRLF \
-                                    "Connection: keep-alive" CRLF \
-                                    CRLF NULLCH;
+// static u8 ssl_get1[128] =       "GET /.json HTTP/1.1" CRLF \
+//                                     "Host: final-524b8.firebaseio.com" CRLF \
+//                                     "Connection: keep-alive" CRLF \
+//                                     CRLF NULLCH;
 
-// static u8 ssl_get1[128] =       "GET /final_prj_544/global_motor_status.json HTTP/1.1" CRLF \
-//                                 "Host: iotirrigationv1r1.firebaseio.com" CRLF \
-//                                 CRLF NULLCH;                                
+static u8 ssl_get1[128] =       "GET /final_prj_544/global_motor_status.json HTTP/1.1" CRLF \
+                                "Host: iotirrigationv1r1.firebaseio.com" CRLF \
+                                CRLF NULLCH;                                
 
-static u8 ssl_patch1[200] =     "PATCH /.json HTTP/1.1" CRLF \
-                                "Host: final-524b8.firebaseio.com" CRLF \
-                                "Content-Type: application/application/x-www-form-urlencoded" CRLF \
-                                "Content-Length: 15"  CRLF \
-                                CRLF\
-                                "{\"status0\":2}"
-                                CRLF NULLCH;
-
-// static u8 patch1[200] =     "PATCH /final_prj_544.json HTTP/1.1" CRLF \
-//                                 "Host: iotirrigationv1r1.firebaseio.com" CRLF \
-//                                 "Content-Type: application/x-www-form-urlencoded" CRLF \
-//                                 "Content-Length: 27"  CRLF \
+// static u8 ssl_patch1[200] =     "PATCH /.json HTTP/1.1" CRLF \
+//                                 "Host: final-524b8.firebaseio.com" CRLF \
+//                                 "Content-Type: application/application/x-www-form-urlencoded" CRLF \
+//                                 "Content-Length: 15"  CRLF \
 //                                 CRLF\
-//                                 "{\"global_motor_status\":1}"
+//                                 "{\"status0\":2}"
 //                                 CRLF NULLCH;
 
+static u8 patch1[200] =     "PATCH /final_prj_544.json HTTP/1.1" CRLF \
+                                "Host: iotirrigationv1r1.firebaseio.com" CRLF \
+                                "Content-Type: application/x-www-form-urlencoded" CRLF \
+                                "Content-Length: 27"  CRLF \
+                                CRLF\
+                                "{\"global_motor_status\":1}"
+                                CRLF NULLCH;
+
+static u8 patch0[200] =     "PATCH /final_prj_544.json HTTP/1.1" CRLF \
+                                "Host: iotirrigationv1r1.firebaseio.com" CRLF \
+                                "Content-Type: application/x-www-form-urlencoded" CRLF \
+                                "Content-Length: 27"  CRLF \
+                                CRLF\
+                                "{\"global_motor_status\":0}"
+                                CRLF NULLCH;
 /*  Message Length  */
 static u32 length = 0;   // Number of bytes to read/write.
 
@@ -484,6 +491,8 @@ void task_master(void *p)
         if(!(ticks % 100))
         {
             ssl_send_message(ssl_get1);
+            if(position_lpm > 0) ssl_send_message(patch1);
+            else ssl_send_message(patch0);
         }
 
         
